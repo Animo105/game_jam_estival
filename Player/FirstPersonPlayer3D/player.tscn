@@ -1,0 +1,176 @@
+[gd_scene load_steps=15 format=3 uid="uid://cvxo4w6ov724i"]
+
+[ext_resource type="Script" uid="uid://ca7ll4bopkqpv" path="res://Player/Scripts/player.gd" id="1_l8h54"]
+[ext_resource type="Script" uid="uid://t5xg36eqq4n0" path="res://Player/Scripts/State Machine/PlayerFSM.gd" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://bf5cw8x5fe2vb" path="res://Player/Scripts/State Machine/PlayerStates/GroundedState.gd" id="3_btcbx"]
+[ext_resource type="Script" uid="uid://bsae5ihuv3a3v" path="res://Player/Scripts/State Machine/PlayerStates/AirState.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://da2ohmmfmsfw0" path="res://Player/Scripts/State Machine/PlayerStates/SlideState.gd" id="5_k53q1"]
+[ext_resource type="Script" uid="uid://bo0fqn3s5hg77" path="res://Player/Scripts/State Machine/PlayerStates/CrouchState.gd" id="6_fhl08"]
+[ext_resource type="Script" uid="uid://hdaj4nvpsw5w" path="res://Player/Scripts/State Machine/PlayerStates/RunState.gd" id="7_od3ui"]
+[ext_resource type="Script" uid="uid://cnotwt57yrto2" path="res://Player/Scripts/State Machine/PlayerStates/JumpState.gd" id="8_apopc"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_x3vf3"]
+length = 0.25
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3v3li"]
+radius = 0.15
+height = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_od3ui"]
+radius = 0.15
+
+[sub_resource type="Animation" id="Animation_00tjw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("neck:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.9, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_od3ui"]
+resource_name = "crouch"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0), Vector3(0, 0.25, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("neck:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.9, 0), Vector3(0, 0.4, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x3vf3"]
+_data = {
+&"RESET": SubResource("Animation_00tjw"),
+&"crouch": SubResource("Animation_od3ui")
+}
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_l8h54")
+
+[node name="stepup" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0.2, 0.25, -0.2)
+shape = SubResource("SeparationRayShape3D_x3vf3")
+disabled = true
+
+[node name="stepup2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, -0.2, 0.25, -0.2)
+shape = SubResource("SeparationRayShape3D_x3vf3")
+disabled = true
+
+[node name="stepup3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0.25, -0.2)
+shape = SubResource("SeparationRayShape3D_x3vf3")
+disabled = true
+
+[node name="PlayerFSM" type="Node" parent="."]
+script = ExtResource("2_4ntmi")
+metadata/_custom_type_script = "uid://t5xg36eqq4n0"
+
+[node name="Ground" type="Node" parent="PlayerFSM"]
+script = ExtResource("3_btcbx")
+metadata/_custom_type_script = "uid://bf5cw8x5fe2vb"
+
+[node name="Air" type="Node" parent="PlayerFSM"]
+script = ExtResource("4_gwnis")
+metadata/_custom_type_script = "uid://bsae5ihuv3a3v"
+
+[node name="Slide" type="Node" parent="PlayerFSM"]
+script = ExtResource("5_k53q1")
+metadata/_custom_type_script = "uid://da2ohmmfmsfw0"
+
+[node name="Jump" type="Node" parent="PlayerFSM"]
+script = ExtResource("8_apopc")
+metadata/_custom_type_script = "uid://cnotwt57yrto2"
+
+[node name="Run" type="Node" parent="PlayerFSM"]
+script = ExtResource("7_od3ui")
+metadata/_custom_type_script = "uid://hdaj4nvpsw5w"
+
+[node name="Crouch" type="Node" parent="PlayerFSM"]
+script = ExtResource("6_fhl08")
+metadata/_custom_type_script = "uid://bo0fqn3s5hg77"
+
+[node name="CollisionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_3v3li")
+
+[node name="Head Ray" type="ShapeCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+shape = SubResource("SphereShape3D_od3ui")
+target_position = Vector3(0, 0.55, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_x3vf3")
+}
+
+[node name="neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+
+[node name="camera" type="Camera3D" parent="neck"]
+
+[node name="AudioListener3D" type="AudioListener3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8797139, 0)
+current = true
