@@ -122,6 +122,23 @@ size_flags_horizontal = 10
 theme_override_font_sizes/font_size = 32
 text = "Espace"
 
+[node name="HSeparator6" type="HSeparator" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=1569453664]
+layout_mode = 2
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=211085675]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer7" unique_id=564144932]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Se propulser vers l'avant"
+
+[node name="Label2" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer7" unique_id=548298970]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = "Shift"
+
 [node name="HSeparator" type="HSeparator" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=536762567]
 layout_mode = 2
 
