@@ -27,7 +27,6 @@ angular_velocity_max = 86.51998
 scale_max = 2.0
 color_ramp = SubResource("GradientTexture1D_jrx62")
 color_initial_ramp = SubResource("GradientTexture1D_4f2bi")
-anim_speed_max = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ngy4w"]
 transparency = 1
@@ -42,7 +41,7 @@ particles_anim_loop = true
 material = SubResource("StandardMaterial3D_ngy4w")
 
 [node name="BloodGPUParticles3D" type="GPUParticles3D" unique_id=1873290126]
-amount = 120
+amount = 100
 amount_ratio = 0.82
 lifetime = 0.7
 explosiveness = 0.82
