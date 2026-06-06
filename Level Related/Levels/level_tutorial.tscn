@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dfnm5tdfviphj"]
+
+[ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_4whrn"]
+[ext_resource type="PackedScene" uid="uid://biekqwwd8jjuk" path="res://Assets/Models/BigRoom.glb" id="2_3cndm"]
+[ext_resource type="PackedScene" uid="uid://cv4v53b5s01gv" path="res://Assets/Models/Wall.glb" id="3_fx8qu"]
+[ext_resource type="PackedScene" uid="uid://fg0lwc4s3333" path="res://Assets/Models/Fence.glb" id="4_fx8qu"]
+[ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="4_jhcvk"]
+[ext_resource type="PackedScene" uid="uid://cyn4q8bvad4pi" path="res://Assets/Models/Elevator.glb" id="5_jhcvk"]
+[ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/PillarSmall.glb" id="7_hyjle"]
+[ext_resource type="PackedScene" uid="uid://bjdrsn4ni6v2j" path="res://Assets/Models/Light.glb" id="8_y4r32"]
+
+[node name="Level" type="Node3D" unique_id=173318787 node_paths=PackedStringArray("office", "demon_world")]
+script = ExtResource("1_4whrn")
+office = NodePath("Office")
+demon_world = NodePath("Daemon")
+metadata/_custom_type_script = "uid://dlbh676178r14"
+
+[node name="Office" type="Node3D" parent="." unique_id=262407820]
+
+[node name="Fence2" parent="Office" unique_id=2034512968 instance=ExtResource("4_fx8qu")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.492675, 0, -4.5904636)
+
+[node name="Wall4" parent="Office" unique_id=432651400 instance=ExtResource("3_fx8qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.369465, 0, -8.313904)
+
+[node name="E to swap" type="Label3D" parent="Office" unique_id=1521544354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.016966, 0.5862814, -10.859028)
+text = "Appuyer sur E pour changer le monde"
+
+[node name="Daemon" type="Node3D" parent="." unique_id=569565411]
+
+[node name="Wall5" parent="Daemon" unique_id=1852137596 instance=ExtResource("3_fx8qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.369465, 0, -4.4665923)
+
+[node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("4_jhcvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.242675, 0.7710309, 10.026082)
+
+[node name="BigRoom2" parent="." unique_id=985979491 instance=ExtResource("2_3cndm")]
+
+[node name="Wall2" parent="." unique_id=392325194 instance=ExtResource("3_fx8qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.368103, 0, 7.317478)
+
+[node name="Wall3" parent="." unique_id=1166617998 instance=ExtResource("3_fx8qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.365228, 0, -0.5182023)
+
+[node name="Elevator2" parent="." unique_id=496477643 instance=ExtResource("5_jhcvk")]
+transform = Transform3D(-0.9962899, 0, -0.08606042, 0, 1, 0, 0.08606042, 0, -0.9962899, 11.246153, 0, 12.66002)
+
+[node name="Wall6" parent="." unique_id=1171333739 instance=ExtResource("3_fx8qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.556127, 0, -8.313904)
+
+[node name="Wall7" parent="." unique_id=1543129925 instance=ExtResource("3_fx8qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5542765, 0, -0.5182023)
+
+[node name="PillarSmall2" parent="." unique_id=2146748248 instance=ExtResource("7_hyjle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5667515, 0, 0)
+
+[node name="PillarSmall3" parent="." unique_id=596021000 instance=ExtResource("7_hyjle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.422566, 0, 0)
+
+[node name="Wall8" parent="." unique_id=1497494555 instance=ExtResource("3_fx8qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5542765, 0, 7.317964)
+
+[node name="Shift to dash" type="Label3D" parent="." unique_id=2083434632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.016966, 1.0632415, -4.5457845)
+text = "Appuyer sur SHIFT pour se propulser"
+
+[node name="Light2" parent="." unique_id=1557470311 instance=ExtResource("8_y4r32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.922988, 0, 5.581562)
