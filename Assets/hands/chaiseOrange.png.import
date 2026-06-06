@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ygxynmnd8fne"
-path="res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"
+uid="uid://beinwuxscwfu"
+path="res://.godot/imported/chaiseOrange.png-b1c992b4f454f2d133a6fde36abea8f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/pick.png"
-dest_files=["res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"]
+source_file="res://Assets/Hands/chaiseOrange.png"
+dest_files=["res://.godot/imported/chaiseOrange.png-b1c992b4f454f2d133a6fde36abea8f8.ctex"]
 
 [params]
 

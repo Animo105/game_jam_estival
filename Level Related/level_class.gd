@@ -1,4 +1,4 @@
-extends Node
+extends Node3D
 class_name Level
 
 @export var office_environement : Environment
@@ -7,10 +7,16 @@ class_name Level
 @export var office: Node3D
 @export var demon_world: Node3D
 
+@export var starting_elevator : Node3D
+
 var world_environement : WorldEnvironment = WorldEnvironment.new()
 var is_in_office : bool = true
 
 func _ready() -> void:
+	if starting_elevator:
+		var player_global_position =  SceneManager.data["relative_position"] + starting_elevator.global_position
+		add_child(Globals.player)
+		Globals.player.global_position = player_global_position
 	add_child(world_environement)
 	enable_office()
 

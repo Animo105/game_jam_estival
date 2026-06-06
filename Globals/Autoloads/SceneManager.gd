@@ -9,6 +9,8 @@ var current_scene : Node : get = _get_current_scene
 ## The previous scene that was not freed upon scene_change.
 var previous_scene : Node
 
+var data : Dictionary
+
 var _saved_nodes : Dictionary[String, Node]
 var _pending_node_scene : Node = null
 var _pending_free_current_scene : bool = true

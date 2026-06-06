@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ygxynmnd8fne"
-path="res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"
+uid="uid://c1lqdkt1ohryo"
+path="res://.godot/imported/punch3.png-0f2448bc0ff915219b9bea0121ce70fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/pick.png"
-dest_files=["res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"]
+source_file="res://Assets/Hands/punch3.png"
+dest_files=["res://.godot/imported/punch3.png-0f2448bc0ff915219b9bea0121ce70fd.ctex"]
 
 [params]
 

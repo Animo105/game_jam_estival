@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ygxynmnd8fne"
-path="res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"
+uid="uid://drl0juqsd2j8w"
+path="res://.godot/imported/chaiseNoire.png-ca01cc7cbe0a749ccf17d1f1699799fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/pick.png"
-dest_files=["res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"]
+source_file="res://Assets/Hands/chaiseNoire.png"
+dest_files=["res://.godot/imported/chaiseNoire.png-ca01cc7cbe0a749ccf17d1f1699799fa.ctex"]
 
 [params]
 
