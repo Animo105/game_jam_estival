@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dfg1tit83sxga"]
+
+[ext_resource type="Script" uid="uid://cihj0g25mid0x" path="res://Items/chair.gd" id="1_qge2a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vlwnb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qge2a"]
+
+[node name="Chair" type="RigidBody3D" unique_id=785926221]
+script = ExtResource("1_qge2a")
+health = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1595306755]
+shape = SubResource("BoxShape3D_vlwnb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2120377864]
+mesh = SubResource("BoxMesh_qge2a")
