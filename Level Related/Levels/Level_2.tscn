@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://wyx0u7ij6x2x"]
+
+[ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_pobmy"]
+[ext_resource type="PackedScene" uid="uid://dghdv0gu0jctx" path="res://Assets/Models/Room.glb" id="2_kso55"]
+[ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/PillarSmall.glb" id="3_rx4ve"]
+[ext_resource type="PackedScene" uid="uid://cyn4q8bvad4pi" path="res://Assets/Models/Elevator.glb" id="4_thw7g"]
+[ext_resource type="PackedScene" uid="uid://yolt7h42j0g1" path="res://Assets/Models/PillarBig.glb" id="5_fs360"]
+[ext_resource type="PackedScene" uid="uid://bgjqxyt4ptyxy" path="res://Assets/Models/BigTable.glb" id="6_fwmwd"]
+[ext_resource type="PackedScene" uid="uid://1pe653m0ej8n" path="res://Assets/Models/WheelChair.glb" id="7_r4mkb"]
+[ext_resource type="PackedScene" uid="uid://doetlgjdpay83" path="res://Assets/Models/Mouse.glb" id="8_nm314"]
+[ext_resource type="PackedScene" uid="uid://chh2tg7ptv1ur" path="res://Assets/Models/Screen.glb" id="9_5pnab"]
+[ext_resource type="PackedScene" uid="uid://bmlwkhvoepw7e" path="res://Assets/Models/Keyboard.glb" id="10_xgyl0"]
+[ext_resource type="PackedScene" uid="uid://b6iikvlm7j2iq" path="res://Assets/Models/Plant.glb" id="11_ebyj2"]
+[ext_resource type="PackedScene" uid="uid://bjdrsn4ni6v2j" path="res://Assets/Models/Light.glb" id="12_kbn4t"]
+[ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="13_rx4ve"]
+[ext_resource type="PackedScene" uid="uid://ccoiyhmb1fhkl" path="res://Assets/Models/Table.glb" id="14_r4mkb"]
+[ext_resource type="PackedScene" uid="uid://bnuk4px31uw3r" path="res://Assets/Models/Chair.glb" id="15_nm314"]
+[ext_resource type="PackedScene" uid="uid://df53px8wikefi" path="res://Assets/Models/RoundTable.glb" id="16_5pnab"]
+[ext_resource type="PackedScene" uid="uid://sjjsnvc2qxta" path="res://Assets/Models/ChairBlack.glb" id="17_xgyl0"]
+
+[node name="Level" type="Node3D" unique_id=765839663 node_paths=PackedStringArray("office", "demon_world")]
+script = ExtResource("1_pobmy")
+office = NodePath("Office")
+demon_world = NodePath("DeamonWorld")
+metadata/_custom_type_script = "uid://dlbh676178r14"
+
+[node name="Office" type="Node3D" parent="." unique_id=1754503997]
+
+[node name="DeamonWorld" type="Node3D" parent="." unique_id=1652125718]
+
+[node name="Room2" parent="." unique_id=1805994829 instance=ExtResource("2_kso55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00055885315, 0.0025222898, 0.00014567375)
+
+[node name="PillarSmall2" parent="." unique_id=1314792013 instance=ExtResource("3_rx4ve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9433699, 0, 4.4210825)
+
+[node name="PillarSmall3" parent="." unique_id=1065889035 instance=ExtResource("3_rx4ve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9433699, 0, -0.594024)
+
+[node name="PillarSmall4" parent="." unique_id=1595015159 instance=ExtResource("3_rx4ve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9433699, 0, -5.4275374)
+
+[node name="Elevator2" parent="." unique_id=1051287039 instance=ExtResource("4_thw7g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8738775, 0, -3.9421766)
+
+[node name="PillarBig2" parent="." unique_id=1391864417 instance=ExtResource("5_fs360")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2512827, 0, 5.636505)
+
+[node name="BigTable2" parent="." unique_id=1105838735 instance=ExtResource("6_fwmwd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.7301859, 0, -0.5135708)
+
+[node name="WheelChair2" parent="." unique_id=2068596452 instance=ExtResource("7_r4mkb")]
+transform = Transform3D(0.19235064, 0, -0.9813262, 0, 1, 0, 0.9813262, 0, 0.19235064, 1.6501769, 0, 0.09811351)
+
+[node name="Mouse2" parent="." unique_id=2115112764 instance=ExtResource("8_nm314")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 1.7666811, 0.61, -0.1905877)
+
+[node name="Screen2" parent="." unique_id=1896722212 instance=ExtResource("9_5pnab")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6302943, 0.61, -0.40503997)
+
+[node name="Keyboard" parent="." unique_id=41952171 instance=ExtResource("10_xgyl0")]
+transform = Transform3D(0.09975388, 0, -0.9950121, 0, 1, 0, 0.9950121, 0, 0.09975388, 1.4957116, 0.61, -0.18884116)
+
+[node name="Plant2" parent="." unique_id=290526115 instance=ExtResource("11_ebyj2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2378702, 0.61, -0.38308758)
+
+[node name="Light2" parent="." unique_id=1394017891 instance=ExtResource("12_kbn4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.480453, -1.1920929e-07, -2.547566)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light2" unique_id=313516450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3615828, 0)
+light_energy = 2.0
+omni_range = 4.577664
+
+[node name="Light3" parent="." unique_id=671731627 instance=ExtResource("12_kbn4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.583472, -1.1920929e-07, -2.547566)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light3" unique_id=856696831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3615828, 0)
+light_energy = 2.0
+omni_range = 4.577664
+
+[node name="Light4" parent="." unique_id=968393371 instance=ExtResource("12_kbn4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.480453, -1.1920929e-07, 1.4524341)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light4" unique_id=280253443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3615828, 0)
+light_energy = 2.0
+omni_range = 4.577664
+
+[node name="Light5" parent="." unique_id=1518861295 instance=ExtResource("12_kbn4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.583472, -1.1920929e-07, 1.4524341)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light5" unique_id=1449375875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3615828, 0)
+light_energy = 2.0
+omni_range = 4.577664
+
+[node name="Light6" parent="." unique_id=1477625349 instance=ExtResource("12_kbn4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.583472, -1.1920929e-07, 0.45243406)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light6" unique_id=1526779173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3615828, 0)
+light_energy = 2.0
+omni_range = 4.577664
+
+[node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("13_rx4ve")]
+
+[node name="Table2" parent="." unique_id=151040527 instance=ExtResource("14_r4mkb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.602568, 0.0025222301, -3.9700308)
+
+[node name="Chair2" parent="." unique_id=155175596 instance=ExtResource("15_nm314")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83048517, 0.002522111, -4.4100037)
+
+[node name="Chair3" parent="." unique_id=497168435 instance=ExtResource("15_nm314")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9040301, 0.0025222301, -3.7524977)
+
+[node name="Chair4" parent="." unique_id=1260581668 instance=ExtResource("15_nm314")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8732102, 0.0025222301, -3.2071192)
+
+[node name="RoundTable2" parent="." unique_id=896737475 instance=ExtResource("16_5pnab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0288538, 0.0025224686, -3.2813199)
+
+[node name="Chair5" parent="." unique_id=1675893560 instance=ExtResource("15_nm314")]
+transform = Transform3D(-0.39866903, 0, -0.9170949, 0, 1, 0, 0.9170949, 0, -0.39866903, 0.43465984, 0.0025222301, -2.7583733)
+
+[node name="Chair6" parent="." unique_id=1641379074 instance=ExtResource("15_nm314")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7643822, 0.0025222301, -3.6098762)
+
+[node name="ChairBlack2" parent="." unique_id=1055477614 instance=ExtResource("17_xgyl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4499935, 0.0025219917, -4.088192)
