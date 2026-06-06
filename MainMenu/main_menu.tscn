@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dm71ftrysxdp7"]
+
+[node name="MainMenu" type="Control" unique_id=883914609]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1691564267]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_top = 150.0
+offset_right = 161.0
+offset_bottom = 217.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "Greedy Tower"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2067110689]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.5
+offset_top = -56.5
+offset_right = 144.5
+offset_bottom = 56.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1616530188]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Jouer"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=850338673]
+layout_mode = 2
+text = "Aide"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1222535730]
+layout_mode = 2
+text = "Quitter"
