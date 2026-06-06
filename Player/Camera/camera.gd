@@ -10,8 +10,8 @@ func _ready() -> void:
 	hands.default()
 
 func _physics_process(_delta: float) -> void:
-	check_for_pickup()
 	check_for_item_action()
+	check_for_pickup()
 
 func check_for_pickup():
 	if item_picked_up: return
@@ -48,6 +48,8 @@ func drop_item():
 func use_item():
 	if not item_picked_up: return
 	item_picked_up.use(global_position, -global_basis.z)
+	if item_picked_up.is_queued_for_deletion():
+		item_picked_up = null
 
 func throw_item():
 	if not item_picked_up: return

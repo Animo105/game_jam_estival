@@ -20,6 +20,7 @@ config/icon="res://Assets/icon.svg"
 Globals="*uid://bjlvruyax0c8c"
 SignalBus="*uid://b5pn5qs3uaurd"
 AudioManager="*uid://nuo2dhgdpwhc"
+SceneManager="*uid://bw2sxibflqgih"
 
 [display]
 

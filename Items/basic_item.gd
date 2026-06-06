@@ -2,7 +2,12 @@ extends RigidBody3D
 
 class_name BasicItem
 
-@export var health : int = 1
+@export var health : int = 1:
+	set(value):
+		health = value
+		if health <= 0:
+			destroy()
+
 @export var damage : int = 1
 @export var texture_in_ui : Texture2D
 
@@ -51,3 +56,6 @@ func use(camera_coords : Vector3, forward_direction : Vector3):
 @warning_ignore("unused_parameter")
 func collision_while_thrown(node : Node3D):
 	pass
+
+func destroy():
+	queue_free()
