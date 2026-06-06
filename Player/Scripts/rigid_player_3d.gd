@@ -65,8 +65,12 @@ func get_bodies_in_melee_range(melee_range : Vector3) -> Array[Node3D]:
 func handle_dash():
 	if inputs.is_dash_just_pressed():
 		var input_dir : Vector2 = inputs.get_vector()
-		var camera_direction : Vector3 = camera.global_transform.basis * Vector3.FORWARD
-		var direction : Vector3 = (visual.transform.basis * Vector3(input_dir.x, camera_direction.y, input_dir.y)).normalized()
+		var camera_direction : Vector3 = -camera.global_transform.basis.z
+		var direction : Vector3 = Vector3.ZERO
+		if input_dir.length() < 0.2 :
+			direction = camera_direction.normalized()
+		else:
+			direction = (visual.transform.basis * Vector3(input_dir.x, camera_direction.y, input_dir.y)).normalized()
 		apply_impulse(direction * DASH_STRENGHT)
 
 func handle_jumping():
