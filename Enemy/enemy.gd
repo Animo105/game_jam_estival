@@ -1,4 +1,4 @@
-extends CharacterBody3D
+extends RigidBody3D
 
 @export var speed : float = 1.0
 @export var player_path : NodePath
@@ -32,10 +32,9 @@ func _physics_process(_delta):
 	var new_velocity = (next_path_position - current_position).normalized() * speed
 	
 	# 4. Appliquer la vélocité et déplacer l'ennemi
-	velocity = new_velocity
-	move_and_slide()
+	linear_velocity = new_velocity
 	
 	# Optionnel : Faire pivoter l'ennemi vers sa direction de marche
-	if velocity.length() > 0.1:
+	if linear_velocity.length() > 0.1:
 		var look_target = Vector3(next_path_position.x, global_transform.origin.y, next_path_position.z)
 		look_at(look_target, Vector3.UP)

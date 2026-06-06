@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bnig31np3t51u" path="res://Player/Camera/camera.gd" id="1_os5io"]
 [ext_resource type="Texture2D" uid="uid://ptnprs3xr62y" path="res://Assets/crosshair.png" id="2_j2w78"]
-[ext_resource type="Texture2D" uid="uid://dtjspvnhlnbsx" path="res://Assets/Keys/mouse_left.svg" id="2_yd4ra"]
-[ext_resource type="Texture2D" uid="uid://hky0deq5k87x" path="res://Assets/Keys/keyboard_g.svg" id="4_bovb7"]
+[ext_resource type="Script" uid="uid://j2gcudyyqgum" path="res://Player/Camera/hands.gd" id="4_bovb7"]
 [ext_resource type="Texture2D" uid="uid://qqvo8x54ixe5" path="res://Assets/hands/Fist.png" id="5_g3p2l"]
 
 [node name="Camera" type="Camera3D" unique_id=524318236]
@@ -41,64 +40,6 @@ grow_vertical = 2
 texture = ExtResource("2_j2w78")
 expand_mode = 1
 
-[node name="ItemPrompts" type="Control" parent="CanvasLayer/HUD" unique_id=345975454]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="PromptPickup" type="PanelContainer" parent="CanvasLayer/HUD/ItemPrompts" unique_id=410038584]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -50.0
-offset_right = 200.0
-grow_vertical = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HUD/ItemPrompts/PromptPickup" unique_id=967385907]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD/ItemPrompts/PromptPickup/HBoxContainer" unique_id=1292011578]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture = ExtResource("2_yd4ra")
-expand_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/HUD/ItemPrompts/PromptPickup/HBoxContainer" unique_id=483477427]
-layout_mode = 2
-text = "Pickup item"
-
-[node name="PromptDrop" type="PanelContainer" parent="CanvasLayer/HUD/ItemPrompts" unique_id=286014615]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -200.0
-offset_top = -50.0
-grow_horizontal = 0
-grow_vertical = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HUD/ItemPrompts/PromptDrop" unique_id=880483897]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD/ItemPrompts/PromptDrop/HBoxContainer" unique_id=228702207]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture = ExtResource("4_bovb7")
-expand_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/HUD/ItemPrompts/PromptDrop/HBoxContainer" unique_id=1300881153]
-layout_mode = 2
-text = "Drop Item"
-
 [node name="Hands" type="TextureRect" parent="CanvasLayer/HUD" unique_id=1894770934]
 layout_mode = 1
 anchors_preset = 15
@@ -109,3 +50,4 @@ grow_vertical = 2
 texture = ExtResource("5_g3p2l")
 expand_mode = 2
 stretch_mode = 5
+script = ExtResource("4_bovb7")

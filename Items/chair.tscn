@@ -10,6 +10,7 @@ size = Vector3(0.47485352, 0.5375366, 0.5058594)
 size = Vector3(0.5, 0.5, 0.5)
 
 [node name="Chair" type="RigidBody3D" unique_id=785926221]
+collision_mask = 3
 script = ExtResource("1_qge2a")
 texture_in_ui = ExtResource("2_kyc31")
 
