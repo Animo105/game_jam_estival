@@ -10,15 +10,12 @@ func physics_update(_delta:float):
 	transition()
 
 func transition():
-	# vers running
-	if player.inputs.is_running():
-		fsm.change_state("run")
 	# vers jumping
-	elif player.inputs.is_jumping():
+	if player.inputs.is_jumping():
 		fsm.change_state("jump")
-	# vers crouch
-	elif player.inputs.is_crouching():
-		fsm.change_state('crouch')
+	# vers dash
+	elif player.inputs.is_dash_just_pressed():
+		fsm.change_state("dash")
 	# vers air
 	elif !player.is_on_floor():
-		fsm.change_state('air')
+		fsm.change_state("air")

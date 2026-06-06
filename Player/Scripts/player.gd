@@ -4,46 +4,38 @@ class_name Player
 @onready var neck: Node3D = $neck
 @onready var camera: Camera3D = $neck/camera
 @onready var collision_shape: CollisionShape3D = $CollisionShape
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var head_ray: ShapeCast3D = $"Head Ray"
 
 @onready var fsm: PlayerFSM = $PlayerFSM
 var inputs : PlayerInput = PlayerInput.new()
 
 const MOUSE_SENSITIVITY : float = 0.2
 
-const DEFAULT_CAM_POS : Vector3 = Vector3(0, 0.9, 0)
-const CROUCH_CAM_POS : Vector3 = Vector3(0, 0.4, 0)
-
-const DEFAULT_SIZE : float = 1.0
-const CROUCH_SIZE : float = 0.5
-const CROUCH_SPEED : float = 0.1
-
-const DEFAULT_SPEED : float = 2
+const DEFAULT_SPEED : float = 4
 const DEFAULT_ACCELERATION : float = 3.0
 const DEFAULT_DECELERATION : float = 4.0
-const JUMP_VELOCITY = 4
+const DEFAULT_FOV : float = 75
 
-var basic_fov = 75
-var last_direction : Vector3
-var starting_pos : Vector3
+const MAX_DASH_DISTANCE : float = 2
 
-var is_hiding : bool = false
-var is_crouching : bool = false
+const JUMP_VELOCITY : float = 4
+
+var starting_position : Vector3
+var starting_transform : Transform3D
+var last_direction : Vector3 = Vector3(0,0,0)
 
 func reset() -> void:
-	global_position = starting_pos
-	camera.fov = basic_fov
-	neck.position = DEFAULT_CAM_POS
-	set_crouch(false)
+	global_position = starting_position
+	transform = starting_transform
 
 func _ready() -> void:
-	starting_pos = global_position
+	starting_position = global_position
+	starting_transform = transform
 	reset()
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _process(delta: float) -> void:
 	fsm.update(delta)
-	camera.fov = lerp(camera.fov, get_speed()+basic_fov, 0.2)
+	camera.fov = lerp(camera.fov, get_speed()+DEFAULT_FOV, 0.2)
 
 func _physics_process(delta: float) -> void:
 	fsm.physics_update(delta)
@@ -51,16 +43,6 @@ func _physics_process(delta: float) -> void:
 
 func is_moving()->bool:
 	return not velocity.x == 0 or not velocity.z == 0
-
-func set_crouch(enable : bool) -> void:
-	if is_crouching == enable:
-		return
-	is_crouching = enable
-	if (enable):
-		animation_player.play("crouch", -1, 1)
-	else:
-		animation_player.play("crouch", -1, -1, true)
-
 
 func get_speed()->float:
 	return velocity.length()

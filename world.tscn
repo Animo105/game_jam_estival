@@ -1,24 +1,27 @@
 [gd_scene format=3 uid="uid://d3p3erhtvx5w7"]
 
-[ext_resource type="PackedScene" uid="uid://cvxo4w6ov724i" path="res://Player/FirstPersonPlayer3D/player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://cvxo4w6ov724i" path="res://Player/player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://qud12qu6aikl" path="res://Assets/Office(1).glb" id="2_fj7yv"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_gv5m4"]
-size = Vector2(10, 10)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gv5m4"]
-data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
+[sub_resource type="Sky" id="Sky_tlwt5"]
+sky_material = SubResource("ProceduralSkyMaterial_fj7yv")
+
+[sub_resource type="Environment" id="Environment_aqk2v"]
+background_mode = 2
+sky = SubResource("Sky_tlwt5")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="World" type="Node3D" unique_id=581130940]
 
-[node name="Tour" type="Node3D" parent="." unique_id=119521744]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Tour" unique_id=2131817955]
-mesh = SubResource("PlaneMesh_gv5m4")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Tour/MeshInstance3D" unique_id=929532272]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Tour/MeshInstance3D/StaticBody3D" unique_id=1028429509]
-shape = SubResource("ConcavePolygonShape3D_gv5m4")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1093891993]
+environment = SubResource("Environment_aqk2v")
 
 [node name="Player" parent="." unique_id=412617056 instance=ExtResource("1_f3sb7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27680635, 0)
+
+[node name="Office" parent="." unique_id=711390649 instance=ExtResource("2_fj7yv")]

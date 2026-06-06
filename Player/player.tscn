@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cvxo4w6ov724i"]
+
+[ext_resource type="Script" uid="uid://ca7ll4bopkqpv" path="res://Player/Scripts/player.gd" id="1_l8h54"]
+[ext_resource type="Script" uid="uid://t5xg36eqq4n0" path="res://Player/Scripts/State Machine/player_fsm.gd" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://bf5cw8x5fe2vb" path="res://Player/Scripts/State Machine/Player States/grounded_state.gd" id="3_btcbx"]
+[ext_resource type="Script" uid="uid://bsae5ihuv3a3v" path="res://Player/Scripts/State Machine/Player States/air_state.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://cg443djvka8sp" path="res://Player/Scripts/State Machine/Player States/dash_state.gd" id="6_fhl08"]
+[ext_resource type="PackedScene" uid="uid://bogy7xo1artfb" path="res://Player/player_hud.tscn" id="7_vtle1"]
+[ext_resource type="Script" uid="uid://cnotwt57yrto2" path="res://Player/Scripts/State Machine/Player States/jump_state.gd" id="8_apopc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3v3li"]
+radius = 0.15
+height = 1.0
+
+[node name="Player" type="CharacterBody3D" unique_id=131217300]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_l8h54")
+
+[node name="PlayerFSM" type="Node" parent="." unique_id=1737307958]
+script = ExtResource("2_4ntmi")
+metadata/_custom_type_script = "uid://t5xg36eqq4n0"
+
+[node name="Ground" type="Node" parent="PlayerFSM" unique_id=4908855]
+script = ExtResource("3_btcbx")
+metadata/_custom_type_script = "uid://bf5cw8x5fe2vb"
+
+[node name="Air" type="Node" parent="PlayerFSM" unique_id=1322630552]
+script = ExtResource("4_gwnis")
+metadata/_custom_type_script = "uid://bsae5ihuv3a3v"
+
+[node name="Jump" type="Node" parent="PlayerFSM" unique_id=1436380212]
+script = ExtResource("8_apopc")
+metadata/_custom_type_script = "uid://cnotwt57yrto2"
+
+[node name="Dash" type="Node" parent="PlayerFSM" unique_id=1560154399]
+script = ExtResource("6_fhl08")
+metadata/_custom_type_script = "uid://cg443djvka8sp"
+
+[node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=784189338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_3v3li")
+
+[node name="neck" type="Node3D" parent="." unique_id=756949831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+
+[node name="camera" type="Camera3D" parent="neck" unique_id=645451033]
+
+[node name="RayCast3D" type="RayCast3D" parent="neck/camera" unique_id=369521120]
+target_position = Vector3(0, 0, -1)
+
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=586708580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8797139, 0)
+current = true
+
+[node name="HUD" parent="." unique_id=967178283 instance=ExtResource("7_vtle1")]
