@@ -9,5 +9,5 @@ class_name BasicItem
 func _ready() -> void:
 	pass
 
-func pickup() -> void:
-	pass
+func drop_at(player_coords : Vector3) -> bool:
+	return false
