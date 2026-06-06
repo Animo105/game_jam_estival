@@ -7,7 +7,7 @@ var demon_environement : Environment
 @export var office: Node3D
 @export var demon_world: Node3D
 
-@export var starting_elevator : Node3D
+@export var starting_elevator : StartingElevator
 
 var world_environement : WorldEnvironment = WorldEnvironment.new()
 var is_in_office : bool = true
@@ -15,12 +15,13 @@ var is_in_office : bool = true
 func _ready() -> void:
 	office_environement = load("res://Assets/Environements/office_environement.tres")
 	demon_environement = load("res://Assets/Environements/demon_world_environement.tres")
-	if starting_elevator:
-		var player_global_position =  SceneManager.data["relative_position"] + starting_elevator.global_position
-		add_child(Globals.player)
-		Globals.player.global_position = player_global_position
 	add_child(world_environement)
 	enable_office()
+	if starting_elevator:
+		add_child(Globals.player)
+		Globals.player.global_position = starting_elevator.to_global(SceneManager.data["relative_position"])
+		Globals.player.visual.global_transform = starting_elevator.global_transform * SceneManager.data["relative_transform"]
+		starting_elevator.open_door()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("swap"):
@@ -28,7 +29,6 @@ func _input(event: InputEvent) -> void:
 			enable_demon_world()
 		else:
 			enable_office()
-			
 
 func enable_demon_world():
 	is_in_office = false
