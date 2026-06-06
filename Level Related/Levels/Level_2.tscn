@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://bnuk4px31uw3r" path="res://Assets/Models/Chair.glb" id="15_nm314"]
 [ext_resource type="PackedScene" uid="uid://df53px8wikefi" path="res://Assets/Models/RoundTable.glb" id="16_5pnab"]
 [ext_resource type="PackedScene" uid="uid://sjjsnvc2qxta" path="res://Assets/Models/ChairBlack.glb" id="17_xgyl0"]
+[ext_resource type="PackedScene" uid="uid://fg0lwc4s3333" path="res://Assets/Models/Fence.glb" id="18_5pnab"]
+[ext_resource type="PackedScene" uid="uid://cv4v53b5s01gv" path="res://Assets/Models/Wall.glb" id="19_xgyl0"]
 
 [node name="Level" type="Node3D" unique_id=765839663 node_paths=PackedStringArray("office", "demon_world")]
 script = ExtResource("1_pobmy")
@@ -129,3 +131,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7643822, 0.0025222301, -3.6
 
 [node name="ChairBlack2" parent="." unique_id=1055477614 instance=ExtResource("17_xgyl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4499935, 0.0025219917, -4.088192)
+
+[node name="Fence2" parent="." unique_id=435255571 instance=ExtResource("18_5pnab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8739328, 0.0025224686, -2.9597697)
+
+[node name="Wall2" parent="." unique_id=1915109803 instance=ExtResource("19_xgyl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0785615, 0.0025223494, -4.420994)
