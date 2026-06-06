@@ -3,14 +3,16 @@
 [ext_resource type="Script" uid="uid://cihj0g25mid0x" path="res://Items/chair.gd" id="1_qge2a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vlwnb"]
+size = Vector3(0.47485352, 0.5375366, 0.5058594)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qge2a"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [node name="Chair" type="RigidBody3D" unique_id=785926221]
 script = ExtResource("1_qge2a")
-health = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1595306755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014038086, -0.008148193, -0.01171875)
 shape = SubResource("BoxShape3D_vlwnb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2120377864]
