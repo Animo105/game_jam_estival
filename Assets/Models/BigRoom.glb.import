@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bjdrsn4ni6v2j"
-path="res://.godot/imported/Light.glb-612cee01becc4a9c4d15e9f23e32749c.scn"
+uid="uid://biekqwwd8jjuk"
+path="res://.godot/imported/BigRoom.glb-ae13246bdae3287f3ea9babb936a3f9c.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Light.glb"
-dest_files=["res://.godot/imported/Light.glb-612cee01becc4a9c4d15e9f23e32749c.scn"]
+source_file="res://Assets/Models/BigRoom.glb"
+dest_files=["res://.godot/imported/BigRoom.glb-ae13246bdae3287f3ea9babb936a3f9c.scn"]
 
 [params]
 

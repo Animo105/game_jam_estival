@@ -1,5 +1,23 @@
 [gd_scene format=3 uid="uid://dm71ftrysxdp7"]
 
+[ext_resource type="Script" uid="uid://c4dwvaralgvum" path="res://MainMenu/main_menu.gd" id="1_nhkf3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhkf3"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.13174233, 0.13174233, 0.1317423, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
 [node name="MainMenu" type="Control" unique_id=883914609]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nhkf3")
 
 [node name="Label" type="Label" parent="." unique_id=1691564267]
 layout_mode = 1
@@ -38,15 +57,155 @@ grow_vertical = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1616530188]
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=1616530188]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Jouer"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=850338673]
+[node name="Aide" type="Button" parent="VBoxContainer" unique_id=850338673]
 layout_mode = 2
-text = "Aide"
+text = "Comment jouer"
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1222535730]
+[node name="Quitter" type="Button" parent="VBoxContainer" unique_id=1222535730]
 layout_mode = 2
 text = "Quitter"
+
+[node name="CommentJouer" type="MarginContainer" parent="." unique_id=584732230]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 64
+
+[node name="PanelContainer" type="PanelContainer" parent="CommentJouer" unique_id=1984227872]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nhkf3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CommentJouer/PanelContainer" unique_id=1686368979]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=1418457656]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=875989873]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Se déplacer"
+
+[node name="Label2" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1553811124]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = "W,A,S,D"
+
+[node name="HSeparator3" type="HSeparator" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=1585048072]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=803809231]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=1192740450]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Sauter"
+
+[node name="Label2" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=936706015]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = "Espace"
+
+[node name="HSeparator" type="HSeparator" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=536762567]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=576859588]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1252998638]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Prendre un objet"
+
+[node name="Label2" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=819853402]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = "Clic gauche"
+
+[node name="HSeparator5" type="HSeparator" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=1691733560]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=1163454489]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer5" unique_id=1176460017]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Lancer un objet"
+
+[node name="Label2" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer5" unique_id=1737104530]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = "Clic droit"
+
+[node name="HSeparator2" type="HSeparator" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=891142622]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=1162671424]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=166709524]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Lâcher un objet"
+
+[node name="Label2" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=611327258]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = "Q"
+
+[node name="HSeparator4" type="HSeparator" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=118886126]
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="CommentJouer/PanelContainer/VBoxContainer" unique_id=251988965]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer6" unique_id=350131317]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Basculer dans l'autre monde"
+
+[node name="Label2" type="Label" parent="CommentJouer/PanelContainer/VBoxContainer/HBoxContainer6" unique_id=2125406784]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = "E"
+
+[node name="Control" type="Control" parent="CommentJouer" unique_id=636098869]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="QuitHelpPanel" type="Button" parent="CommentJouer/Control" unique_id=543460660]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.018000001
+offset_left = -5.0
+offset_top = -47.0
+offset_right = 47.567993
+offset_bottom = 6.0
+theme_override_font_sizes/font_size = 32
+text = "X"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Aide" to="." method="_on_aide_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="CommentJouer/Control/QuitHelpPanel" to="." method="_on_quit_help_panel_pressed"]
