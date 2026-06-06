@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cu4txx2qm0h21"]
+
+[ext_resource type="Script" uid="uid://c1gychmh2ni5" path="res://Enemy/enemy.gd" id="1_lps4e"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_58vub"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lps4e"]
+
+[node name="Enemy" type="CharacterBody3D" unique_id=2135443486]
+script = ExtResource("1_lps4e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1926648313]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_58vub")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=791189044]
+shape = SubResource("CapsuleShape3D_lps4e")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=365550943]
+target_desired_distance = 1.4
