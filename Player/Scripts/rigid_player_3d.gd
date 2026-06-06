@@ -1,4 +1,5 @@
 extends RigidBody3D
+class_name Player
 
 const MOUSE_SENSITIVITY : float = 0.2
 
@@ -18,6 +19,9 @@ const JUMP_VELOCITY : float = 6.0
 
 var is_grounded : bool = false
 var inputs : PlayerInput = PlayerInput.new()
+
+func _ready() -> void:
+	Globals.player = self
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):

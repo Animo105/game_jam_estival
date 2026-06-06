@@ -5,8 +5,11 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_58vub"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lps4e"]
+radius = 0.37109375
+height = 1.4140625
 
 [node name="Enemy" type="RigidBody3D" unique_id=378903687]
+max_contacts_reported = 5
 script = ExtResource("1_lps4e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1926648313]
@@ -14,6 +17,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_58vub")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=791189044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0078125, 0)
 shape = SubResource("CapsuleShape3D_lps4e")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=365550943]

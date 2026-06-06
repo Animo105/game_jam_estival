@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	check_for_pickup()
-	check_for_drop()
+	check_for_item_action()
 
 func check_for_pickup():
 	if item_picked_up: return
@@ -29,17 +29,23 @@ func pickup(basic_item : BasicItem):
 		hands.set_item_texture(basic_item.texture_in_ui)
 	SignalBus.item_picked_up.emit()
 
-func check_for_drop():
+func check_for_item_action():
 	if not item_picked_up: return
 	if Input.is_action_just_pressed("drop"):
 		drop_item()
+	elif Input.is_action_just_pressed("right_click"):
+		throw_item()
 
 func drop_item():
 	if not item_picked_up: return
-	var forward : Vector3 = -global_basis.z
-	forward.y = 0
-	if item_picked_up.drop_at(global_position, forward):
+	if item_picked_up.drop_at(global_position, -global_basis.z):
 		item_picked_up = null
 	else:
 		print("ho, ho... problems!")
-		
+
+func throw_item():
+	if not item_picked_up: return
+	if item_picked_up.throw(global_position, -global_basis.z):
+		item_picked_up = null
+	else:
+		print("ho, ho... problems!")

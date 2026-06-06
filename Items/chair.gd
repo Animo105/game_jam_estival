@@ -2,10 +2,23 @@ extends BasicItem
 
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 
+var exclude_list : Array[Node3D]
+
+func collision_while_thrown(node : Node3D):
+	if not node is BasicEnemy: return
+	if exclude_list.has(node) : return
+	health -= 1
+	node.hit(linear_velocity, damage)
+	exclude_list.append(node)
+	print(health)
+	if health <= 0:
+		queue_free()
+
 func drop_at(camera_coords : Vector3, forward_direction : Vector3) -> bool:
 	freeze = true
 	Globals.active_object_scene.add_child(self)
-	global_position = camera_coords + forward_direction * 0.7
+	forward_direction.y = 0
+	global_position = camera_coords + forward_direction * 1
 	angular_velocity = Vector3.ZERO
 	linear_velocity = Vector3.ZERO
 	global_transform.basis = Basis.IDENTITY
@@ -13,5 +26,11 @@ func drop_at(camera_coords : Vector3, forward_direction : Vector3) -> bool:
 		get_parent().remove_child(self)
 		return false
 	freeze = false
+	state = States.NORMAL
 	return true
-	
+
+func throw(camera_coods : Vector3, forward_direction : Vector3) -> bool:
+	if not drop_at(camera_coods, forward_direction): return false
+	apply_impulse(forward_direction * 10)
+	state = States.THROWN
+	return true

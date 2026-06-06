@@ -92,6 +92,21 @@ shape = SubResource("ConcavePolygonShape3D_snyfs")
 [node name="Chair" parent="Office" unique_id=785926221 instance=ExtResource("3_tlwt5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6820712, 0.9050214, 0)
 
+[node name="Chair2" parent="Office" unique_id=433421719 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6820712, 0.9050214, -0.6436064)
+
+[node name="Chair3" parent="Office" unique_id=278909414 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6820712, 0.9050214, -1.2343341)
+
+[node name="Chair4" parent="Office" unique_id=1792290058 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6820712, 0.9050214, -2.234334)
+
+[node name="Chair5" parent="Office" unique_id=2056758851 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6820712, 0.9050214, -1.7420385)
+
+[node name="Chair6" parent="Office" unique_id=1569422427 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6820712, 0.9050214, 0.6252477)
+
 [node name="DemonWorld" type="Node3D" parent="." unique_id=1640773339]
 
 [node name="Enemy" type="RigidBody3D" parent="DemonWorld" unique_id=598551495]
@@ -103,7 +118,6 @@ physics_material_override = SubResource("PhysicsMaterial_aqk2v")
 gravity_scale = 2.0
 linear_damp = 3.0
 script = ExtResource("4_aqk2v")
-player_path = NodePath("../../RigidPlayer3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="DemonWorld/Enemy" unique_id=1926648313]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
