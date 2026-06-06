@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dt2r0e5g52ltl"]
+
+[ext_resource type="Texture2D" uid="uid://cuicioifsocvn" path="res://Assets/particleblood.png" id="1_ngy4w"]
+
+[sub_resource type="Gradient" id="Gradient_jrx62"]
+colors = PackedColorArray(0.5111483, 1.8770993e-06, 0, 1, 0.99999994, 0.1835837, 0.12355625, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4f2bi"]
+gradient = SubResource("Gradient_jrx62")
+
+[sub_resource type="Gradient" id="Gradient_ngy4w"]
+offsets = PackedFloat32Array(0.70261437, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jrx62"]
+gradient = SubResource("Gradient_ngy4w")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1pn8j"]
+lifetime_randomness = 0.28
+angle_min = -360.0
+angle_max = 360.00003
+spread = 30.0
+initial_velocity_min = -10.0
+initial_velocity_max = 10.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 86.51998
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_jrx62")
+color_initial_ramp = SubResource("GradientTexture1D_4f2bi")
+anim_speed_max = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ngy4w"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_ngy4w")
+billboard_mode = 3
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_jrx62"]
+material = SubResource("StandardMaterial3D_ngy4w")
+
+[node name="BloodGPUParticles3D" type="GPUParticles3D" unique_id=1873290126]
+amount = 120
+amount_ratio = 0.82
+lifetime = 0.7
+explosiveness = 0.82
+process_material = SubResource("ParticleProcessMaterial_1pn8j")
+draw_pass_1 = SubResource("QuadMesh_jrx62")
