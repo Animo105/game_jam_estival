@@ -31,6 +31,7 @@ func drop_at(camera_coords : Vector3, forward_direction : Vector3) -> bool:
 
 func throw(camera_coods : Vector3, forward_direction : Vector3) -> bool:
 	if not drop_at(camera_coods, forward_direction): return false
+	exclude_list.clear()
 	apply_impulse(forward_direction * 10)
 	state = States.THROWN
 	return true
