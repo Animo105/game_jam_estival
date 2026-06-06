@@ -1,28 +1,30 @@
 [gd_scene format=3 uid="uid://cu4txx2qm0h21"]
 
 [ext_resource type="Script" uid="uid://dhtk5xy0m2idv" path="res://Enemy/demon_enemy.gd" id="1_px1sc"]
-[ext_resource type="Texture2D" uid="uid://bwybilfnk5g50" path="res://Assets/capybara-square-1.jpg.optimal.jpg" id="2_px1sc"]
+[ext_resource type="Texture2D" uid="uid://brhp2djwnvxtm" path="res://Assets/Enemies/DemonGameJamEstival2026 (Custom).png" id="2_px1sc"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lps4e"]
-radius = 0.37109375
-height = 1.4140625
+[sub_resource type="BoxShape3D" id="BoxShape3D_px1sc"]
+size = Vector3(0.61120605, 1.0190749, 0.2952423)
 
 [node name="Enemy" type="RigidBody3D" unique_id=378903687]
+collision_layer = 4
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 max_contacts_reported = 5
 script = ExtResource("1_px1sc")
 speed = 2.0
-stop_distance = 0.5
+stop_distance = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=791189044]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0078125, 0)
-shape = SubResource("CapsuleShape3D_lps4e")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010681152, 0.28982502, -0.0414505)
+shape = SubResource("BoxShape3D_px1sc")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=365550943]
-target_desired_distance = 1.4
+target_desired_distance = 0.1
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1397648398]
-transform = Transform3D(0.08, 0, 0, 0, 0.15, 0, 0, 0, 0.2, 0, -0.059722453, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.27792498, 0)
 texture = ExtResource("2_px1sc")
+hframes = 2
+vframes = 2
