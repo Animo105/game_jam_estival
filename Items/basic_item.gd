@@ -20,11 +20,6 @@ func _physics_process(_delta: float) -> void:
 	if linear_velocity.length() < 0.5 :
 		state = States.NORMAL
 
-
-@warning_ignore("unused_parameter")
-func collision_while_thrown(node : Node3D):
-	pass
-
 func can_place() -> bool:
 	var space_state : PhysicsDirectSpaceState3D = Globals.active_object_scene.get_world_3d().direct_space_state
 	var collision : CollisionShape3D = $CollisionShape3D
@@ -48,3 +43,11 @@ func drop_at(camera_coords : Vector3, forward_direction : Vector3) -> bool:
 @warning_ignore("unused_parameter")
 func throw(camera_coods : Vector3, forward_direction : Vector3) -> bool:
 	return false
+
+@warning_ignore("unused_parameter")
+func use(camera_coords : Vector3, forward_direction : Vector3):
+	pass
+
+@warning_ignore("unused_parameter")
+func collision_while_thrown(node : Node3D):
+	pass

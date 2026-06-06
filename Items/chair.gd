@@ -14,14 +14,20 @@ func collision_while_thrown(node : Node3D):
 	if health <= 0:
 		queue_free()
 
+func use(camera_coords : Vector3, forward_direction : Vector3):
+	pass
+
+func reset():
+	angular_velocity = Vector3.ZERO
+	linear_velocity = Vector3.ZERO
+	global_transform.basis = Basis.IDENTITY
+
 func drop_at(camera_coords : Vector3, forward_direction : Vector3) -> bool:
 	freeze = true
 	Globals.active_object_scene.add_child(self)
 	forward_direction.y = 0
 	global_position = camera_coords + forward_direction * 1
-	angular_velocity = Vector3.ZERO
-	linear_velocity = Vector3.ZERO
-	global_transform.basis = Basis.IDENTITY
+	reset()
 	if not can_place() :
 		get_parent().remove_child(self)
 		return false

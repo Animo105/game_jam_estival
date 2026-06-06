@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dfg1tit83sxga"]
 
 [ext_resource type="Script" uid="uid://cihj0g25mid0x" path="res://Items/chair.gd" id="1_qge2a"]
-[ext_resource type="Texture2D" uid="uid://du8msloshx12t" path="res://Assets/hands/chair.png" id="2_kyc31"]
+[ext_resource type="Texture2D" uid="uid://du8msloshx12t" path="res://Assets/Hands/chair.png" id="2_kyc31"]
 [ext_resource type="Texture2D" uid="uid://dfhehgwk0ec04" path="res://Assets/Items/Chair(2)_Orange.jpg" id="3_2lb1x"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6lhv0"]
@@ -113,6 +113,7 @@ collision_mask = 3
 mass = 3.0
 script = ExtResource("1_qge2a")
 health = 3
+damage = 2
 texture_in_ui = ExtResource("2_kyc31")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1926357823]

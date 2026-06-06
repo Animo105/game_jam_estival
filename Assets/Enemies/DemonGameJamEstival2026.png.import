@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ygxynmnd8fne"
-path="res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"
+uid="uid://ckq6qbodnn4yx"
+path="res://.godot/imported/DemonGameJamEstival2026.png-0da4f890c4d5474c6b0549d93912fc88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/pick.png"
-dest_files=["res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"]
+source_file="res://Assets/Enemies/DemonGameJamEstival2026.png"
+dest_files=["res://.godot/imported/DemonGameJamEstival2026.png-0da4f890c4d5474c6b0549d93912fc88.ctex"]
 
 [params]
 

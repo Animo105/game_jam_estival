@@ -35,6 +35,8 @@ func check_for_item_action():
 		drop_item()
 	elif Input.is_action_just_pressed("right_click"):
 		throw_item()
+	elif Input.is_action_just_pressed("left_click"):
+		use_item()
 
 func drop_item():
 	if not item_picked_up: return
@@ -42,6 +44,10 @@ func drop_item():
 		item_picked_up = null
 	else:
 		print("ho, ho... problems!")
+
+func use_item():
+	if not item_picked_up: return
+	item_picked_up.use(global_position, -global_basis.z)
 
 func throw_item():
 	if not item_picked_up: return

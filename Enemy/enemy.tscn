@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://cu4txx2qm0h21"]
 
-[ext_resource type="Script" uid="uid://c1gychmh2ni5" path="res://Enemy/enemy.gd" id="1_lps4e"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_58vub"]
+[ext_resource type="Script" uid="uid://dhtk5xy0m2idv" path="res://Enemy/demon_enemy.gd" id="1_px1sc"]
+[ext_resource type="Texture2D" uid="uid://bwybilfnk5g50" path="res://Assets/capybara-square-1.jpg.optimal.jpg" id="2_px1sc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lps4e"]
 radius = 0.37109375
 height = 1.4140625
 
 [node name="Enemy" type="RigidBody3D" unique_id=378903687]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
 max_contacts_reported = 5
-script = ExtResource("1_lps4e")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1926648313]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_58vub")
+script = ExtResource("1_px1sc")
+speed = 2.0
+stop_distance = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=791189044]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0078125, 0)
@@ -22,3 +22,7 @@ shape = SubResource("CapsuleShape3D_lps4e")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=365550943]
 target_desired_distance = 1.4
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1397648398]
+transform = Transform3D(0.08, 0, 0, 0, 0.15, 0, 0, 0, 0.2, 0, -0.059722453, 0)
+texture = ExtResource("2_px1sc")
