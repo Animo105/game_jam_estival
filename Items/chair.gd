@@ -1,6 +1,7 @@
 extends BasicItem
 
 @export var range : Vector3 = Vector3.ZERO
+const PUSH_FORCE : int = 5
 
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 
@@ -12,7 +13,6 @@ func collision_while_thrown(node : Node3D):
 	health -= 1
 	node.hit(linear_velocity, damage)
 	exclude_list.append(node)
-	print(health)
 	if health <= 0:
 		queue_free()
 
@@ -20,7 +20,6 @@ func use(_camera_coords : Vector3, forward_direction : Vector3):
 	var bodies := Globals.player.get_bodies_in_melee_range(range)
 	for body in bodies:
 		if body is BasicEnemy:
-			print("hit")
 			body.hit(forward_direction, damage)
 		if body is BasicItem:
 			linear_velocity += forward_direction
