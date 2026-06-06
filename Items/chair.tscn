@@ -109,9 +109,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3kr2e")
 
 [node name="Chair" type="RigidBody3D" unique_id=785926221]
-collision_mask = 3
+collision_mask = 5
 mass = 3.0
 script = ExtResource("1_qge2a")
+range = Vector3(0.8, 0.5, 2)
 health = 3
 damage = 2
 texture_in_ui = ExtResource("2_kyc31")

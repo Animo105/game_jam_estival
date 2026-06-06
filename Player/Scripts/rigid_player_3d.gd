@@ -16,6 +16,8 @@ const JUMP_VELOCITY : float = 6.0
 @onready var neck: Node3D = $Visual/Neck
 @onready var camera: Camera3D = $Visual/Neck/Camera
 @onready var feet_ray_cast: RayCast3D = $FeetRayCast
+@onready var melee_area: Area3D = $Visual/MeleeArea
+@onready var range_collision_shape: CollisionShape3D = $Visual/MeleeArea/CollisionShape3D
 
 var is_grounded : bool = false
 var inputs : PlayerInput = PlayerInput.new()
@@ -54,6 +56,11 @@ func handle_movement(speed : float = DEFAULT_SPEED, acceleration : float = DEFAU
 		linear_velocity.x = move_toward(linear_velocity.x, 0, deceleration)
 		linear_velocity.z = move_toward(linear_velocity.z, 0, deceleration)
 
+func get_bodies_in_melee_range(melee_range : Vector3) -> Array[Node3D]:
+	range_collision_shape.shape.size = melee_range
+	range_collision_shape.position.z = -melee_range.z
+	return melee_area.get_overlapping_bodies()
+
 func handle_dash():
 	if inputs.is_dash_just_pressed():
 		var input_dir : Vector2 = inputs.get_vector()
@@ -76,3 +83,7 @@ func handle_jumping():
 
 func jump():
 	linear_velocity.y = JUMP_VELOCITY
+
+
+func _on_melee_area_body_entered(body: Node3D) -> void:
+	print("enter")

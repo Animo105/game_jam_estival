@@ -10,7 +10,11 @@ friction = 0.1
 radius = 0.15
 height = 1.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_67wvr"]
+size = Vector3(1, 1, 2)
+
 [node name="RigidPlayer3D" type="RigidBody3D" unique_id=233515060]
+collision_layer = 2
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
@@ -34,3 +38,14 @@ target_position = Vector3(0, -0.2, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 
 [node name="Camera" parent="Visual/Neck" unique_id=524318236 instance=ExtResource("2_67wvr")]
+
+[node name="MeleeArea" type="Area3D" parent="Visual" unique_id=1626863896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Visual/MeleeArea" unique_id=1292027009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_67wvr")
+
+[connection signal="body_entered" from="Visual/MeleeArea" to="." method="_on_melee_area_body_entered"]
