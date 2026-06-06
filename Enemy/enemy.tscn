@@ -19,7 +19,6 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 max_contacts_reported = 5
 script = ExtResource("1_px1sc")
-max_health = 100
 speed = 4.5
 stop_distance = 0.0
 

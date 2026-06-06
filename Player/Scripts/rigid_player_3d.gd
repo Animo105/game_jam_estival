@@ -49,6 +49,7 @@ func _physics_process(_delta: float) -> void:
 func handle_movement(speed : float = DEFAULT_SPEED, acceleration : float = DEFAULT_ACCELERATION, deceleration : float = DEFAULT_DECELERATION)->void:
 	var input_dir : Vector2 = inputs.get_vector()
 	var direction : Vector3 = (visual.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
 	if direction:
 		linear_velocity.x = move_toward(linear_velocity.x, direction.x * speed, acceleration)
 		linear_velocity.z = move_toward(linear_velocity.z, direction.z * speed, acceleration)
@@ -63,6 +64,7 @@ func get_bodies_in_melee_range(melee_range : Vector3) -> Array[Node3D]:
 	return melee_area.get_overlapping_bodies()
 
 func handle_dash():
+	if not is_grounded: return
 	if inputs.is_dash_just_pressed():
 		var input_dir : Vector2 = inputs.get_vector()
 		var camera_direction : Vector3 = -camera.global_transform.basis.z
