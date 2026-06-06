@@ -59,6 +59,7 @@ func handle_movement(speed : float = DEFAULT_SPEED, acceleration : float = DEFAU
 func get_bodies_in_melee_range(melee_range : Vector3) -> Array[Node3D]:
 	range_collision_shape.shape.size = melee_range
 	range_collision_shape.position.z = -melee_range.z/2
+	await get_tree().physics_frame
 	return melee_area.get_overlapping_bodies()
 
 func handle_dash():
