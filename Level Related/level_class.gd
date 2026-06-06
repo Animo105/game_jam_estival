@@ -1,8 +1,8 @@
 extends Node3D
 class_name Level
 
-@export var office_environement : Environment
-@export var demon_environement : Environment
+var office_environement : Environment
+var demon_environement : Environment
 
 @export var office: Node3D
 @export var demon_world: Node3D
@@ -13,6 +13,8 @@ var world_environement : WorldEnvironment = WorldEnvironment.new()
 var is_in_office : bool = true
 
 func _ready() -> void:
+	office_environement = load("res://Assets/Environements/office_environement.tres")
+	demon_environement = load("res://Assets/Environements/demon_world_environement.tres")
 	if starting_elevator:
 		var player_global_position =  SceneManager.data["relative_position"] + starting_elevator.global_position
 		add_child(Globals.player)
