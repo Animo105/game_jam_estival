@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dfg1tit83sxga"]
 
 [ext_resource type="Script" uid="uid://dkkk5utcoerc7" path="res://Items/Scripts/combat_item.gd" id="1_kyc31"]
-[ext_resource type="Texture2D" uid="uid://beinwuxscwfu" path="res://Assets/Hands/chaiseOrange.png" id="2_2lb1x"]
+[ext_resource type="Texture2D" uid="uid://beinwuxscwfu" path="res://Assets/hands/chaiseOrange.png" id="2_2lb1x"]
 [ext_resource type="Texture2D" uid="uid://dfhehgwk0ec04" path="res://Assets/Items/Chair(2)_Orange.jpg" id="3_2lb1x"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kyc31"]

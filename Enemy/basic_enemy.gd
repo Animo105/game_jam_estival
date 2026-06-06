@@ -17,7 +17,7 @@ var state : States = States.CHASSING
 
 var _frame_count : int = 0
 
-func _init() -> void:
+func _ready() -> void:
 	health = max_health
 
 func hit(force : Vector3, damage : int):
@@ -26,6 +26,7 @@ func hit(force : Vector3, damage : int):
 	health -= damage
 	if health < 0:
 		death()
+	print("health"+str(health))
 
 func death():
 	queue_free()
