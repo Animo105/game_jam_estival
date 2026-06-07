@@ -21,6 +21,9 @@ var _frame_count : int = 0
 
 var _timer : Timer = Timer.new()
 
+func _init() -> void:
+	collision_layer = 4
+
 func _ready() -> void:
 	add_child(_timer)
 	health = max_health
@@ -68,16 +71,9 @@ func naviguate():
 	# 2. Vérifier si l'agent a atteint sa cible
 	if nav_agent.is_navigation_finished():
 		linear_velocity = Vector3.ZERO
-		look_at(player.global_position, Vector3.UP)
-		rotation.x = 0
-		rotation.z = 0
 		return
 	# 3. Calculer la direction vers le prochain point du chemin
 	var current_position = global_transform.origin
 	var next_path_position = nav_agent.get_next_path_position()
 	# 4. Calculer et appliquer la vélocité et déplacer l'ennemi
 	linear_velocity = (next_path_position - current_position).normalized() * speed
-	# Optionnel : Faire pivoter l'ennemi vers sa direction de marche
-	if linear_velocity.length() > 0.1:
-		var look_target = Vector3(player.global_position.x, global_transform.origin.y, player.global_position.z)
-		look_at(look_target, Vector3.UP)

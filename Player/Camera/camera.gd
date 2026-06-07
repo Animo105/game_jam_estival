@@ -35,7 +35,7 @@ func check_for_hand_action():
 		if Input.is_action_just_pressed("left_click") && not is_throwing_hands:
 			is_throwing_hands = true
 			throw_hand_ray_cast.get_collider().hit(Vector3.ZERO, 1)
-			hands.play_once_animation(throw_hand_animation, 0.3)
+			hands.play_once_animation(throw_hand_animation, 0.5)
 			await hands.finished_animation
 			is_throwing_hands = false
 	else:

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dpejp70faqtsj"]
+
+[ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_rpwjg"]
+[ext_resource type="PackedScene" uid="uid://biekqwwd8jjuk" path="res://Assets/Models/Static/BigRoom.glb" id="2_85i5q"]
+[ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="2_v4xur"]
+[ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="3_63i6k"]
+[ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="3_pbi3v"]
+[ext_resource type="PackedScene" uid="uid://bjdrsn4ni6v2j" path="res://Assets/Models/Light.glb" id="5_bwd7l"]
+[ext_resource type="PackedScene" uid="uid://284x8rv58kc8" path="res://Enemy/jonny.tscn" id="7_w1m4x"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_w1m4x"]
+vertices = PackedVector3Array(0.2800007, 0.46495038, -6.2199993, 2.2800007, 0.46495038, -6.2199993, 2.2800007, 0.46495038, -10.719999, -0.4699993, 0.46495038, -5.4699993, -11.219999, 0.46495038, -10.719999, -11.219999, 0.46495038, -2.7199993, -0.4699993, 0.46495038, -2.9699993, 4.2800007, 0.46495038, -6.2199993, 5.0300007, 0.46495038, -5.4699993, 11.280001, 0.46495038, -4.2199993, 11.280001, 0.46495038, -10.719999, 5.0300007, 0.46495038, -3.9699993, 4.2800007, 0.46495038, -0.7199993, 2.2800007, 0.46495038, -0.7199993, 2.2800007, 0.46495038, 2.0300007, 4.2800007, 0.46495038, 2.0300007, 5.0300007, 0.46495038, 2.7800007, 5.0300007, 0.46495038, 4.2800007, 11.280001, 0.46495038, 4.0300007, 5.0300007, 0.46495038, -1.4699993, 2.2800007, 0.46495038, 10.030001, 2.2800007, 0.46495038, 7.5300007, 0.5300007, 0.46495038, 7.5300007, 0.5300007, 0.46495038, 2.0300007, 0.2800007, 0.46495038, -0.7199993, -0.21999931, 0.46495038, 6.7800007, -0.21999931, 0.46495038, 2.7800007, -0.4699993, 0.46495038, -1.4699993, -11.219999, 0.46495038, 10.030001, 4.2800007, 0.46495038, 7.5300007, 5.0300007, 0.46495038, 6.7800007, 11.280001, 0.46495038, 10.030001)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 4), PackedInt32Array(4, 3, 5), PackedInt32Array(3, 6, 5), PackedInt32Array(7, 1, 2), PackedInt32Array(7, 2, 8), PackedInt32Array(8, 2, 10), PackedInt32Array(8, 10, 9), PackedInt32Array(9, 11, 8), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(18, 17, 16), PackedInt32Array(12, 19, 15), PackedInt32Array(15, 19, 16), PackedInt32Array(16, 19, 18), PackedInt32Array(18, 19, 9), PackedInt32Array(19, 11, 9), PackedInt32Array(22, 21, 20), PackedInt32Array(14, 23, 13), PackedInt32Array(13, 23, 24), PackedInt32Array(26, 25, 27), PackedInt32Array(27, 25, 5), PackedInt32Array(5, 25, 28), PackedInt32Array(23, 26, 24), PackedInt32Array(24, 26, 27), PackedInt32Array(22, 20, 25), PackedInt32Array(25, 20, 28), PackedInt32Array(5, 6, 27), PackedInt32Array(20, 21, 29), PackedInt32Array(29, 30, 20), PackedInt32Array(20, 30, 31), PackedInt32Array(31, 30, 18), PackedInt32Array(30, 17, 18)]
+agent_height = 1.0
+agent_radius = 0.8
+
+[node name="Level_1" type="Node3D" unique_id=176721035 node_paths=PackedStringArray("office", "demon_world")]
+script = ExtResource("1_rpwjg")
+office = NodePath("Office")
+demon_world = NodePath("Demon")
+metadata/_custom_type_script = "uid://dlbh676178r14"
+
+[node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("2_v4xur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9665031, 0, 0.808949)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1913907508]
+navigation_mesh = SubResource("NavigationMesh_w1m4x")
+
+[node name="Structure" type="Node3D" parent="NavigationRegion3D" unique_id=492704723]
+
+[node name="BigRoom2" parent="NavigationRegion3D/Structure" unique_id=1074359900 instance=ExtResource("2_85i5q")]
+
+[node name="ElevatorArea" parent="NavigationRegion3D/Structure" unique_id=213366012 instance=ExtResource("3_pbi3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2207294, 2.8458166e-07, -3.3917904)
+
+[node name="StartingElevator" parent="NavigationRegion3D/Structure" unique_id=1763282973 instance=ExtResource("3_63i6k")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.408478, -1.922555e-07, 4.701333)
+
+[node name="Light2" parent="NavigationRegion3D/Structure" unique_id=1261968370 instance=ExtResource("5_bwd7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9433575, 0, 0.93330306)
+
+[node name="Office" type="Node3D" parent="." unique_id=1220497806]
+
+[node name="Demon" type="Node3D" parent="." unique_id=681797222]
+
+[node name="Jonny" parent="." unique_id=639036525 instance=ExtResource("7_w1m4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.912368, 0.0041429996, 0.2835078)
+collision_mask = 8

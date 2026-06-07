@@ -13,6 +13,7 @@ var world_environement : WorldEnvironment = WorldEnvironment.new()
 var is_in_office : bool = true
 
 func _ready() -> void:
+	print("loaded_level")
 	SwapManager.enter_office.connect(enable_office)
 	SwapManager.enter_demon_world.connect(enable_demon_world)
 	office_environement = load("res://Assets/Environements/office_environement.tres")

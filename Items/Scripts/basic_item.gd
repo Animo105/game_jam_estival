@@ -17,6 +17,7 @@ var state : States = States.NORMAL
 func _init() -> void:
 	contact_monitor = true
 	max_contacts_reported = 1
+	collision_layer = 8
 	collision_mask = 7
 
 func _physics_process(_delta: float) -> void:
