@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://b4tydq41bvlos" path="res://Assets/Models/HighPlant.glb" id="10_k6sqf"]
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="11_k6sqf"]
 [ext_resource type="PackedScene" uid="uid://bgjqxyt4ptyxy" path="res://Assets/Models/BigTable.glb" id="13_nfyuv"]
-[ext_resource type="PackedScene" uid="uid://el7o3fnep3qo" path="res://Assets/Models/Computer.glb" id="14_4w87f"]
+[ext_resource type="PackedScene" uid="uid://bun0xb5xg07su" path="res://Assets/Models/Computer.glb" id="14_4w87f"]
 [ext_resource type="PackedScene" uid="uid://ccoiyhmb1fhkl" path="res://Assets/Models/Table.glb" id="16_v0747"]
 [ext_resource type="PackedScene" uid="uid://chh2tg7ptv1ur" path="res://Assets/Models/Screen.glb" id="17_b54we"]
 [ext_resource type="PackedScene" uid="uid://doetlgjdpay83" path="res://Assets/Models/Mouse.glb" id="19_hwiih"]

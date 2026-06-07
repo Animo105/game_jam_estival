@@ -1,8 +1,9 @@
 extends TextureRect
 class_name HudHands
 
-@onready var DEFAULT_HANDS_TEXTURE : Texture2D = load("res://Assets/Hands/idle.png")
-@onready var PICKUP_HAND_TEXTURE = load("uid://t82slqdsxqqc")
+@onready var DEFAULT_HANDS_TEXTURE : Texture = load("res://Assets/Hands/idle.png")
+@onready var PICKUP_HAND_TEXTURE : Texture = load("res://Assets/Hands/grabHands.png")
+@onready var FISTS_TEXTURE : Texture = load("res://Assets/Hands/Fist.png")
 
 signal finished_animation
 
@@ -24,14 +25,24 @@ func _process(_delta: float) -> void:
 			texture = animation_frames[animation_index]
 
 func default():
+	if animation_playing: return
 	texture = DEFAULT_HANDS_TEXTURE
 
 func pickup():
+	if animation_playing: return
 	texture = PICKUP_HAND_TEXTURE
 
+func fists():
+	if animation_playing: return
+	texture = FISTS_TEXTURE
+
 func set_item_texture(item_texture : Texture):
-	texture = item_texture
+	if animation_playing:
+		animation_playing = false
+		tween.kill()
+		finished_animation.emit()
 	pickup_texture = item_texture
+	texture = item_texture
 
 func play_once_animation(frames : Array[Texture], time : float = 1) -> void:
 	if tween:
