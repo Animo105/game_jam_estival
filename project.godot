@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://bug2k20qn2hie"
 [autoload]
 
 Globals="*uid://bjlvruyax0c8c"
+Vfx="*uid://ceag1yxg44i8c"
 SignalBus="*uid://b5pn5qs3uaurd"
 SceneManager="*uid://bw2sxibflqgih"
 AudioManager="*uid://nuo2dhgdpwhc"

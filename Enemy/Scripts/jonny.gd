@@ -1,6 +1,7 @@
 extends BasicEnemy
 
-const MAXIMAL_JONNY_RANGE : int = 5
+
+const MAXIMAL_JONNY_RANGE : int = 15
 
 @onready var sexy_mouth: Marker3D = $sexy_mouth
 @onready var fire_cooldown: Timer = $fire_cooldown

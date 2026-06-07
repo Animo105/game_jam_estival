@@ -43,6 +43,7 @@ func on_life_changed(new_amount :int, decreasing :bool) -> void :
 	if !decreasing :
 		return
 	
+	Vfx.play(Vfx.Sound.FIRE, -5)
 	fire.show()
 	timer.start()
 	

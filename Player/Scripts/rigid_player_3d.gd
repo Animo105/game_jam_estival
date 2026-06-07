@@ -14,6 +14,10 @@ const JUMP_VELOCITY : float = 10.0
 
 const STARTING_LIFE : int = 5
 
+# SFX
+var footstep_timer: float = 0.0
+const FOOTSTEP_INTERVAL: float = 0.3
+
 @onready var visual: Node3D = $Visual
 @onready var neck: Node3D = $Visual/Neck
 @onready var camera: Camera3D = $Visual/Neck/Camera
@@ -67,10 +71,23 @@ func _update_camera(mouse_x : float, mouse_y : float):
 	neck.rotate_x(deg_to_rad(mouse_y * MOUSE_SENSITIVITY)) # rotate sur x axis la camera (up/down)
 	neck.rotation.x = clamp(neck.rotation.x, deg_to_rad(-70), deg_to_rad(70)) # clamp la rotation
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	handle_movement()
 	handle_dash()
 	handle_jumping()
+	handle_footsteps(delta)
+
+func handle_footsteps(delta: float) -> void:
+	var horizontal_speed := Vector2(linear_velocity.x, linear_velocity.z).length()
+
+	if is_grounded and horizontal_speed > 1.0:
+		footstep_timer -= delta
+
+		if footstep_timer <= 0.0:
+			Vfx.play(Vfx.Sound.STEP, 23)
+			footstep_timer = FOOTSTEP_INTERVAL
+	else:
+		footstep_timer = 0.0
 
 func handle_movement(speed : float = DEFAULT_SPEED, acceleration : float = DEFAULT_ACCELERATION, deceleration : float = DEFAULT_DECELERATION)->void:
 	var input_dir : Vector2 = inputs.get_vector()
@@ -94,6 +111,7 @@ func handle_dash():
 		if is_grounded: can_dash = true
 		else: return
 	if inputs.is_dash_just_pressed():
+		Vfx.play(Vfx.Sound.DASH)
 		var input_dir : Vector2 = inputs.get_vector()
 		var camera_direction : Vector3 = -camera.global_transform.basis.z
 		var direction : Vector3 = Vector3.ZERO

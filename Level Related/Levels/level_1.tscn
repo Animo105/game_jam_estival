@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bmeggvgxwrt5f"]
+[gd_scene format=3 uid="uid://dpejp70faqtsj"]
 
 [ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_s72ca"]
 [ext_resource type="PackedScene" uid="uid://cehd8wr85cfup" path="res://Items/high_plant.tscn" id="2_0ol6i"]
