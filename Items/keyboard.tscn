@@ -49,7 +49,7 @@ push_force = 3
 melee_range = Vector3(0.6, 0.6, 1)
 melee_animation = Array[Texture]([ExtResource("2_k2ssc")])
 throwable = false
-damage = 6
+damage = 15
 texture_in_ui = ExtResource("3_yi40j")
 metadata/_custom_type_script = "uid://dkkk5utcoerc7"
 

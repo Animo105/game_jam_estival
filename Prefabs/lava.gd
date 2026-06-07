@@ -18,5 +18,5 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	var player = body as Player
 	
 	if player:
-		player.linear_velocity.y += 10.0
+		player.linear_velocity.y += 15.0
 		player.health -= 1

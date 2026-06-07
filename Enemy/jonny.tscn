@@ -15,6 +15,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 gravity_scale = 0.0
 script = ExtResource("1_0f67d")
+max_health = 20
 speed = 2.0
 stop_distance = 0.0
 metadata/_custom_type_script = "uid://c1gychmh2ni5"

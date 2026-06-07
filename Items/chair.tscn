@@ -104,7 +104,7 @@ melee_attack = false
 melee_range = Vector3(0.8, 0.5, 2)
 throw_force = 22
 health = 3
-damage = 4
+damage = 8
 texture_in_ui = ExtResource("2_2lb1x")
 metadata/_custom_type_script = "uid://dkkk5utcoerc7"
 

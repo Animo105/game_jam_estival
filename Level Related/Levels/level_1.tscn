@@ -19,35 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://dqvqavgusd0pd" path="res://Assets/Models/Static/Tv.glb" id="15_k705s"]
 [ext_resource type="PackedScene" uid="uid://c5hugqjkhcp7" path="res://Items/big_table.tscn" id="16_pypdh"]
 [ext_resource type="PackedScene" uid="uid://ccoiyhmb1fhkl" path="res://Assets/Models/Table.glb" id="18_35b1u"]
-[ext_resource type="PackedScene" uid="uid://biekqwwd8jjuk" path="res://Assets/Models/Static/BigRoom.glb" id="20_3trax"]
+[ext_resource type="PackedScene" uid="uid://wyx0u7ij6x2x" path="res://Level Related/Levels/Level_2.tscn" id="20_3qt2t"]
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="20_3xtle"]
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="22_i6bpf"]
-[ext_resource type="PackedScene" uid="uid://bjdrsn4ni6v2j" path="res://Assets/Models/Light.glb" id="22_pkfum"]
-[ext_resource type="PackedScene" uid="uid://df53px8wikefi" path="res://Assets/Models/RoundTable.glb" id="23_ccj0d"]
 [ext_resource type="PackedScene" uid="uid://dghdv0gu0jctx" path="res://Assets/Models/Static/Room.glb" id="24_nbhpf"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="25_onfom"]
 [ext_resource type="PackedScene" uid="uid://dybx4e0t3dq8u" path="res://Assets/Models/Static/HighTable.glb" id="26_76nuw"]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_w1m4x"]
-vertices = PackedVector3Array(0.2800007, 0.46495038, -6.2199993, 2.2800007, 0.46495038, -6.2199993, 2.2800007, 0.46495038, -10.719999, -0.4699993, 0.46495038, -5.4699993, -11.219999, 0.46495038, -10.719999, -11.219999, 0.46495038, -2.7199993, -0.4699993, 0.46495038, -2.9699993, 4.2800007, 0.46495038, -6.2199993, 5.0300007, 0.46495038, -5.4699993, 11.280001, 0.46495038, -4.2199993, 11.280001, 0.46495038, -10.719999, 5.0300007, 0.46495038, -3.9699993, 4.2800007, 0.46495038, -0.7199993, 2.2800007, 0.46495038, -0.7199993, 2.2800007, 0.46495038, 2.0300007, 4.2800007, 0.46495038, 2.0300007, 5.0300007, 0.46495038, 2.7800007, 5.0300007, 0.46495038, 4.2800007, 11.280001, 0.46495038, 4.0300007, 5.0300007, 0.46495038, -1.4699993, 2.2800007, 0.46495038, 10.030001, 2.2800007, 0.46495038, 7.5300007, 0.5300007, 0.46495038, 7.5300007, 0.5300007, 0.46495038, 2.0300007, 0.2800007, 0.46495038, -0.7199993, -0.21999931, 0.46495038, 6.7800007, -0.21999931, 0.46495038, 2.7800007, -0.4699993, 0.46495038, -1.4699993, -11.219999, 0.46495038, 10.030001, 4.2800007, 0.46495038, 7.5300007, 5.0300007, 0.46495038, 6.7800007, 11.280001, 0.46495038, 10.030001)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 4), PackedInt32Array(4, 3, 5), PackedInt32Array(3, 6, 5), PackedInt32Array(7, 1, 2), PackedInt32Array(7, 2, 8), PackedInt32Array(8, 2, 10), PackedInt32Array(8, 10, 9), PackedInt32Array(9, 11, 8), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(18, 17, 16), PackedInt32Array(12, 19, 15), PackedInt32Array(15, 19, 16), PackedInt32Array(16, 19, 18), PackedInt32Array(18, 19, 9), PackedInt32Array(19, 11, 9), PackedInt32Array(22, 21, 20), PackedInt32Array(14, 23, 13), PackedInt32Array(13, 23, 24), PackedInt32Array(26, 25, 27), PackedInt32Array(27, 25, 5), PackedInt32Array(5, 25, 28), PackedInt32Array(23, 26, 24), PackedInt32Array(24, 26, 27), PackedInt32Array(22, 20, 25), PackedInt32Array(25, 20, 28), PackedInt32Array(5, 6, 27), PackedInt32Array(20, 21, 29), PackedInt32Array(29, 30, 20), PackedInt32Array(20, 30, 31), PackedInt32Array(31, 30, 18), PackedInt32Array(30, 17, 18)]
-agent_height = 1.0
-agent_radius = 0.8
-
-[sub_resource type="PackedScene" id="PackedScene_l4ejg"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array()],
-"names": PackedStringArray("Level_1", "Node3D", "script", "office", "demon_world", "metadata/_custom_type_script", "RigidPlayer3D", "transform", "NavigationRegion3D", "NavigationRegion3D", "navigation_mesh", "Structure", "Node3D", "BigRoom2", "ElevatorArea", "transform", "StartingElevator", "transform", "Light2", "transform", "RoundTable2", "transform", "RoundTable3", "transform", "RoundTable4", "transform", "RoundTable5", "transform", "RoundTable6", "transform", "RoundTable7", "transform", "Table2", "transform", "Table3", "transform", "Office", "Node3D", "Demon", "Node3D", "Jonny", "transform", "collision_mask"),
-"node_count": 19,
-"node_ids": PackedInt32Array(176721035, 233515060, 1913907508, 492704723, 1074359900, 213366012, 1763282973, 1261968370, 1173995218, 181714565, 569472315, 2139992921, 90557491, 188314240, 523641455, 2141024020, 1220497806, 681797222, 639036525),
-"node_paths": [NodePath("."), NodePath("."), NodePath("./NavigationRegion3D"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("./NavigationRegion3D/Structure"), NodePath("."), NodePath("."), NodePath(".")],
-"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 4, 2, 0, 1073741827, 1, 1073741828, 2, 5, 3, 0, 1073741824, 0, 2147483647, 6, 4, 1, 7, 5, 0, 1073741825, 0, 9, 8, -1, 1, 10, 6, 0, 1073741826, 0, 12, 11, -1, 0, 0, 1073741827, 0, 2147483647, 13, 7, 0, 0, 1073741828, 0, 2147483647, 14, 8, 1, 15, 9, 0, 1073741829, 0, 2147483647, 16, 10, 1, 17, 11, 0, 1073741830, 0, 2147483647, 18, 12, 1, 19, 13, 0, 1073741831, 0, 2147483647, 20, 14, 1, 21, 15, 0, 1073741832, 0, 2147483647, 22, 16, 1, 23, 17, 0, 1073741833, 0, 2147483647, 24, 18, 1, 25, 19, 0, 1073741834, 0, 2147483647, 26, 20, 1, 27, 21, 0, 1073741835, 0, 2147483647, 28, 22, 1, 29, 23, 0, 1073741836, 0, 2147483647, 30, 24, 1, 31, 25, 0, 1073741837, 0, 2147483647, 32, 26, 1, 33, 27, 0, 1073741838, 0, 2147483647, 34, 28, 1, 35, 29, 0, 1073741839, 0, 37, 36, -1, 0, 0, 1073741840, 0, 39, 38, -1, 0, 0, 1073741841, 0, 2147483647, 40, 30, 2, 41, 31, 42, 32, 0),
-"variants": [ExtResource("1_s72ca"), NodePath("Office"), NodePath("Demon"), "uid://dlbh676178r14", ExtResource("13_5ff7v"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9665031, 0, 0.808949), SubResource("NavigationMesh_w1m4x"), ExtResource("20_3trax"), ExtResource("20_3xtle"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2207294, 2.8458166e-07, -11.86357), ExtResource("22_i6bpf"), Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.408478, -1.922555e-07, 10.733988), ExtResource("22_pkfum"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9433575, 0, 0.93330306), ExtResource("23_ccj0d"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6465282, 0, 0.18941307), ExtResource("23_ccj0d"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.171072, -2.3841858e-07, 2.3412592), ExtResource("23_ccj0d"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7421825, 0, -1.8181973), ExtResource("23_ccj0d"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7553596, 0, 1.8537588), ExtResource("23_ccj0d"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6913004, 0, -0.49523878), ExtResource("23_ccj0d"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3367643, -2.3841858e-07, -2.6601458), ExtResource("18_35b1u"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.949285, 0, 5.581127), ExtResource("18_35b1u"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4749928, 0, 5.4672165), ExtResource("11_ddhk5"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.912368, 0.0041429996, 0.2835078), 8],
-"version": 3
-}
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_t2mk1"]
 vertices = PackedVector3Array(0.32858515, 1.2, 2.3285851, 0.32858515, 1.2, 3.0785851, 0.82858515, 1.2, 3.0785851, 1.3285851, 1.2, 1.8285851, 0.82858515, 1.2, 1.8285851, 0.82858515, 1.2, 0.32858515, 4.578585, 1.2, 1.8285851, 4.578585, 1.2, -3.9214149, 0.82858515, 1.2, -2.9214149, 0.82858515, 1.2, -3.9214149, -0.42141485, 1.2, -2.4214149, -0.42141485, 1.2, -0.17141485, -1.1714149, 1.2, 2.3285851, -1.4214149, 1.2, 3.0785851, -4.421415, 1.2, 3.8285851, -1.9214149, 1.2, 3.8285851, -1.6714149, 1.2, 1.8285851, -1.6714149, 1.2, 0.32858515, -4.421415, 1.2, -2.6714149)
@@ -568,7 +545,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.05
 
 [node name="ElevatorArea" parent="." unique_id=213366012 instance=ExtResource("20_3xtle")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.077, 0, -5.251)
-next_floor = SubResource("PackedScene_l4ejg")
+next_floor = ExtResource("20_3qt2t")
 enemies_to_kill = 1
 
 [node name="StartingElevator" parent="." unique_id=1763282973 instance=ExtResource("22_i6bpf")]
@@ -604,3 +581,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7234378, -0.55113816, -4.0
 height = 4.0
 vertices = PackedVector3Array(1.8003666, 0, 0.47468305, -2.3118877, 0, 0.5183995, -2.4780097, 0, -0.98252964, 1.9752319, 0, -0.8776107)
 affect_navigation_mesh = true
+
+[node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("13_5ff7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.595724, 0.43214577, -1.7540455)
