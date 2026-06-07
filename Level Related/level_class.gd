@@ -8,6 +8,7 @@ var demon_environement : Environment
 @export var demon_world: Node3D
 
 @export var starting_elevator : StartingElevator
+@export var do_swap_timer : bool = true
 
 var world_environement : WorldEnvironment = WorldEnvironment.new()
 var is_in_office : bool = true
@@ -25,7 +26,8 @@ func _ready() -> void:
 		player.global_position = starting_elevator.to_global(SceneManager.data["relative_position"])
 		player.visual.global_transform = starting_elevator.global_transform * SceneManager.data["relative_transform"]
 		player.set_position_for_reset()
-		starting_elevator.open_door()
+		await starting_elevator.open_door()
+	SwapManager.restart_timer(do_swap_timer)
 
 func enable_demon_world():
 	is_in_office = false

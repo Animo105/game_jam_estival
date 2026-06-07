@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cb223rrpovmeu"]
+
+[ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_2fwj5"]
+[ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="2_vrv4r"]
+[ext_resource type="PackedScene" uid="uid://dghdv0gu0jctx" path="res://Assets/Models/Static/Room.glb" id="3_qbdc1"]
+
+[node name="Level" type="Node3D" unique_id=1272493495 node_paths=PackedStringArray("office", "demon_world", "starting_elevator")]
+script = ExtResource("1_2fwj5")
+office = NodePath("Office")
+demon_world = NodePath("Demon")
+starting_elevator = NodePath("StartingElevator")
+do_swap_timer = false
+metadata/_custom_type_script = "uid://dlbh676178r14"
+
+[node name="StartingElevator" parent="." unique_id=1763282973 instance=ExtResource("2_vrv4r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.0226607)
+
+[node name="Structure" type="Node3D" parent="." unique_id=1716488355]
+
+[node name="Room2" parent="Structure" unique_id=2059312010 instance=ExtResource("3_qbdc1")]
+
+[node name="Office" type="Node3D" parent="." unique_id=282849895]
+
+[node name="Demon" type="Node3D" parent="." unique_id=450848660]
+
+[node name="Label3D" type="Label3D" parent="." unique_id=706615303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0626341, 2.9521766)
+double_sided = false
+text = "Tu est monter tout en haut de la tour!
+Bravo pour la promotion!"
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=1074150805]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.0626341, 2.9521766)
+double_sided = false
+text = "Tu est monter tout en haut de la tour!
+Bravo pour la promotion!"

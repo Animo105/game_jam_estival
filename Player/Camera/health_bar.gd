@@ -16,12 +16,13 @@ func _ready() -> void:
 	SignalBus.start_player_health_gain.connect(on_start_health_gain)
 	progress_bar.max_value = Player.STARTING_LIFE
 	progress_bar.value = 5
+	SwapManager.life_gain_timer.timeout.connect(health_timeout)
 
 
 func on_start_health_gain(REGEN_RATE :int, life_gain_timer :Timer) -> void :
+	
 	regen_rate = REGEN_RATE
 	regen_timer = life_gain_timer
-	regen_timer.timeout.connect(health_timeout)
 	regen_bar.value = 0
 	regen_bar.max_value = REGEN_RATE
 

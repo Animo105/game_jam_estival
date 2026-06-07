@@ -39,6 +39,7 @@ agent_height = 1.0
 script = ExtResource("1_4whrn")
 office = NodePath("Office")
 demon_world = NodePath("Daemon")
+do_swap_timer = false
 metadata/_custom_type_script = "uid://dlbh676178r14"
 
 [node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("4_jhcvk")]

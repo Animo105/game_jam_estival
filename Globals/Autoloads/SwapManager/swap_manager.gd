@@ -127,8 +127,8 @@ func lock_in_office():
 	is_in_office = true
 	enter_office.emit()
 
-func restart_timer():
-	set_swap_mode(true)
+func restart_timer(enable_timer : bool):
+	set_swap_mode(enable_timer)
 	swap_to_office()
 	
 
