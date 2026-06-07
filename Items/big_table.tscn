@@ -62,9 +62,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xem18")
 
-[node name="BigTable" type="RigidBody3D" unique_id=1629484651]
-mass = 20.0
-continuous_cd = true
+[node name="BigTable" type="StaticBody3D" unique_id=852459545]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1261753164]
 shape = SubResource("ConvexPolygonShape3D_gf277")

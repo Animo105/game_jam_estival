@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ykgx2u11wanq"]
+
+[ext_resource type="Texture2D" uid="uid://bhx73mwcmnm8n" path="res://Assets/Materials/Lava.png" id="1_nsqen"]
+
+[resource]
+albedo_texture = ExtResource("1_nsqen")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 10.0
+uv1_scale = Vector3(10, 10, 10)

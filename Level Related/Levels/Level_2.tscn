@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://fg0lwc4s3333" path="res://Assets/Models/Static/Fence.glb" id="12_2vipy"]
 [ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="13_rx4ve"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="13_sihpr"]
+[ext_resource type="PackedScene" uid="uid://b1gfwcdldul4k" path="res://Prefabs/lava.tscn" id="13_t2mk1"]
 [ext_resource type="PackedScene" uid="uid://c5hugqjkhcp7" path="res://Items/big_table.tscn" id="14_7nao7"]
 [ext_resource type="PackedScene" uid="uid://yolt7h42j0g1" path="res://Assets/Models/Static/PillarBig.glb" id="14_l2c51"]
 [ext_resource type="PackedScene" uid="uid://ccoiyhmb1fhkl" path="res://Assets/Models/Table.glb" id="14_r4mkb"]
@@ -26,12 +27,23 @@
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="21_mjxqx"]
 [ext_resource type="PackedScene" uid="uid://dpejp70faqtsj" path="res://Level Related/Levels/level_1.tscn" id="21_t2mk1"]
 [ext_resource type="PackedScene" uid="uid://284x8rv58kc8" path="res://Enemy/jonny.tscn" id="25_l2c51"]
+[ext_resource type="Texture2D" uid="uid://c5upvhaaflw1x" path="res://Assets/Materials/HeartContainer.png" id="27_dfw15"]
+[ext_resource type="Texture2D" uid="uid://dqrwrcc8sqisy" path="res://Assets/Materials/Heart.png" id="27_xskrn"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_n37fa"]
 vertices = PackedVector3Array(0.32858515, 1.2, 2.3285851, 0.32858515, 1.2, 3.0785851, 0.82858515, 1.2, 3.0785851, 1.3285851, 1.2, 1.8285851, 0.82858515, 1.2, 1.8285851, 0.82858515, 1.2, 0.32858515, 4.578585, 1.2, 1.8285851, 4.578585, 1.2, -3.9214149, 0.82858515, 1.2, -2.9214149, 0.82858515, 1.2, -3.9214149, -0.42141485, 1.2, -2.4214149, -0.42141485, 1.2, -0.17141485, -1.1714149, 1.2, 2.3285851, -1.4214149, 1.2, 3.0785851, -4.421415, 1.2, 3.8285851, -1.9214149, 1.2, 3.8285851, -1.6714149, 1.2, 1.8285851, -1.6714149, 1.2, 0.32858515, -4.421415, 1.2, -2.6714149)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(3, 5, 6), PackedInt32Array(6, 5, 8), PackedInt32Array(6, 8, 7), PackedInt32Array(8, 9, 7), PackedInt32Array(3, 4, 5), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 5), PackedInt32Array(0, 1, 12), PackedInt32Array(12, 1, 13), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 14), PackedInt32Array(17, 14, 18), PackedInt32Array(12, 13, 16), PackedInt32Array(16, 13, 15), PackedInt32Array(11, 17, 10), PackedInt32Array(10, 17, 18)]
 cell_height = 0.6
 agent_radius = 0.7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfw15"]
+bg_color = Color(18.892157, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.5254902)
+shadow_size = 8
 
 [node name="Level" type="Node3D" unique_id=765839663 node_paths=PackedStringArray("office", "demon_world")]
 script = ExtResource("1_pobmy")
@@ -314,6 +326,15 @@ transform = Transform3D(-0.99701786, 0, -0.077171504, 0, 1, 0, 0.077171504, 0, -
 [node name="Chair6" parent="Office" unique_id=1553342482 instance=ExtResource("3_t0sj4")]
 transform = Transform3D(0.7440901, 0, -0.6680793, 0, 1, 0, 0.6680793, 0, 0.7440901, -3.1845572, 4.7683716e-07, 0.29817426)
 
+[node name="Chair13" parent="Office" unique_id=275051662 instance=ExtResource("3_t0sj4")]
+transform = Transform3D(0.33079433, 0, 0.94370294, 0, 1, 0, -0.94370294, 0, 0.33079433, -0.8971018, 3.5762787e-07, -1.6089531)
+
+[node name="Chair14" parent="Office" unique_id=1502624964 instance=ExtResource("3_t0sj4")]
+transform = Transform3D(-0.99391115, 0, 0.110185325, 0, 1, 0, -0.110185325, 0, -0.99391115, -1.6216184, 4.7683716e-07, -0.99491286)
+
+[node name="Chair15" parent="Office" unique_id=989011757 instance=ExtResource("3_t0sj4")]
+transform = Transform3D(0.07868534, 0, -0.99689955, 0, 1, 0, 0.99689955, 0, 0.07868534, -1.0740654, 4.172325e-07, -0.1509574)
+
 [node name="Chair7" parent="Office" unique_id=155175596 instance=ExtResource("15_nm314")]
 transform = Transform3D(-0.9927784, 0, 0.1199635, 0, 1, 0, -0.1199635, 0, -0.9927784, -4.912398, 0, 3.6065664)
 
@@ -342,6 +363,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.275397, 0.85889935, 4.28292
 
 [node name="Jonny" parent="DeamonWorld" unique_id=639036525 instance=ExtResource("25_l2c51")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0675466, 0.004143238, 1.8401628)
+
+[node name="Lava" parent="DeamonWorld" unique_id=1801914305 instance=ExtResource("13_t2mk1")]
 
 [node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("13_rx4ve")]
 
@@ -397,6 +420,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.96
 [node name="RoundTable2" parent="Common" unique_id=1232861652 instance=ExtResource("17_w1ww4")]
 transform = Transform3D(0.52237946, 0, -0.8527131, 0, 1, 0, 0.8527131, 0, 0.52237946, -4.0240607, 0.0232203, 0.037657976)
 
+[node name="RoundTable3" parent="Common" unique_id=1829053138 instance=ExtResource("17_w1ww4")]
+transform = Transform3D(-0.20920902, 0, -0.97787094, 0, 1, 0, 0.97787094, 0, -0.20920902, -1.0242155, 0.0232203, -0.91668594)
+
 [node name="Table2" parent="Common" unique_id=151040527 instance=ExtResource("14_r4mkb")]
 transform = Transform3D(-0.9999498, 0, 0.010017933, 0, 1, 0, -0.010017933, 0, -0.9999498, -3.9211385, 2.3841858e-07, 3.317463)
 
@@ -438,3 +464,48 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7234378, -0.55113816, -4.0
 height = 4.0
 vertices = PackedVector3Array(1.8003666, 0, 0.47468305, -2.3118877, 0, 0.5183995, -2.4780097, 0, -0.98252964, 1.9752319, 0, -0.8776107)
 affect_navigation_mesh = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=902339315]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -109.0
+offset_right = 260.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+texture = ExtResource("27_dfw15")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1406864867]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -59.0
+offset_right = 218.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_dfw15")
+value = 72.83
+show_percentage = false
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1293078012]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -104.57501
+offset_right = 260.0
+offset_bottom = -4.575012
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("27_xskrn")
