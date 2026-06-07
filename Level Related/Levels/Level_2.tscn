@@ -32,10 +32,11 @@ polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Arr
 cell_height = 0.6
 agent_radius = 0.7
 
-[node name="Level" type="Node3D" unique_id=765839663 node_paths=PackedStringArray("office", "demon_world")]
+[node name="Level" type="Node3D" unique_id=765839663 node_paths=PackedStringArray("office", "demon_world", "starting_elevator")]
 script = ExtResource("1_pobmy")
 office = NodePath("Office")
 demon_world = NodePath("DeamonWorld")
+starting_elevator = NodePath("StartingElevator")
 metadata/_custom_type_script = "uid://dlbh676178r14"
 
 [node name="Office" type="Node3D" parent="." unique_id=1754503997]
