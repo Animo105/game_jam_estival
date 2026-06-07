@@ -5,3 +5,4 @@ signal item_picked_up
 signal enemy_death
 signal player_death
 signal player_life_changing(new_value : int)
+signal enter_elevator

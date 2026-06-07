@@ -27,6 +27,7 @@ SceneManager="*uid://bw2sxibflqgih"
 AudioManager="*uid://nuo2dhgdpwhc"
 SwapManager="*uid://bats0nchg8doq"
 IMM="*uid://chycbua4v54gl"
+ElevatorAudioStreamPlayer="*uid://03om3ygwyfaw"
 
 [display]
 

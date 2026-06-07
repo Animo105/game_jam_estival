@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://6aoypm7yt0um"
+path="res://.godot/imported/ElevatorMusic.ogg-316a7bab2f75cec3ef8541bf86b53fdf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Globals/Autoloads/Music Stuff/Musics/elevator/ElevatorMusic.ogg"
+dest_files=["res://.godot/imported/ElevatorMusic.ogg-316a7bab2f75cec3ef8541bf86b53fdf.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

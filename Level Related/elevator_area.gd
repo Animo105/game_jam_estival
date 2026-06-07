@@ -36,6 +36,8 @@ func open_door():
 
 func _on_elevator_area_body_entered(body: Node3D) -> void:
 	if body is Player:
+		SignalBus.enter_elevator.emit()
+		ElevatorAudioStreamPlayer.enter_elevator()
 		door_shape.disabled = false
 		area_shape.disabled = true
 		if tween: tween.kill()
