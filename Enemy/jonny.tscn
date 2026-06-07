@@ -8,12 +8,13 @@
 size = Vector3(0.93255615, 1.0898438, 0.11340332)
 
 [node name="Jonny" type="RigidBody3D" unique_id=639036525]
-collision_layer = 4
+collision_layer = 5
 collision_mask = 9
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 gravity_scale = 0.0
+continuous_cd = true
 script = ExtResource("1_0f67d")
 max_health = 20
 speed = 2.0
