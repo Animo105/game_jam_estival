@@ -38,13 +38,14 @@ func reset():
 	health = STARTING_LIFE
 
 func _set_health(value : int) -> void:
+	var is_decreasing : bool = (value - health) < 0
 	health = value
 	if health <= 0:
 		reset()
 		SignalBus.player_death.emit()
 		get_tree().call_deferred("reload_current_scene")
 	else:
-		SignalBus.player_life_changing.emit(value)
+		SignalBus.player_life_changing.emit(value, is_decreasing)
 
 func _ready() -> void:
 	Globals.player = self

@@ -46,7 +46,9 @@ life_gain = 2
 metadata/_custom_type_script = "uid://md478m8hlh80"
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=682791834]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 mesh = SubResource("ArrayMesh_tn4ll")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=290897360]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_u20ni")

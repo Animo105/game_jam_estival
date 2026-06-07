@@ -1,9 +1,9 @@
 extends TextureRect
 class_name HudHands
 
-@onready var DEFAULT_HANDS_TEXTURE : Texture = load("res://Assets/Hands/idle.png")
-@onready var PICKUP_HAND_TEXTURE : Texture = load("res://Assets/Hands/grabHands.png")
-@onready var FISTS_TEXTURE : Texture = load("res://Assets/Hands/Fist.png")
+@onready var DEFAULT_HANDS_TEXTURE : Texture = load("res://Assets/hands/idle.png")
+@onready var PICKUP_HAND_TEXTURE : Texture = load("res://Assets/hands/grabHands.png")
+@onready var FISTS_TEXTURE : Texture = load("res://Assets/hands/Fist.png")
 
 signal finished_animation
 
