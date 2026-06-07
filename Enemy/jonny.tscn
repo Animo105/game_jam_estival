@@ -40,5 +40,4 @@ metadata/_custom_type_script = "uid://dl70i8uslhjr4"
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1811034002]
 target_desired_distance = 4.0
-path_height_offset = 2.0
 navigation_layers = 2

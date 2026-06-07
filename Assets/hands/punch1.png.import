@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnvbmecovurha"
-path="res://.godot/imported/punch1.png-31d3899115114fecc040c470c2c57b4c.ctex"
+path="res://.godot/imported/punch1.png-5cf164685974a905019882681a26ed9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/punch1.png"
-dest_files=["res://.godot/imported/punch1.png-31d3899115114fecc040c470c2c57b4c.ctex"]
+source_file="res://Assets/hands/punch1.png"
+dest_files=["res://.godot/imported/punch1.png-5cf164685974a905019882681a26ed9a.ctex"]
 
 [params]
 
