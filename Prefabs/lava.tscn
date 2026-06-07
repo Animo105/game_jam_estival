@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b1gfwcdldul4k"]
+
+[ext_resource type="Script" uid="uid://cp7ytxv1n4vno" path="res://Prefabs/lava.gd" id="1_n0xnl"]
+[ext_resource type="Material" uid="uid://ykgx2u11wanq" path="res://Assets/Materials/Lava.tres" id="2_q2y5h"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xskrn"]
+material = ExtResource("2_q2y5h")
+size = Vector2(30, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t2mk1"]
+size = Vector3(30, 0.5, 15)
+
+[node name="Lava" type="Node3D" unique_id=1801914305]
+script = ExtResource("1_n0xnl")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1805967774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22164416, 0)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_xskrn")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=10984287]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1218275581]
+shape = SubResource("BoxShape3D_t2mk1")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

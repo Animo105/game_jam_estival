@@ -87,7 +87,7 @@ shadow_mesh = SubResource("ArrayMesh_as3r0")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_osbbc"]
 points = PackedVector3Array(0.57068086, 0.60889935, 1.3000001, -0.57079256, 0.60889935, 1.3000001, 0.57068086, 0.58112454, 1.3000001, 0.57068086, 0.60889935, -1.3000001, -0.57079256, 0.58112454, 1.3000001, -0.57079256, 0.60889935, -1.3000001, 0.42351294, 3.7252903e-09, 1.155697, 0.57068086, 0.58112454, -1.3000001, -0.42362463, 3.7252903e-09, 1.155697, -0.57079256, 0.58112454, -1.3000001, 0.42351294, 3.7252903e-09, -1.1559515, -0.42362463, 3.7252903e-09, -1.1559515)
 
-[node name="Table" type="RigidBody3D" unique_id=1007853647]
+[node name="Table" type="StaticBody3D" unique_id=1957330533]
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=1965380382]
 mesh = SubResource("ArrayMesh_uo7ni")

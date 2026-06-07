@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://bnig31np3t51u" path="res://Player/Camera/camera.gd" id="1_os5io"]
 [ext_resource type="Texture2D" uid="uid://ptnprs3xr62y" path="res://Assets/crosshair.png" id="2_j2w78"]
 [ext_resource type="Script" uid="uid://j2gcudyyqgum" path="res://Player/Camera/hands.gd" id="4_bovb7"]
-[ext_resource type="Texture2D" uid="uid://qqvo8x54ixe5" path="res://Assets/Hands/Fist.png" id="5_g3p2l"]
+[ext_resource type="Texture2D" uid="uid://qqvo8x54ixe5" path="res://Assets/hands/Fist.png" id="5_g3p2l"]
+[ext_resource type="PackedScene" uid="uid://conxhiin3emnb" path="res://Player/Camera/health_bar.tscn" id="5_j8a2t"]
 
 [node name="Camera" type="Camera3D" unique_id=524318236]
 current = true
@@ -56,3 +57,5 @@ texture = ExtResource("5_g3p2l")
 expand_mode = 2
 stretch_mode = 5
 script = ExtResource("4_bovb7")
+
+[node name="HealthBar" parent="CanvasLayer" unique_id=1996196434 instance=ExtResource("5_j8a2t")]
