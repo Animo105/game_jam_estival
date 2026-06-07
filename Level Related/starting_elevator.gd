@@ -23,4 +23,5 @@ func open_door():
 	tween.tween_property(collision_shape_3d, "disabled", true, 0)
 	tween.tween_property(elevator_mesh, "blend_shapes/Open", 1, 0.3)
 	await tween.finished
+	count_down_label.visible = false
 	ElevatorAudioStreamPlayer.exit_elevator()
