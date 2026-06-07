@@ -57,7 +57,6 @@ func enter_elevator(duration := 1.0):
 
 func exit_elevator(duration := 1.0):
 	var tween = create_tween()
-
 	tween.parallel().tween_method(
 		func(v): AudioServer.set_bus_volume_db(war_bus, v),
 		-25.0,

@@ -21,3 +21,4 @@ func open_door():
 	tween.tween_property(self, "count_down", 0, 3)
 	tween.tween_property(elevator_mesh, "blend_shapes/Open", 1, 0.3)
 	await tween.finished
+	ElevatorAudioStreamPlayer.exit_elevator()
