@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cu4txx2qm0h21"]
 
-[ext_resource type="Script" uid="uid://dhtk5xy0m2idv" path="res://Enemy/demon_enemy.gd" id="1_px1sc"]
+[ext_resource type="Script" uid="uid://dhtk5xy0m2idv" path="res://Enemy/Scripts/demon_enemy.gd" id="1_px1sc"]
+[ext_resource type="Script" uid="uid://dl70i8uslhjr4" path="res://Enemy/Scripts/enemy_health_bar.gd" id="2_adr3c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_px1sc"]
 size = Vector3(0.664032, 1.2930776, 0.02145459)
@@ -45,5 +46,16 @@ collision_mask = 2
 [node name="Range" type="CollisionShape3D" parent="RangeArea" unique_id=196320539]
 transform = Transform3D(0.8239411, 0.005292091, 0.56665075, -0.0064227674, 0.9999794, 0, -0.56663907, -0.003639466, 0.8239581, 0.019201603, 0.60801333, -0.037930965)
 shape = SubResource("CylinderShape3D_2pb1h")
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="." unique_id=847484713 node_paths=PackedStringArray("enemy", "screen_position")]
+offset_right = 4.0
+offset_bottom = 27.0
+script = ExtResource("2_adr3c")
+enemy = NodePath("..")
+screen_position = NodePath("../Marker3D")
+metadata/_custom_type_script = "uid://dl70i8uslhjr4"
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=244014988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2557967, 0)
 
 [connection signal="body_entered" from="RangeArea" to="." method="_on_area_3d_body_entered"]

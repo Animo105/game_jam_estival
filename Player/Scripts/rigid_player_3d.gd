@@ -12,6 +12,8 @@ const DASH_STRENGHT : float = 30.0
 
 const JUMP_VELOCITY : float = 6.0
 
+const STARTING_LIFE : int = 5
+
 @onready var visual: Node3D = $Visual
 @onready var neck: Node3D = $Visual/Neck
 @onready var camera: Camera3D = $Visual/Neck/Camera
@@ -22,6 +24,26 @@ const JUMP_VELOCITY : float = 6.0
 var is_grounded : bool = false
 var inputs : PlayerInput = PlayerInput.new()
 var can_dash : bool = true
+
+var reset_transform : Transform3D
+var health : int = 5:
+	set = _set_health
+
+func set_position_for_reset():
+	reset_transform = global_transform
+
+func reset():
+	global_transform = reset_transform
+	health = STARTING_LIFE
+
+func _set_health(value : int) -> void:
+	health = value
+	if health <= 0:
+		reset()
+		SignalBus.player_death.emit()
+		get_tree().call_deferred("reload_current_scene")
+	else:
+		SignalBus.player_life_changing.emit(value)
 
 func _ready() -> void:
 	Globals.player = self

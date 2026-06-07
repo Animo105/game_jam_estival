@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://284x8rv58kc8"]
+
+[ext_resource type="Script" uid="uid://dmo343jhk0ruf" path="res://Enemy/Scripts/jonny.gd" id="1_0f67d"]
+[ext_resource type="Texture2D" uid="uid://ey3y52ddmlf6" path="res://Assets/Enemies/Jonny.png" id="2_qmrw7"]
+[ext_resource type="Script" uid="uid://dl70i8uslhjr4" path="res://Enemy/Scripts/enemy_health_bar.gd" id="3_qmrw7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ho4ba"]
+size = Vector3(0.93255615, 1.0898438, 0.11340332)
+
+[node name="Jonny" type="RigidBody3D" unique_id=639036525]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+gravity_scale = 0.0
+script = ExtResource("1_0f67d")
+speed = 2.0
+stop_distance = 0.0
+metadata/_custom_type_script = "uid://c1gychmh2ni5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=69125288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012298584, 0.92240393, 0.0038452148)
+shape = SubResource("BoxShape3D_ho4ba")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=865628372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.79935706, 0)
+pixel_size = 0.0005
+texture = ExtResource("2_qmrw7")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=225040653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7538921, 0)
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="." unique_id=2106552967 node_paths=PackedStringArray("enemy", "screen_position")]
+offset_right = 4.0
+offset_bottom = 27.0
+script = ExtResource("3_qmrw7")
+enemy = NodePath("..")
+screen_position = NodePath("../Marker3D")
+width = 150.0
+metadata/_custom_type_script = "uid://dl70i8uslhjr4"
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1811034002]
+target_desired_distance = 4.0
+path_height_offset = 2.0
+navigation_layers = 2

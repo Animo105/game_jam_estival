@@ -1,6 +1,8 @@
 extends RigidBody3D
 class_name BasicEnemy
 
+signal damaged
+
 const PATH_REFRESH_RATE : int = 3
 
 @export var max_health : int = 10
@@ -27,6 +29,7 @@ func hit(force : Vector3, damage : int):
 	state = States.HIT
 	linear_velocity = force
 	health -= damage
+	damaged.emit()
 	if health < 0:
 		death()
 	print("health"+str(health))
@@ -56,7 +59,6 @@ func naviguate():
 		if Globals.player:
 			player = Globals.player
 		else:
-			push_error("No player for enemies")
 			return
 	# 1. refresh la position tout les X frames
 	_frame_count += 1
@@ -65,6 +67,10 @@ func naviguate():
 		_frame_count = 0
 	# 2. Vérifier si l'agent a atteint sa cible
 	if nav_agent.is_navigation_finished():
+		linear_velocity = Vector3.ZERO
+		look_at(player.global_position, Vector3.UP)
+		rotation.x = 0
+		rotation.z = 0
 		return
 	# 3. Calculer la direction vers le prochain point du chemin
 	var current_position = global_transform.origin

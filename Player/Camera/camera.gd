@@ -7,11 +7,15 @@ extends Camera3D
 var item_picked_up : BasicItem
 
 func _ready() -> void:
+	SignalBus.player_death.connect(_on_player_death)
 	hands.default()
 
 func _physics_process(_delta: float) -> void:
 	check_for_item_action()
 	check_for_pickup()
+
+func _on_player_death():
+	item_picked_up = null
 
 func check_for_pickup():
 	if item_picked_up: return

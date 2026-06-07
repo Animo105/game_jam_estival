@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brhp2djwnvxtm"
-path.s3tc="res://.godot/imported/DemonGameJamEstival2026 (Custom).png-0c9b16d5654f1d09d500b9296aa77ad8.s3tc.ctex"
+uid="uid://ey3y52ddmlf6"
+path.s3tc="res://.godot/imported/Jonny.png-d51322e5440a3f149a82becccead5c4e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Enemies/DemonGameJamEstival2026 (Custom).png"
-dest_files=["res://.godot/imported/DemonGameJamEstival2026 (Custom).png-0c9b16d5654f1d09d500b9296aa77ad8.s3tc.ctex"]
+source_file="res://Assets/Enemies/Jonny.png"
+dest_files=["res://.godot/imported/Jonny.png-d51322e5440a3f149a82becccead5c4e.s3tc.ctex"]
 
 [params]
 

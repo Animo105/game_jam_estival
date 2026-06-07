@@ -13,22 +13,19 @@ var world_environement : WorldEnvironment = WorldEnvironment.new()
 var is_in_office : bool = true
 
 func _ready() -> void:
+	SwapManager.enter_office.connect(enable_office)
+	SwapManager.enter_demon_world.connect(enable_demon_world)
 	office_environement = load("res://Assets/Environements/office_environement.tres")
 	demon_environement = load("res://Assets/Environements/demon_world_environement.tres")
 	add_child(world_environement)
 	enable_office()
 	if starting_elevator:
-		add_child(Globals.player)
-		Globals.player.global_position = starting_elevator.to_global(SceneManager.data["relative_position"])
-		Globals.player.visual.global_transform = starting_elevator.global_transform * SceneManager.data["relative_transform"]
+		var player = Globals.player
+		add_child(player)
+		player.global_position = starting_elevator.to_global(SceneManager.data["relative_position"])
+		player.visual.global_transform = starting_elevator.global_transform * SceneManager.data["relative_transform"]
+		player.set_position_for_reset()
 		starting_elevator.open_door()
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("swap"):
-		if is_in_office:
-			enable_demon_world()
-		else:
-			enable_office()
 
 func enable_demon_world():
 	is_in_office = false
@@ -38,7 +35,6 @@ func enable_demon_world():
 	office.visible = false
 	world_environement.environment = demon_environement
 	demon_world.visible = true
-	SignalBus.enter_demon_world.emit()
 
 func enable_office():
 	is_in_office = true
@@ -48,4 +44,3 @@ func enable_office():
 	demon_world.visible = false
 	world_environement.environment = office_environement
 	office.visible = true
-	SignalBus.enter_office.emit()
