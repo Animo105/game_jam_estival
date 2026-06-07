@@ -1,9 +1,10 @@
 extends TextureRect
 class_name HudHands
 
-@onready var DEFAULT_HANDS_TEXTURE : Texture = load("res://Assets/hands/idle.png")
-@onready var PICKUP_HAND_TEXTURE : Texture = load("res://Assets/hands/grabHands.png")
-@onready var FISTS_TEXTURE : Texture = load("res://Assets/hands/Fist.png")
+
+const IDLE = preload("uid://dysrq1ahucm43")
+const GRAB_HANDS = preload("uid://t82slqdsxqqc")
+const FIST = preload("uid://qqvo8x54ixe5")
 
 signal finished_animation
 
@@ -26,15 +27,15 @@ func _process(_delta: float) -> void:
 
 func default():
 	if animation_playing: return
-	texture = DEFAULT_HANDS_TEXTURE
+	texture = IDLE
 
 func pickup():
 	if animation_playing: return
-	texture = PICKUP_HAND_TEXTURE
+	texture = GRAB_HANDS
 
 func fists():
 	if animation_playing: return
-	texture = FISTS_TEXTURE
+	texture = FIST
 
 func set_item_texture(item_texture : Texture):
 	if animation_playing:

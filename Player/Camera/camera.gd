@@ -5,10 +5,10 @@ extends Camera3D
 @onready var hands: HudHands = $CanvasLayer/HUD/Hands
 
 var throw_hand_animation : Array[Texture] = [
-	load("res://Assets/hands/punch1.png"),
-	load("res://Assets/hands/Fist.png"),
-	load("res://Assets/hands/punch2.png"),
-	load("res://Assets/hands/Fist.png")
+	preload("uid://cnvbmecovurha"),
+	preload("uid://qqvo8x54ixe5"),
+	preload("uid://cvlvfgw5w4ndk"),
+	preload("uid://qqvo8x54ixe5"),
 ]
 var item_picked_up : BasicItem
 var is_throwing_hands : bool = false

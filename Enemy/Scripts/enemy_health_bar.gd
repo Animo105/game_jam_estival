@@ -13,7 +13,7 @@ func _ready() -> void:
 		queue_free()
 		return
 	visible_on_screen.enable_node_path = self.get_path()
-	visible_on_screen.aabb = AABB(Vector3.ZERO, Vector3(0.1,1, 0.1))
+	visible_on_screen.aabb = AABB(Vector3.ZERO, Vector3(0.2,1, 0.2))
 	enemy.add_child.call_deferred(visible_on_screen)
 	show_percentage = false
 	camera = get_viewport().get_camera_3d()

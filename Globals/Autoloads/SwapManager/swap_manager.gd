@@ -18,24 +18,32 @@ var life_gain_timer : Timer = Timer.new()
 var office_swap_timer : Timer = Timer.new()
 var demon_swap_timer : Timer = Timer.new()
 
-var animation_to_office : Array[Texture] = [
-	load("res://Assets/hands/tower_flip1.png"),
-	load("res://Assets/hands/tower_flip2.png"),
-	load("res://Assets/hands/tower_flip3.png"),
-	load("res://Assets/hands/tower_up.png"),
-	load("res://Assets/hands/tower_up.png"),
-	load("res://Assets/hands/tower_up.png"),
-]
-var animation_to_demon : Array[Texture] = [
-	load("res://Assets/hands/tower_flip3.png"),
-	load("res://Assets/hands/tower_flip2.png"),
-	load("res://Assets/hands/tower_flip1.png"),
-	load("res://Assets/hands/tower_inverse.png"),
-	load("res://Assets/hands/tower_inverse.png"),
-	load("res://Assets/hands/tower_inverse.png"),
-]
+const TOWER_FLIP_1 = preload("uid://8jwi8bksver")
+const TOWER_FLIP_2 = preload("uid://cmfgtvhgwk8c0")
+const TOWER_FLIP_3 = preload("uid://0hbxv64xawyl")
+const TOWER_INVERSE = preload("uid://cq1ctduff4i23")
+const TOWER_UP = preload("uid://b7syh2ug0103t")
+
+var animation_to_office : Array[Texture] = []
+var animation_to_demon : Array[Texture] = []
+
+func setup_animation():
+	animation_to_office.clear()
+	animation_to_demon.clear()
+	animation_to_office.append(TOWER_FLIP_1)
+	animation_to_office.append(TOWER_FLIP_2)
+	animation_to_office.append(TOWER_FLIP_3)
+	animation_to_office.append(TOWER_UP)
+	animation_to_office.append(TOWER_UP)
+	animation_to_office.append(TOWER_UP)
+	
+	animation_to_demon.append(TOWER_FLIP_3)
+	animation_to_demon.append(TOWER_FLIP_2)
+	animation_to_demon.append(TOWER_FLIP_1)
+	animation_to_demon.append(TOWER_INVERSE)
 
 func _ready() -> void:
+	setup_animation()
 	life_gain_timer.wait_time = REGEN_RATE
 	life_gain_timer.autostart = false
 	life_gain_timer.one_shot = true

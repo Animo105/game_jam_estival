@@ -22,13 +22,13 @@ buses/default_bus_layout="uid://bug2k20qn2hie"
 [autoload]
 
 Globals="*uid://bjlvruyax0c8c"
-Vfx="*uid://ceag1yxg44i8c"
 SignalBus="*uid://b5pn5qs3uaurd"
 SceneManager="*uid://bw2sxibflqgih"
 AudioManager="*uid://nuo2dhgdpwhc"
 SwapManager="*uid://bats0nchg8doq"
 IMM="*uid://chycbua4v54gl"
 ElevatorAudioStreamPlayer="*uid://03om3ygwyfaw"
+Vfx="*uid://ceag1yxg44i8c"
 
 [display]
 
