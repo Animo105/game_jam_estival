@@ -1,24 +1,19 @@
 [remap]
 
-importer="wav"
-type="AudioStreamWAV"
-uid="uid://tdxj6gluptoi"
-path="res://.godot/imported/war_loop.ogg-32ac9b87449ebbe4a48d4198293aaa4d.sample"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4xft14ix34xg"
+path="res://.godot/imported/war_loop.ogg-32ac9b87449ebbe4a48d4198293aaa4d.oggvorbisstr"
 
 [deps]
 
 source_file="res://Globals/Autoloads/Music Stuff/Musics/Hell/Loop/war_loop.ogg"
-dest_files=["res://.godot/imported/war_loop.ogg-32ac9b87449ebbe4a48d4198293aaa4d.sample"]
+dest_files=["res://.godot/imported/war_loop.ogg-32ac9b87449ebbe4a48d4198293aaa4d.oggvorbisstr"]
 
 [params]
 
-force/8_bit=false
-force/mono=false
-force/max_rate=false
-force/max_rate_hz=44100
-edit/trim=false
-edit/normalize=false
-edit/loop_mode=0
-edit/loop_begin=0
-edit/loop_end=-1
-compress/mode=2
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

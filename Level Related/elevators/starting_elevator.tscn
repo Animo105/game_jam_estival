@@ -152,3 +152,5 @@ shape = SubResource("BoxShape3D_gafna")
 [node name="count_down" type="Label3D" parent="." unique_id=1168590898]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.030584157, 1.2499665, 1.5143055)
 text = "3"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1750438100]
