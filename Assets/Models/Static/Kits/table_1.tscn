@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b7ng02dqptvqu"]
+
+[ext_resource type="PackedScene" uid="uid://dybx4e0t3dq8u" path="res://Assets/Models/Static/HighTable.glb" id="1_c346q"]
+[ext_resource type="PackedScene" uid="uid://cpo7xnkvkp26w" path="res://Items/noodles.tscn" id="2_iwhy6"]
+[ext_resource type="PackedScene" uid="uid://cccaj650n1npp" path="res://Items/valley.tscn" id="3_wrvdl"]
+[ext_resource type="PackedScene" uid="uid://b8pg2wa2e6kby" path="res://Items/black_chair.tscn" id="4_u0e3u"]
+
+[node name="Table1" type="Node" unique_id=1331622834]
+
+[node name="HighTable" parent="." unique_id=1455268582 instance=ExtResource("1_c346q")]
+
+[node name="Food" type="Node" parent="." unique_id=333428562]
+
+[node name="Noodles" parent="Food" unique_id=795123092 instance=ExtResource("2_iwhy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044895202, 0.8466804, -0.5464359)
+
+[node name="Noodles2" parent="Food" unique_id=1505415235 instance=ExtResource("2_iwhy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04598838, 0.8466804, -0.6107761)
+
+[node name="Noodles3" parent="Food" unique_id=1938823262 instance=ExtResource("2_iwhy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030141681, 0.8466804, -0.5829907)
+
+[node name="Noodles4" parent="Food" unique_id=1040682452 instance=ExtResource("2_iwhy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0025716126, 0.86477053, -0.5737776)
+
+[node name="Valley" parent="Food" unique_id=331481802 instance=ExtResource("3_wrvdl")]
+transform = Transform3D(0.6012154, 0, 0.7990869, 0, 1, 0, -0.7990869, 0, 0.6012154, 0.040245682, 0.85910684, -0.38055822)
+
+[node name="Valley2" parent="Food" unique_id=221452251 instance=ExtResource("3_wrvdl")]
+transform = Transform3D(0.6012154, 0, 0.7990869, 0, 1, 0, -0.7990869, 0, 0.6012154, 0.06377748, 0.85910684, -0.36285338)
+
+[node name="Valley3" parent="Food" unique_id=979124918 instance=ExtResource("3_wrvdl")]
+transform = Transform3D(0.79874045, 0, 0.6016756, 0, 1, 0, -0.6016756, 0, 0.79874045, 0.08533648, 0.85910684, -0.34663293)
+
+[node name="Valley4" parent="Food" unique_id=1496064275 instance=ExtResource("3_wrvdl")]
+transform = Transform3D(0.8194722, 0, -0.5731188, 0, 1, 0, 0.5731188, 0, 0.8194722, 0.063899785, 0.8655303, -0.36276147)
+
+[node name="Chairs" type="Node" parent="." unique_id=233719592]
+
+[node name="BlackChair" parent="Chairs" unique_id=442746016 instance=ExtResource("4_u0e3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49264723, 0, -0.9069371)
+
+[node name="BlackChair2" parent="Chairs" unique_id=1803707821 instance=ExtResource("4_u0e3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49264723, 0, -0.36778834)
+
+[node name="BlackChair3" parent="Chairs" unique_id=1759419350 instance=ExtResource("4_u0e3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49264723, 0, 0.23081422)
+
+[node name="BlackChair4" parent="Chairs" unique_id=1912019219 instance=ExtResource("4_u0e3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49264723, 0, 0.80229187)

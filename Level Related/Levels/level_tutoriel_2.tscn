@@ -1,7 +1,59 @@
 [gd_scene format=3 uid="uid://cp4gr4h7vdpyo"]
 
 [ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_dhkpv"]
+[ext_resource type="PackedScene" uid="uid://biekqwwd8jjuk" path="res://Assets/Models/Static/BigRoom.glb" id="3_4d651"]
+[ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="3_j6urx"]
+[ext_resource type="PackedScene" uid="uid://cv4v53b5s01gv" path="res://Assets/Models/Static/Wall.glb" id="3_q8rre"]
+[ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="5_q8rre"]
+[ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="6_raaxf"]
+[ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="7_y3agi"]
 
-[node name="LevelTutoriel2" type="Node3D" unique_id=1616675434]
+[node name="LevelTutoriel2" type="Node3D" unique_id=1616675434 node_paths=PackedStringArray("office", "demon_world")]
 script = ExtResource("1_dhkpv")
+office = NodePath("Office")
+demon_world = NodePath("Demon")
 metadata/_custom_type_script = "uid://dlbh676178r14"
+
+[node name="Structure" type="Node3D" parent="." unique_id=467329136]
+
+[node name="StartingElevator" parent="Structure" unique_id=1763282973 instance=ExtResource("3_j6urx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.040073, 0, -11.93782)
+
+[node name="Wall2" parent="Structure" unique_id=1115078050 instance=ExtResource("3_q8rre")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1363697, 2.3841858e-07, -8.214445)
+
+[node name="Wall3" parent="Structure" unique_id=891034586 instance=ExtResource("3_q8rre")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.538914, 2.3841858e-07, -0.7503221)
+
+[node name="Wall5" parent="Structure" unique_id=1282474215 instance=ExtResource("3_q8rre")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.696198, 2.3841858e-07, -0.7503221)
+
+[node name="Wall4" parent="Structure" unique_id=1262225398 instance=ExtResource("3_q8rre")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6219807, 2.3841858e-07, -4.713844)
+
+[node name="Office" type="Node3D" parent="." unique_id=644804624]
+
+[node name="Demon" type="Node3D" parent="." unique_id=1619296020]
+
+[node name="BigRoom2" parent="." unique_id=1074359900 instance=ExtResource("3_4d651")]
+
+[node name="PillarSmall2" parent="." unique_id=75206802 instance=ExtResource("5_q8rre")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6252637, 0, -0.88318014)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=973885012]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.084366, 2.166515, -0.92874646)
+double_sided = false
+text = "Vous pouvez rester un maximum de 5 seconde dans les 
+bureaux. il est possible de changer a tout moment avec E"
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=1589847816]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.377404, 1.0354424, -0.92874646)
+double_sided = false
+text = "Vous devez rester un minimum de 10 seconde dans 
+l'autre monde avant de pouvoir changer avec E"
+
+[node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("6_raaxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.938246, 0, -7.2990704)
+
+[node name="ElevatorArea" parent="." unique_id=213366012 instance=ExtResource("7_y3agi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.093305, 4.6163073e-08, 5.351502)
