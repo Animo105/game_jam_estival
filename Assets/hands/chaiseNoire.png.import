@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drl0juqsd2j8w"
-path="res://.godot/imported/chaiseNoire.png-ca01cc7cbe0a749ccf17d1f1699799fa.ctex"
+path="res://.godot/imported/chaiseNoire.png-43b9542ceb83578e9546d6be2460590c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/chaiseNoire.png"
-dest_files=["res://.godot/imported/chaiseNoire.png-ca01cc7cbe0a749ccf17d1f1699799fa.ctex"]
+source_file="res://Assets/hands/chaiseNoire.png"
+dest_files=["res://.godot/imported/chaiseNoire.png-43b9542ceb83578e9546d6be2460590c.ctex"]
 
 [params]
 

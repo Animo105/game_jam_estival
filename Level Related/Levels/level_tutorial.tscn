@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://fg0lwc4s3333" path="res://Assets/Models/Fence.glb" id="4_fx8qu"]
 [ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="4_jhcvk"]
 [ext_resource type="PackedScene" uid="uid://cyn4q8bvad4pi" path="res://Assets/Models/Elevator.glb" id="5_jhcvk"]
-[ext_resource type="PackedScene" uid="uid://cu4txx2qm0h21" path="res://Enemy/enemy.tscn" id="5_nfyuv"]
+[ext_resource type="PackedScene" uid="uid://cu4txx2qm0h21" path="res://Enemy/demon_enemy.tscn" id="5_nfyuv"]
 [ext_resource type="PackedScene" uid="uid://b6iikvlm7j2iq" path="res://Assets/Models/Plant.glb" id="6_hyjle"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/PillarSmall.glb" id="7_hyjle"]
 [ext_resource type="PackedScene" uid="uid://bjdrsn4ni6v2j" path="res://Assets/Models/Light.glb" id="8_y4r32"]
@@ -16,12 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="11_k6sqf"]
 [ext_resource type="PackedScene" uid="uid://bgjqxyt4ptyxy" path="res://Assets/Models/BigTable.glb" id="13_nfyuv"]
 [ext_resource type="PackedScene" uid="uid://el7o3fnep3qo" path="res://Assets/Models/Computer.glb" id="14_4w87f"]
-[ext_resource type="PackedScene" uid="uid://1pe653m0ej8n" path="res://Assets/Models/WheelChair.glb" id="15_kdbxh"]
 [ext_resource type="PackedScene" uid="uid://ccoiyhmb1fhkl" path="res://Assets/Models/Table.glb" id="16_v0747"]
 [ext_resource type="PackedScene" uid="uid://chh2tg7ptv1ur" path="res://Assets/Models/Screen.glb" id="17_b54we"]
 [ext_resource type="PackedScene" uid="uid://doetlgjdpay83" path="res://Assets/Models/Mouse.glb" id="19_hwiih"]
 [ext_resource type="PackedScene" uid="uid://bmlwkhvoepw7e" path="res://Assets/Models/Keyboard.glb" id="20_f8tsc"]
-[ext_resource type="PackedScene" uid="uid://bnuk4px31uw3r" path="res://Assets/Models/Chair.glb" id="21_51f2g"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_nfyuv"]
 vertices = PackedVector3Array(-11.719698, 0.01495062, -2.341217, -9.969698, 0.01495062, -2.341217, -9.719698, 0.01495062, -3.091217, -11.719698, 0.01495062, -13.591217, 5.780302, 0.01495062, -3.091217, 5.780302, 0.01495062, -5.341217, 1.030302, 0.01495062, -5.341217, -6.219698, 0.01495062, -3.341217, 0.78030205, 0.01495062, -6.591217, 5.780302, 0.01495062, -13.591217, 5.780302, 0.01495062, -6.841217, 7.280302, 0.01495062, -13.591217, 7.280302, 0.01495062, -6.841217, 8.530302, 0.01495062, -6.841217, 8.530302, 0.01495062, -13.591217, 10.030302, 0.01495062, -13.591217, 10.030302, 0.01495062, -7.591217, 11.780302, 0.01495062, -7.591217, 11.780302, 0.01495062, -13.591217, 10.030302, 0.01495062, 7.408783, 10.780302, 0.01495062, 8.158783, 11.780302, 0.01495062, 8.158783, 11.780302, 0.01495062, -6.091217, 10.530302, 0.01495062, -1.591217, 10.030302, 0.01495062, -6.091217, 10.030302, 0.01495062, -3.341217, 10.530302, 0.01495062, -3.091217, 10.030302, 0.01495062, -1.341217, 7.780302, 0.01495062, 1.908783, 7.280302, 0.01495062, 8.158783, 8.530302, 0.01495062, 8.158783, 8.530302, 0.01495062, -5.341217, 7.280302, 0.01495062, -5.341217, 7.280302, 0.01495062, 1.658783, -9.719698, 0.01495062, -1.591217, -6.469698, 0.01495062, 8.158783, -6.469698, 0.01495062, 5.658783, -7.719698, 0.01495062, 5.408783, -11.719698, 0.01495062, 8.158783, -7.719698, 0.01495062, 1.408783, -6.469698, 0.01495062, 1.158783, -6.469698, 0.01495062, -1.591217, -0.46969795, 0.01495062, 3.908783, 0.53030205, 0.01495062, 3.658783, 0.28030205, 0.01495062, 3.158783, -0.46969795, 0.01495062, 2.908783, -2.719698, 0.01495062, 4.158783, -3.219698, 0.01495062, 5.658783, -3.219698, 0.01495062, 1.408783, -3.219698, 0.01495062, 3.908783, -4.969698, 0.01495062, 5.658783, -4.969698, 0.01495062, 8.158783, -4.969698, 0.01495062, -1.591217, -4.969698, 0.01495062, 1.158783, 5.530302, 0.01495062, 4.908783, 2.030302, 0.01495062, 4.908783, 2.030302, 0.01495062, 7.158783, 5.780302, 0.01495062, 8.158783, -0.21969795, 0.01495062, 7.408783, -0.21969795, 0.01495062, -1.591217, 1.280302, 0.01495062, 2.908783, 1.780302, 0.01495062, 3.658783, 5.780302, 0.01495062, -1.591217, 1.280302, 0.01495062, -1.591217, 0.53030205, 0.6249506, 4.658783, 0.53030205, 0.6249506, 6.408783, 1.030302, 0.6249506, 6.408783, 1.030302, 0.6249506, 4.658783)
@@ -44,10 +42,6 @@ text = "Appuyer sur SHIFT pour se propulser"
 [node name="Light2" parent="." unique_id=1557470311 instance=ExtResource("8_y4r32")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.004224, 0, 5.581562)
 
-[node name="Kill 1 enemy to move" type="Label3D" parent="." unique_id=1886673149]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.8378677, 1.4688463, 5.615457)
-text = "Démons restant à exterminer"
-
 [node name="BigTable2" parent="." unique_id=1313574200 instance=ExtResource("13_nfyuv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66, 0, 1.636)
 
@@ -59,12 +53,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6385205, 0.6169444, 1.28375
 
 [node name="Computer2" parent="." unique_id=1056791547 instance=ExtResource("14_4w87f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.111151, 0.62421006, 1.3551011)
-
-[node name="WheelChair2" parent="." unique_id=1979244993 instance=ExtResource("15_kdbxh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.500832, 0.06945926, 1.7339923)
-
-[node name="WheelChair3" parent="." unique_id=1895520985 instance=ExtResource("15_kdbxh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.532, 0, 1.7567078)
 
 [node name="Screen2" parent="." unique_id=763630603 instance=ExtResource("17_b54we")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.6782173, 0.6130776, 1.7896142)
@@ -86,12 +74,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9144783, 0.6249177, 1.79427
 
 [node name="Keyboard2" parent="." unique_id=156861932 instance=ExtResource("20_f8tsc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.944716, 0.6148682, 1.9890404)
-
-[node name="Chair2" parent="." unique_id=1144662647 instance=ExtResource("21_51f2g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6932101, 0, 8.606466)
-
-[node name="Chair3" parent="." unique_id=1885435011 instance=ExtResource("21_51f2g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6969702, 0, 7.421)
 
 [node name="Tv2" parent="." unique_id=652950462 instance=ExtResource("10_e7326")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4477057, 1.935918, 3.9012122)
@@ -213,7 +195,8 @@ Bonne chance"
 
 [node name="Enemy" parent="NavigationRegion3D/Daemon" unique_id=378903687 instance=ExtResource("5_nfyuv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8890626, 0.46116745, 2.6122627)
-max_health = 30
+max_health = 20
+speed = 3.0
 
 [node name="Office" type="Node3D" parent="NavigationRegion3D" unique_id=262407820]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3228705)
@@ -249,3 +232,8 @@ text = "Appuyer sur CLIQUE GAUCHE
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.8674574, 1.0708185, 7.848026)
 text = "Retourne dans le monde normal
  pour plus de fourniture"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=79847930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4917257, 1.96422, 5.6578884)
+light_energy = 0.8
+light_volumetric_fog_energy = 0.0

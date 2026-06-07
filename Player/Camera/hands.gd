@@ -2,7 +2,7 @@ extends TextureRect
 class_name HudHands
 
 @onready var DEFAULT_HANDS_TEXTURE : Texture2D = load("res://Assets/Hands/idle.png")
-@onready var PICKUP_HAND_TEXTURE = load("uid://ygxynmnd8fne")
+@onready var PICKUP_HAND_TEXTURE = load("uid://t82slqdsxqqc")
 
 signal finished_animation
 

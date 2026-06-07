@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ds8kqmtn5el6d"]
+
+[ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_37g6f"]
+[ext_resource type="PackedScene" uid="uid://dghdv0gu0jctx" path="res://Assets/Models/Room.glb" id="2_cd214"]
+[ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="3_encuu"]
+[ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="4_ufxeq"]
+
+[node name="Level" type="Node3D" unique_id=1722688135 node_paths=PackedStringArray("office", "demon_world")]
+script = ExtResource("1_37g6f")
+office = NodePath("Office")
+demon_world = NodePath("NavigationRegion3D/Daemon")
+metadata/_custom_type_script = "uid://dlbh676178r14"
+
+[node name="Office" type="Node3D" parent="." unique_id=1406651117]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1023283389]
+
+[node name="Daemon" type="Node3D" parent="NavigationRegion3D" unique_id=912247312]
+
+[node name="Room2" parent="NavigationRegion3D" unique_id=394575679 instance=ExtResource("2_cd214")]
+
+[node name="StartingElevator" parent="NavigationRegion3D" unique_id=1763282973 instance=ExtResource("3_encuu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15683144, 4.6163073e-08, -5.3943458)
+
+[node name="ElevatorArea" parent="NavigationRegion3D" unique_id=213366012 instance=ExtResource("4_ufxeq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.4505006, 2.8458166e-07, 4.5458317)
