@@ -40,8 +40,10 @@ shadow_mesh = SubResource("ArrayMesh_8ajvi")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pbgrx"]
 points = PackedVector3Array(-0.043000005, 0, -0.009000001, -0.043000005, 0.0067567034, -0.009000001, 0.043000005, 0, -0.009000001, -0.043000005, 0, 0.009000001, -0.043000005, 0.0067567034, 0.009000001, 0.043000005, 0.0067567034, -0.009000001, 0.043000005, 0, 0.009000001, 0.043000005, 0.0067567034, 0.009000001)
 
-[node name="Valley" type="RigidBody3D" unique_id=331481802]
+[node name="Valley" type="RigidBody3D" unique_id=1814746061]
 continuous_cd = true
+script = ExtResource("1_aamh8")
+metadata/_custom_type_script = "uid://md478m8hlh80"
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=951204796]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
