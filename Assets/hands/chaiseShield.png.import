@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://by64hawf15vo0"
-path="res://.godot/imported/chaiseShield.png-18d66bcc126ac0e2dafc4e1fccf577ca.ctex"
+path="res://.godot/imported/chaiseShield.png-d8e67256996c9cac855f772fc9354f4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hands/chaiseShield.png"
-dest_files=["res://.godot/imported/chaiseShield.png-18d66bcc126ac0e2dafc4e1fccf577ca.ctex"]
+source_file="res://Assets/Hands/chaiseShield.png"
+dest_files=["res://.godot/imported/chaiseShield.png-d8e67256996c9cac855f772fc9354f4b.ctex"]
 
 [params]
 

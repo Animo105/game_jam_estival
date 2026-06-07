@@ -5,6 +5,8 @@ class_name CombatItem
 
 @export var melee_attack : bool = true
 @export var melee_range : Vector3 = Vector3.ONE
+@export var melee_animation : Array[Texture]
+@export var animation_time : float = 0.3
 
 @export var throwable : bool = true
 @export var throw_force : int = 10
@@ -12,6 +14,7 @@ class_name CombatItem
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 
 var exclude_list : Array[Node3D]
+var can_attack : bool = true
 
 func collision_while_thrown(node : Node3D):
 	if not node is BasicEnemy: return
@@ -25,11 +28,17 @@ func destroy():
 
 func use(_camera_coords : Vector3, forward_direction : Vector3):
 	if not melee_attack: return
+	if not can_attack: return
+	can_attack = false
 	var bodies := await Globals.player.get_bodies_in_melee_range(melee_range)
 	for body in bodies:
 		if body is BasicEnemy:
 			health -= 1
 			body.hit(forward_direction * push_force, damage)
+			Globals.hud_hands.play_once_animation(melee_animation, animation_time)
+			await Globals.hud_hands.finished_animation
+			can_attack = true
+		can_attack = true
 		if body is BasicItem:
 			linear_velocity += forward_direction
 

@@ -1,7 +1,9 @@
 [gd_scene format=4 uid="uid://bufnby1swxxhm"]
 
-[ext_resource type="Script" uid="uid://bvul8at3tnxs0" path="res://Items/Scripts/basic_item.gd" id="1_2umji"]
+[ext_resource type="Script" uid="uid://dkkk5utcoerc7" path="res://Items/Scripts/combat_item.gd" id="1_2umji"]
 [ext_resource type="Material" uid="uid://cvwuylasnaxvk" path="res://Assets/Materials/Keyboard.tres" id="2_7k5vy"]
+[ext_resource type="Texture2D" uid="uid://b6y282ak7eu1c" path="res://Assets/Hands/keyboard2.png" id="2_k2ssc"]
+[ext_resource type="Texture2D" uid="uid://b5sr5j1tigcj2" path="res://Assets/Hands/keyboard1.png" id="3_yi40j"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1aye2"]
 _surfaces = [{
@@ -40,10 +42,17 @@ shadow_mesh = SubResource("ArrayMesh_1aye2")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7100a"]
 points = PackedVector3Array(0.059988275, 0.007812233, 0.16405253, 0.059988275, 0, 0.16405253, 0.059988275, 0.007812233, -0.16405253, 0.056570105, 0.011239231, 0.16061603, -0.060000017, 0.007812233, 0.16405253, -0.060000017, 0, 0.16405253, 0.059988275, 0, -0.16405253, 0.056570105, 0.011239231, -0.16064815, -0.060000017, 0.007812233, -0.16405253, -0.056581847, 0.011239231, 0.16061603, -0.060000017, 0, -0.16405253, -0.056581847, 0.011239231, -0.16064815)
 
-[node name="Keyboard" type="RigidBody3D" unique_id=1365926055]
+[node name="Keyboard" type="RigidBody3D" unique_id=1622170737]
 continuous_cd = true
 script = ExtResource("1_2umji")
-metadata/_custom_type_script = "uid://bvul8at3tnxs0"
+push_force = 3
+melee_range = Vector3(0.6, 0.6, 1)
+melee_animation = Array[Texture]([ExtResource("2_k2ssc")])
+throwable = false
+health = 5
+damage = 2
+texture_in_ui = ExtResource("3_yi40j")
+metadata/_custom_type_script = "uid://dkkk5utcoerc7"
 
 [node name="Keyboard2" type="MeshInstance3D" parent="." unique_id=1001408828]
 mesh = SubResource("ArrayMesh_wsufr")
