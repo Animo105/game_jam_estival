@@ -21,6 +21,7 @@ const JUMP_VELOCITY : float = 6.0
 
 var is_grounded : bool = false
 var inputs : PlayerInput = PlayerInput.new()
+var can_dash : bool = true
 
 func _ready() -> void:
 	Globals.player = self
@@ -64,7 +65,9 @@ func get_bodies_in_melee_range(melee_range : Vector3) -> Array[Node3D]:
 	return melee_area.get_overlapping_bodies()
 
 func handle_dash():
-	if not is_grounded: return
+	if not can_dash: 
+		if is_grounded: can_dash = true
+		else: return
 	if inputs.is_dash_just_pressed():
 		var input_dir : Vector2 = inputs.get_vector()
 		var camera_direction : Vector3 = -camera.global_transform.basis.z
@@ -74,6 +77,7 @@ func handle_dash():
 		else:
 			direction = (visual.transform.basis * Vector3(input_dir.x, camera_direction.y, input_dir.y)).normalized()
 		apply_impulse(direction * DASH_STRENGHT)
+		can_dash = false
 
 func handle_jumping():
 	if not is_grounded:

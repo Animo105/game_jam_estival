@@ -10,7 +10,7 @@ current = true
 script = ExtResource("1_os5io")
 
 [node name="PickupRayCast" type="RayCast3D" parent="." unique_id=2091028835]
-target_position = Vector3(0, 0, -1)
+target_position = Vector3(0, 0, -2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1525147730]
 

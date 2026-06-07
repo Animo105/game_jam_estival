@@ -1,5 +1,4 @@
 extends RigidBody3D
-
 class_name BasicItem
 
 @export var health : int = 1:
@@ -10,6 +9,7 @@ class_name BasicItem
 
 @export var damage : int = 1
 @export var texture_in_ui : Texture2D
+@export var drop_distance : float = 1.0
 
 enum States {NORMAL, THROWN}
 var state : States = States.NORMAL
@@ -42,9 +42,24 @@ func can_place() -> bool:
 func _ready() -> void:
 	pass
 
+func reset():
+	angular_velocity = Vector3.ZERO
+	linear_velocity = Vector3.ZERO
+	global_transform.basis = Basis.IDENTITY
+
 @warning_ignore("unused_parameter")
 func drop_at(camera_coords : Vector3, forward_direction : Vector3) -> bool:
-	return false
+	freeze = true
+	Globals.active_object_scene.add_child(self)
+	forward_direction.y = 0
+	global_position = camera_coords + forward_direction * drop_distance
+	reset()
+	if not can_place() :
+		get_parent().remove_child(self)
+		return false
+	freeze = false
+	state = States.NORMAL
+	return true
 
 @warning_ignore("unused_parameter")
 func throw(camera_coods : Vector3, forward_direction : Vector3) -> bool:

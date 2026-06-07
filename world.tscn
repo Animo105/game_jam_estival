@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="3_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://dfg1tit83sxga" path="res://Items/chair.tscn" id="3_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://cu4txx2qm0h21" path="res://Enemy/enemy.tscn" id="4_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://cu4txx2qm0h21" path="res://Enemy/demon_enemy.tscn" id="4_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://dpejp70faqtsj" path="res://Level Related/Levels/level_1.tscn" id="6_dwbse"]
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="8_gbfbk"]
 [ext_resource type="PackedScene" uid="uid://b8pg2wa2e6kby" path="res://Items/black_chair.tscn" id="9_ioo17"]

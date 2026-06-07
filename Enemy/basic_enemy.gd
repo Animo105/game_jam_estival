@@ -12,12 +12,15 @@ const PATH_REFRESH_RATE : int = 3
 var player : Node3D
 
 var health : int = 0
-enum States {CHASSING, HIT, DEAD}
+enum States {CHASSING, HIT, DEAD, COOLDOWN}
 var state : States = States.CHASSING
 
 var _frame_count : int = 0
 
+var _timer : Timer = Timer.new()
+
 func _ready() -> void:
+	add_child(_timer)
 	health = max_health
 
 func hit(force : Vector3, damage : int):
@@ -38,6 +41,12 @@ func _physics_process(_delta):
 	elif state == States.HIT:
 		hit_recoil()
 
+func put_on_cooldown(time_s : float) -> void:
+	state = States.COOLDOWN
+	_timer.start(time_s)
+	await _timer.timeout
+	state = States.CHASSING
+
 func hit_recoil():
 	if linear_velocity.length() < 0.5:
 		state = States.CHASSING
@@ -47,6 +56,7 @@ func naviguate():
 		if Globals.player:
 			player = Globals.player
 		else:
+			push_error("No player for enemies")
 			return
 	# 1. refresh la position tout les X frames
 	_frame_count += 1
