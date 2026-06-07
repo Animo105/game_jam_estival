@@ -8,7 +8,7 @@ material = ExtResource("2_q2y5h")
 size = Vector2(30, 30)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t2mk1"]
-size = Vector3(30, 0.5, 15)
+size = Vector3(30, 0.5, 30)
 
 [node name="Lava" type="Node3D" unique_id=1801914305]
 script = ExtResource("1_n0xnl")

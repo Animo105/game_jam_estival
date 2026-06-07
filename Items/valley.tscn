@@ -40,9 +40,12 @@ shadow_mesh = SubResource("ArrayMesh_8ajvi")
 points = PackedVector3Array(-0.043000005, 0, -0.009000001, -0.043000005, 0.0067567034, -0.009000001, 0.043000005, 0, -0.009000001, -0.043000005, 0, 0.009000001, -0.043000005, 0.0067567034, 0.009000001, 0.043000005, 0.0067567034, -0.009000001, 0.043000005, 0, 0.009000001, 0.043000005, 0.0067567034, 0.009000001)
 
 [node name="Valley" type="RigidBody3D" unique_id=331481802]
+continuous_cd = true
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=951204796]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ah7lg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1420002885]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_pbgrx")

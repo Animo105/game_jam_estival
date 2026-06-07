@@ -15,9 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://biekqwwd8jjuk" path="res://Assets/Models/Static/BigRoom.glb" id="9_5j77n"]
 [ext_resource type="PackedScene" uid="uid://dvxcsjeu8v7af" path="res://Items/computer.tscn" id="9_cl4tl"]
 [ext_resource type="PackedScene" uid="uid://cv4v53b5s01gv" path="res://Assets/Models/Static/Wall.glb" id="10_d0u7d"]
+[ext_resource type="PackedScene" uid="uid://cpo7xnkvkp26w" path="res://Items/noodles.tscn" id="11_cl4tl"]
 [ext_resource type="PackedScene" uid="uid://284x8rv58kc8" path="res://Enemy/jonny.tscn" id="11_d0u7d"]
 [ext_resource type="PackedScene" uid="uid://dybx4e0t3dq8u" path="res://Assets/Models/Static/HighTable.glb" id="11_mph1w"]
 [ext_resource type="PackedScene" uid="uid://2h6uuvddf3ju" path="res://Items/table.tscn" id="12_cl4tl"]
+[ext_resource type="PackedScene" uid="uid://cccaj650n1npp" path="res://Items/valley.tscn" id="12_mph1w"]
 [ext_resource type="PackedScene" uid="uid://yolt7h42j0g1" path="res://Assets/Models/Static/PillarBig.glb" id="13_6l3ix"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="14_xxtx7"]
 [ext_resource type="PackedScene" uid="uid://qmefvog5bmqt" path="res://Items/round_table.tscn" id="15_3axcm"]
@@ -329,6 +331,45 @@ transform = Transform3D(0.99797493, 0, 0.06360918, 0, 1, 0, -0.06360918, 0, 0.99
 
 [node name="Computer3" parent="Office" unique_id=2117280588 instance=ExtResource("9_cl4tl")]
 transform = Transform3D(-0.003804773, 0, -0.9999927, 0, 1, 0, 0.9999927, 0, -0.003804773, -10.610547, 0.8588996, -3.7847657)
+
+[node name="Valley" parent="Office" unique_id=331481802 instance=ExtResource("12_mph1w")]
+transform = Transform3D(0.8141459, 0, 0.5806603, 0, 1, 0, -0.5806603, 0, 0.8141459, -1.064297, 0.6089338, -3.3901243)
+
+[node name="Valley2" parent="Office" unique_id=672888412 instance=ExtResource("12_mph1w")]
+transform = Transform3D(0.986277, 0, -0.16509926, 0, 1, 0, 0.16509926, 0, 0.986277, -4.817441, 0.6089338, -3.0214894)
+
+[node name="Valley3" parent="Office" unique_id=1123618380 instance=ExtResource("12_mph1w")]
+transform = Transform3D(0.2851531, 0, -0.9584819, 0, 1, 0, 0.9584819, 0, 0.2851531, -3.397691, 0.6089338, -6.5478706)
+
+[node name="Valley4" parent="Office" unique_id=1400423262 instance=ExtResource("12_mph1w")]
+transform = Transform3D(0.2851531, 0, -0.9584819, 0, 1, 0, 0.9584819, 0, 0.2851531, 1.4934213, 0.6089338, 0.43138742)
+
+[node name="Valley5" parent="Office" unique_id=734886331 instance=ExtResource("12_mph1w")]
+transform = Transform3D(0.2851531, 0, -0.9584819, 0, 1, 0, 0.9584819, 0, 0.2851531, -7.9749956, 0.8658779, 2.326194)
+
+[node name="Valley6" parent="Office" unique_id=1218947423 instance=ExtResource("12_mph1w")]
+transform = Transform3D(0.8937161, 0, 0.44863278, 0, 1, 0, -0.44863278, 0, 0.8937161, -6.519334, 0.8658779, 2.2524958)
+
+[node name="Valley7" parent="Office" unique_id=2037859083 instance=ExtResource("12_mph1w")]
+transform = Transform3D(0.8937161, 0, 0.44863278, 0, 1, 0, -0.44863278, 0, 0.8937161, -8.499329, 0.8658779, -9.372089)
+
+[node name="Noodles" parent="Office" unique_id=795123092 instance=ExtResource("11_cl4tl")]
+transform = Transform3D(0.4598744, 0, 0.887984, 0, 1, 0, -0.887984, 0, 0.4598744, -7.8388395, 0.60925484, -3.6336603)
+
+[node name="Noodles4" parent="Office" unique_id=1442240568 instance=ExtResource("11_cl4tl")]
+transform = Transform3D(0.93907624, 0, -0.34370893, 0, 1, 0, 0.34370893, 0, 0.93907624, -1.2261887, 0.60925484, -6.482046)
+
+[node name="Noodles5" parent="Office" unique_id=434891839 instance=ExtResource("11_cl4tl")]
+transform = Transform3D(0.88180614, 0, 0.47161213, 0, 1, 0, -0.47161213, 0, 0.88180614, 2.0045617, 0.60925484, -3.0176194)
+
+[node name="Noodles6" parent="Office" unique_id=181687162 instance=ExtResource("11_cl4tl")]
+transform = Transform3D(0.88180614, 0, 0.47161213, 0, 1, 0, -0.47161213, 0, 0.88180614, -4.343995, 0.60925484, 1.2867515)
+
+[node name="Noodles3" parent="Office" unique_id=998937437 instance=ExtResource("11_cl4tl")]
+transform = Transform3D(0.4598744, 0, 0.887984, 0, 1, 0, -0.887984, 0, 0.4598744, -11.663444, 0.6422189, -6.4009147)
+
+[node name="Noodles2" parent="Office" unique_id=486190368 instance=ExtResource("11_cl4tl")]
+transform = Transform3D(-0.25908875, 0, 0.9658536, 0, 1, 0, -0.9658536, 0, -0.25908875, -10.558832, 0.86758494, 0.084444106)
 
 [node name="Hell" type="Node3D" parent="." unique_id=1043018584]
 

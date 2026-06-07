@@ -5,6 +5,18 @@
 [ext_resource type="Script" uid="uid://6s8aig2pci60" path="res://Player/Camera/health_bar.gd" id="1_ownfq"]
 [ext_resource type="Texture2D" uid="uid://dqrwrcc8sqisy" path="res://Assets/Materials/Heart.png" id="2_4gwlb"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ownfq"]
+bg_color = Color(18.892002, 18.892002, 18.892002, 1)
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0xsx"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfw15"]
 bg_color = Color(18.892157, 0, 0, 1)
 corner_radius_top_left = 20
@@ -52,6 +64,24 @@ grow_vertical = 0
 size_flags_horizontal = 4
 texture = ExtResource("1_ly4gg")
 
+[node name="RegenBar" type="ProgressBar" parent="." unique_id=1064347592]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 413.0
+offset_top = 641.0
+offset_right = 828.0
+offset_bottom = 645.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_ownfq")
+value = 100.0
+show_percentage = false
+
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1377075996]
 layout_mode = 1
 anchors_preset = 7
@@ -66,10 +96,10 @@ offset_bottom = 641.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_a0xsx")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dfw15")
-max_value = 126.5
 step = 1.0
-value = 72.83
+value = 100.0
 show_percentage = false
 
 [node name="Foreground" type="TextureRect" parent="." unique_id=1331065073]
@@ -80,9 +110,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 360.0
-offset_top = 575.425
+offset_top = 574.0
 offset_right = 880.0
-offset_bottom = 675.425
+offset_bottom = 674.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_4gwlb")
