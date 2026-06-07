@@ -13,6 +13,8 @@ const PATH_REFRESH_RATE : int = 3
 @onready var nav_agent : NavigationAgent3D = $NavigationAgent3D
 var player : Node3D
 
+var blood_effect = load("res://VFX/blood_splash.tscn")
+
 var health : int = 0
 enum States {CHASSING, HIT, DEAD, COOLDOWN}
 var state : States = States.CHASSING
@@ -38,6 +40,10 @@ func hit(force : Vector3, damage : int):
 	print("health"+str(health))
 
 func death():
+	var blood = blood_effect.instantiate()
+	blood.global_position = self.global_position
+	get_parent().add_child(blood)
+	blood.emitting = true
 	queue_free()
 	SignalBus.enemy_death.emit()
 
