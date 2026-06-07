@@ -43,6 +43,7 @@ func _set_health(value : int) -> void:
 	if health <= 0:
 		reset()
 		SignalBus.player_death.emit()
+		get_parent().remove_child.call_deferred(self)
 		get_tree().call_deferred("reload_current_scene")
 	else:
 		SignalBus.player_life_changing.emit(value, is_decreasing)

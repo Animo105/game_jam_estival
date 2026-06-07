@@ -37,6 +37,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.69
 [node name="Wall4" parent="Structure" unique_id=1262225398 instance=ExtResource("3_q8rre")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6219807, 2.3841858e-07, -4.713844)
 
+[node name="Wall6" parent="Structure" unique_id=576627338 instance=ExtResource("3_q8rre")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 0.3250084, 2.3841858e-07, -4.713844)
+
 [node name="Office" type="Node3D" parent="." unique_id=644804624]
 
 [node name="Demon" type="Node3D" parent="." unique_id=1619296020]
@@ -60,3 +63,9 @@ les bureaux apres 5 secondes"
 
 [node name="Light" parent="." unique_id=754433382 instance=ExtResource("7_6x1iy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.457367, 0, -3.7170024)
+
+[node name="Label3D3" type="Label3D" parent="." unique_id=1508174959]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.639647, 0.5352918, 5.4431376)
+double_sided = false
+text = "Attention! Le prochain niveau contien
+ de la lave au sol du monde des démons"
