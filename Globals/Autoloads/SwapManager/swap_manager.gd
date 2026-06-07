@@ -18,20 +18,20 @@ var office_swap_timer : Timer = Timer.new()
 var demon_swap_timer : Timer = Timer.new()
 
 var animation_to_office : Array[Texture] = [
-	load("res://Assets/Hands/tower_flip1.png"),
-	load("res://Assets/Hands/tower_flip2.png"),
-	load("res://Assets/Hands/tower_flip3.png"),
-	load("res://Assets/Hands/tower_up.png"),
-	load("res://Assets/Hands/tower_up.png"),
-	load("res://Assets/Hands/tower_up.png"),
+	load("res://Assets/hands/tower_flip1.png"),
+	load("res://Assets/hands/tower_flip2.png"),
+	load("res://Assets/hands/tower_flip3.png"),
+	load("res://Assets/hands/tower_up.png"),
+	load("res://Assets/hands/tower_up.png"),
+	load("res://Assets/hands/tower_up.png"),
 ]
 var animation_to_demon : Array[Texture] = [
-	load("res://Assets/Hands/tower_flip3.png"),
-	load("res://Assets/Hands/tower_flip2.png"),
-	load("res://Assets/Hands/tower_flip1.png"),
-	load("res://Assets/Hands/tower_inverse.png"),
-	load("res://Assets/Hands/tower_inverse.png"),
-	load("res://Assets/Hands/tower_inverse.png"),
+	load("res://Assets/hands/tower_flip3.png"),
+	load("res://Assets/hands/tower_flip2.png"),
+	load("res://Assets/hands/tower_flip1.png"),
+	load("res://Assets/hands/tower_inverse.png"),
+	load("res://Assets/hands/tower_inverse.png"),
+	load("res://Assets/hands/tower_inverse.png"),
 ]
 
 func _ready() -> void:
