@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cccaj650n1npp"]
 
 [ext_resource type="Material" uid="uid://ut7mqi6dsfsj" path="res://Assets/Materials/Material.tres" id="1_2cfq8"]
+[ext_resource type="Script" uid="uid://md478m8hlh80" path="res://Items/Scripts/food_items.gd" id="1_aamh8"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8ajvi"]
 _surfaces = [{
@@ -39,7 +40,9 @@ shadow_mesh = SubResource("ArrayMesh_8ajvi")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pbgrx"]
 points = PackedVector3Array(-0.043000005, 0, -0.009000001, -0.043000005, 0.0067567034, -0.009000001, 0.043000005, 0, -0.009000001, -0.043000005, 0, 0.009000001, -0.043000005, 0.0067567034, 0.009000001, 0.043000005, 0.0067567034, -0.009000001, 0.043000005, 0, 0.009000001, 0.043000005, 0.0067567034, 0.009000001)
 
-[node name="Valley" type="RigidBody3D" unique_id=331481802]
+[node name="Valley" type="RigidBody3D" unique_id=116067478]
+script = ExtResource("1_aamh8")
+metadata/_custom_type_script = "uid://md478m8hlh80"
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=951204796]
 mesh = SubResource("ArrayMesh_ah7lg")

@@ -42,11 +42,12 @@ func check_for_hand_action():
 		hands.default()
 
 func pickup(basic_item : BasicItem):
-	item_picked_up = basic_item
-	basic_item.get_parent().remove_child(basic_item)
-	if basic_item.texture_in_ui:
-		hands.set_item_texture(basic_item.texture_in_ui)
-	SignalBus.item_picked_up.emit()
+	if basic_item.pickup():
+		item_picked_up = basic_item
+		basic_item.get_parent().remove_child(basic_item)
+		if basic_item.texture_in_ui:
+			hands.set_item_texture(basic_item.texture_in_ui)
+		SignalBus.item_picked_up.emit()
 
 func check_for_item_action():
 	if not item_picked_up: return

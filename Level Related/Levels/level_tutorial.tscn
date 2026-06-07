@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://dvxcsjeu8v7af" path="res://Items/computer.tscn" id="22_v0747"]
 [ext_resource type="PackedScene" uid="uid://b8pg2wa2e6kby" path="res://Items/black_chair.tscn" id="23_4w87f"]
 [ext_resource type="PackedScene" uid="uid://ds22dr0hwtayh" path="res://Items/plant.tscn" id="23_kdbxh"]
+[ext_resource type="PackedScene" uid="uid://cpo7xnkvkp26w" path="res://Items/noodles.tscn" id="23_v0747"]
+[ext_resource type="PackedScene" uid="uid://cccaj650n1npp" path="res://Items/valley.tscn" id="24_b54we"]
 [ext_resource type="PackedScene" uid="uid://cehd8wr85cfup" path="res://Items/high_plant.tscn" id="24_v0747"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_nfyuv"]
@@ -258,15 +260,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3560777, 0.0017630913, 1.67
 
 [node name="BlackChair2" parent="Office" unique_id=442746016 instance=ExtResource("23_4w87f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.7616258, 0, 10.8001375)
+push_force = 6
+melee_range = Vector3(1, 1, 1)
 
 [node name="BlackChair3" parent="Office" unique_id=1121393629 instance=ExtResource("23_4w87f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.3167262, 0, 10.8001375)
+push_force = 6
+melee_range = Vector3(1, 1, 1)
 
 [node name="BlackChair4" parent="Office" unique_id=93503986 instance=ExtResource("23_4w87f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.8203955, 0, 10.8001375)
+push_force = 6
+melee_range = Vector3(1, 1, 1)
 
 [node name="BlackChair5" parent="Office" unique_id=1763156760 instance=ExtResource("23_4w87f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.350903, 0, 10.8001375)
+push_force = 6
+melee_range = Vector3(1, 1, 1)
 
 [node name="Label3D" type="Label3D" parent="Office" unique_id=1821894918]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.5194018, 1.7002952, 11.176788)
@@ -296,6 +306,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.188235, 0.61, 1.4727311)
 
 [node name="Screen2" parent="Office" unique_id=942036220 instance=ExtResource("9_lrnf2")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.1738523, 0.61, 1.9554145)
+
+[node name="Noodles" parent="Office" unique_id=795123092 instance=ExtResource("23_v0747")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8711941, 0.6092551, 6.8960514)
+
+[node name="Valley" parent="Office" unique_id=116067478 instance=ExtResource("24_b54we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8637085, 0.6089341, 7.3992786)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2065422838]
 collision_layer = 16

@@ -45,6 +45,7 @@ func _ready() -> void:
 	demon_swap_timer.autostart = false
 	demon_swap_timer.one_shot = true
 	SignalBus.player_life_changing.connect(player_life_changed)
+	SignalBus.player_death.connect(player_death)
 	life_gain_timer.timeout.connect(life_gain_timer_timeout)
 	office_swap_timer.timeout.connect(office_timer_timeout)
 	demon_swap_timer.timeout.connect(demon_timer_timeout)
@@ -84,6 +85,9 @@ func set_swap_mode(enable : bool):
 	else:
 		timer.visible = true
 		office_swap_timer.start()
+
+func player_death():
+	swap_to_office.call_deferred()
 
 func swap():
 	if is_in_office:
