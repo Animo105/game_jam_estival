@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://conxhiin3emnb"]
 
+[ext_resource type="Texture2D" uid="uid://dxbgdcc50uk4v" path="res://Assets/Materials/Fire.png" id="1_4gwlb"]
 [ext_resource type="Texture2D" uid="uid://c5upvhaaflw1x" path="res://Assets/Materials/HeartContainer.png" id="1_ly4gg"]
+[ext_resource type="Script" uid="uid://6s8aig2pci60" path="res://Player/Camera/health_bar.gd" id="1_ownfq"]
 [ext_resource type="Texture2D" uid="uid://dqrwrcc8sqisy" path="res://Assets/Materials/Heart.png" id="2_4gwlb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfw15"]
@@ -17,8 +19,24 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_ownfq")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=886334398]
+[node name="Fire" type="TextureRect" parent="." unique_id=1627027901]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 351.0
+offset_top = 477.0
+offset_right = 871.0
+offset_bottom = 663.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_4gwlb")
+
+[node name="Background" type="TextureRect" parent="." unique_id=886334398]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -50,10 +68,11 @@ grow_vertical = 0
 mouse_filter = 2
 theme_override_styles/fill = SubResource("StyleBoxFlat_dfw15")
 max_value = 126.5
+step = 1.0
 value = 72.83
 show_percentage = false
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1331065073]
+[node name="Foreground" type="TextureRect" parent="." unique_id=1331065073]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -67,3 +86,9 @@ offset_bottom = 675.425
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_4gwlb")
+
+[node name="Timer" type="Timer" parent="." unique_id=891914503]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

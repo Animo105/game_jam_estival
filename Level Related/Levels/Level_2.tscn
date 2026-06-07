@@ -27,23 +27,12 @@
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="21_mjxqx"]
 [ext_resource type="PackedScene" uid="uid://dpejp70faqtsj" path="res://Level Related/Levels/level_1.tscn" id="21_t2mk1"]
 [ext_resource type="PackedScene" uid="uid://284x8rv58kc8" path="res://Enemy/jonny.tscn" id="25_l2c51"]
-[ext_resource type="Texture2D" uid="uid://c5upvhaaflw1x" path="res://Assets/Materials/HeartContainer.png" id="27_dfw15"]
-[ext_resource type="Texture2D" uid="uid://dqrwrcc8sqisy" path="res://Assets/Materials/Heart.png" id="27_xskrn"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_n37fa"]
 vertices = PackedVector3Array(0.32858515, 1.2, 2.3285851, 0.32858515, 1.2, 3.0785851, 0.82858515, 1.2, 3.0785851, 1.3285851, 1.2, 1.8285851, 0.82858515, 1.2, 1.8285851, 0.82858515, 1.2, 0.32858515, 4.578585, 1.2, 1.8285851, 4.578585, 1.2, -3.9214149, 0.82858515, 1.2, -2.9214149, 0.82858515, 1.2, -3.9214149, -0.42141485, 1.2, -2.4214149, -0.42141485, 1.2, -0.17141485, -1.1714149, 1.2, 2.3285851, -1.4214149, 1.2, 3.0785851, -4.421415, 1.2, 3.8285851, -1.9214149, 1.2, 3.8285851, -1.6714149, 1.2, 1.8285851, -1.6714149, 1.2, 0.32858515, -4.421415, 1.2, -2.6714149)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(3, 5, 6), PackedInt32Array(6, 5, 8), PackedInt32Array(6, 8, 7), PackedInt32Array(8, 9, 7), PackedInt32Array(3, 4, 5), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 5), PackedInt32Array(0, 1, 12), PackedInt32Array(12, 1, 13), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 14), PackedInt32Array(17, 14, 18), PackedInt32Array(12, 13, 16), PackedInt32Array(16, 13, 15), PackedInt32Array(11, 17, 10), PackedInt32Array(10, 17, 18)]
 cell_height = 0.6
 agent_radius = 0.7
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfw15"]
-bg_color = Color(18.892157, 0, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0.5254902)
-shadow_size = 8
 
 [node name="Level" type="Node3D" unique_id=765839663 node_paths=PackedStringArray("office", "demon_world")]
 script = ExtResource("1_pobmy")
@@ -464,48 +453,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7234378, -0.55113816, -4.0
 height = 4.0
 vertices = PackedVector3Array(1.8003666, 0, 0.47468305, -2.3118877, 0, 0.5183995, -2.4780097, 0, -0.98252964, 1.9752319, 0, -0.8776107)
 affect_navigation_mesh = true
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=902339315]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -260.0
-offset_top = -109.0
-offset_right = 260.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 4
-texture = ExtResource("27_dfw15")
-
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1406864867]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -217.0
-offset_top = -59.0
-offset_right = 218.0
-offset_bottom = -39.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-theme_override_styles/fill = SubResource("StyleBoxFlat_dfw15")
-value = 72.83
-show_percentage = false
-
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1293078012]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -260.0
-offset_top = -104.57501
-offset_right = 260.0
-offset_bottom = -4.575012
-grow_horizontal = 2
-grow_vertical = 0
-texture = ExtResource("27_xskrn")
