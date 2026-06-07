@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="3_63i6k"]
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="3_pbi3v"]
 [ext_resource type="PackedScene" uid="uid://bjdrsn4ni6v2j" path="res://Assets/Models/Light.glb" id="5_bwd7l"]
+[ext_resource type="PackedScene" uid="uid://df53px8wikefi" path="res://Assets/Models/RoundTable.glb" id="7_jj4p3"]
 [ext_resource type="PackedScene" uid="uid://284x8rv58kc8" path="res://Enemy/jonny.tscn" id="7_w1m4x"]
+[ext_resource type="PackedScene" uid="uid://ccoiyhmb1fhkl" path="res://Assets/Models/Table.glb" id="8_sgtho"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_w1m4x"]
 vertices = PackedVector3Array(0.2800007, 0.46495038, -6.2199993, 2.2800007, 0.46495038, -6.2199993, 2.2800007, 0.46495038, -10.719999, -0.4699993, 0.46495038, -5.4699993, -11.219999, 0.46495038, -10.719999, -11.219999, 0.46495038, -2.7199993, -0.4699993, 0.46495038, -2.9699993, 4.2800007, 0.46495038, -6.2199993, 5.0300007, 0.46495038, -5.4699993, 11.280001, 0.46495038, -4.2199993, 11.280001, 0.46495038, -10.719999, 5.0300007, 0.46495038, -3.9699993, 4.2800007, 0.46495038, -0.7199993, 2.2800007, 0.46495038, -0.7199993, 2.2800007, 0.46495038, 2.0300007, 4.2800007, 0.46495038, 2.0300007, 5.0300007, 0.46495038, 2.7800007, 5.0300007, 0.46495038, 4.2800007, 11.280001, 0.46495038, 4.0300007, 5.0300007, 0.46495038, -1.4699993, 2.2800007, 0.46495038, 10.030001, 2.2800007, 0.46495038, 7.5300007, 0.5300007, 0.46495038, 7.5300007, 0.5300007, 0.46495038, 2.0300007, 0.2800007, 0.46495038, -0.7199993, -0.21999931, 0.46495038, 6.7800007, -0.21999931, 0.46495038, 2.7800007, -0.4699993, 0.46495038, -1.4699993, -11.219999, 0.46495038, 10.030001, 4.2800007, 0.46495038, 7.5300007, 5.0300007, 0.46495038, 6.7800007, 11.280001, 0.46495038, 10.030001)
@@ -31,13 +33,37 @@ navigation_mesh = SubResource("NavigationMesh_w1m4x")
 [node name="BigRoom2" parent="NavigationRegion3D/Structure" unique_id=1074359900 instance=ExtResource("2_85i5q")]
 
 [node name="ElevatorArea" parent="NavigationRegion3D/Structure" unique_id=213366012 instance=ExtResource("3_pbi3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2207294, 2.8458166e-07, -3.3917904)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2207294, 2.8458166e-07, -11.86357)
 
 [node name="StartingElevator" parent="NavigationRegion3D/Structure" unique_id=1763282973 instance=ExtResource("3_63i6k")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.408478, -1.922555e-07, 4.701333)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.408478, -1.922555e-07, 10.733988)
 
 [node name="Light2" parent="NavigationRegion3D/Structure" unique_id=1261968370 instance=ExtResource("5_bwd7l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9433575, 0, 0.93330306)
+
+[node name="RoundTable2" parent="NavigationRegion3D/Structure" unique_id=1173995218 instance=ExtResource("7_jj4p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6465282, 0, 0.18941307)
+
+[node name="RoundTable3" parent="NavigationRegion3D/Structure" unique_id=181714565 instance=ExtResource("7_jj4p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.171072, -2.3841858e-07, 2.3412592)
+
+[node name="RoundTable4" parent="NavigationRegion3D/Structure" unique_id=569472315 instance=ExtResource("7_jj4p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7421825, 0, -1.8181973)
+
+[node name="RoundTable5" parent="NavigationRegion3D/Structure" unique_id=2139992921 instance=ExtResource("7_jj4p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7553596, 0, 1.8537588)
+
+[node name="RoundTable6" parent="NavigationRegion3D/Structure" unique_id=90557491 instance=ExtResource("7_jj4p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6913004, 0, -0.49523878)
+
+[node name="RoundTable7" parent="NavigationRegion3D/Structure" unique_id=188314240 instance=ExtResource("7_jj4p3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3367643, -2.3841858e-07, -2.6601458)
+
+[node name="Table2" parent="NavigationRegion3D/Structure" unique_id=523641455 instance=ExtResource("8_sgtho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.949285, 0, 5.581127)
+
+[node name="Table3" parent="NavigationRegion3D/Structure" unique_id=2141024020 instance=ExtResource("8_sgtho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4749928, 0, 5.4672165)
 
 [node name="Office" type="Node3D" parent="." unique_id=1220497806]
 
