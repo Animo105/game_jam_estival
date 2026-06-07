@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ygxynmnd8fne"
-path="res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"
+path="res://.godot/imported/pick.png-3f31073f15b02455a03ac9a82c0f178a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/pick.png"
-dest_files=["res://.godot/imported/pick.png-646f4fb4c422f6064cadfddfd572285f.ctex"]
+source_file="res://Assets/hands/pick.png"
+dest_files=["res://.godot/imported/pick.png-3f31073f15b02455a03ac9a82c0f178a.ctex"]
 
 [params]
 

@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dqvqavgusd0pd" path="res://Assets/Models/Static/Tv.glb" id="18_wy55a"]
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="20_ahrcu"]
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="21_mjxqx"]
-[ext_resource type="PackedScene" uid="uid://dpejp70faqtsj" path="res://Level Related/Levels/level_1.tscn" id="21_t2mk1"]
+[ext_resource type="PackedScene" uid="uid://b6wy3ojvhgign" path="res://Level Related/Levels/level_3.tscn" id="21_t2mk1"]
 [ext_resource type="PackedScene" uid="uid://284x8rv58kc8" path="res://Enemy/jonny.tscn" id="25_l2c51"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_t2mk1"]
