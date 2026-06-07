@@ -88,6 +88,7 @@ func set_swap_mode(enable : bool):
 		office_swap_timer.start()
 
 func player_death():
+	set_swap_mode(false)
 	swap_to_office.call_deferred()
 
 func swap():
