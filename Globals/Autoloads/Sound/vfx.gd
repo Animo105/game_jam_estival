@@ -4,7 +4,9 @@ enum Sound {
 	STEP,
 	FIRE,
 	DASH,
-	CARD
+	CARD,
+	HIT,
+	DEAD,
 }
 
 const PLAYER_POOL_SIZE: int = 32
@@ -14,6 +16,8 @@ const SOUND_PITCH_VARIATION := {
 	Sound.FIRE: 0.1,
 	Sound.DASH: 0.2,
 	Sound.CARD: 0.0,
+	Sound.HIT: 0.1,
+	Sound.DEAD: 0.1
 }
 
 var sounds := {
@@ -21,6 +25,8 @@ var sounds := {
 	Sound.FIRE: preload("res://Assets/Sounds/Fire.ogg") as AudioStream,
 	Sound.DASH: preload("res://Assets/Sounds/dash.ogg") as AudioStream,
 	Sound.CARD: preload("res://Assets/Sounds/card flash.ogg") as AudioStream,
+	Sound.HIT: preload("res://Assets/Sounds/hit.ogg") as AudioStream,
+	Sound.DEAD: preload("res://Assets/Sounds/dead.ogg") as AudioStream,
 	
 }
 

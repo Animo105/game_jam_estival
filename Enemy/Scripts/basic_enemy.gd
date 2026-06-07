@@ -36,8 +36,11 @@ func hit(force : Vector3, damage : int):
 	health -= damage
 	damaged.emit()
 	if health < 0:
+		Vfx.play(Vfx.Sound.DEAD)
 		death()
-
+	else :
+		Vfx.play(Vfx.Sound.HIT)
+		
 func death():
 	var blood = blood_effect.instantiate()
 	get_parent().add_child(blood)
