@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dysrq1ahucm43"
-path="res://.godot/imported/idle.png-8a759da4530999072fcf0da777f0a3a8.ctex"
+uid="uid://0hbxv64xawyl"
+path="res://.godot/imported/tower_flip3.png-93118fccdbbe2b0710cd581ede575880.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/idle.png"
-dest_files=["res://.godot/imported/idle.png-8a759da4530999072fcf0da777f0a3a8.ctex"]
+source_file="res://Assets/Hands/tower_flip3.png"
+dest_files=["res://.godot/imported/tower_flip3.png-93118fccdbbe2b0710cd581ede575880.ctex"]
 
 [params]
 

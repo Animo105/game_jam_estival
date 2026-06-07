@@ -5,16 +5,20 @@
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="3_j6urx"]
 [ext_resource type="PackedScene" uid="uid://cv4v53b5s01gv" path="res://Assets/Models/Static/Wall.glb" id="3_q8rre"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="5_q8rre"]
-[ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="6_raaxf"]
+[ext_resource type="PackedScene" uid="uid://crykday4qt6bt" path="res://Prefabs/light.tscn" id="7_6x1iy"]
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="7_y3agi"]
 
-[node name="LevelTutoriel2" type="Node3D" unique_id=1616675434 node_paths=PackedStringArray("office", "demon_world")]
+[node name="LevelTutoriel2" type="Node3D" unique_id=1616675434 node_paths=PackedStringArray("office", "demon_world", "starting_elevator")]
 script = ExtResource("1_dhkpv")
 office = NodePath("Office")
 demon_world = NodePath("Demon")
+starting_elevator = NodePath("Structure/StartingElevator")
 metadata/_custom_type_script = "uid://dlbh676178r14"
 
 [node name="Structure" type="Node3D" parent="." unique_id=467329136]
+
+[node name="ElevatorArea" parent="Structure" unique_id=213366012 instance=ExtResource("7_y3agi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.093305, 4.6163073e-08, 5.351502)
 
 [node name="StartingElevator" parent="Structure" unique_id=1763282973 instance=ExtResource("3_j6urx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.040073, 0, -11.93782)
@@ -49,11 +53,8 @@ bureaux. il est possible de changer a tout moment avec E"
 [node name="Label3D2" type="Label3D" parent="." unique_id=1589847816]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.377404, 1.0354424, -0.92874646)
 double_sided = false
-text = "Vous devez rester un minimum de 10 seconde dans 
+text = "Vous devez rester un minimum de 5 seconde dans 
 l'autre monde avant de pouvoir changer avec E"
 
-[node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("6_raaxf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.938246, 0, -7.2990704)
-
-[node name="ElevatorArea" parent="." unique_id=213366012 instance=ExtResource("7_y3agi")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.093305, 4.6163073e-08, 5.351502)
+[node name="Light" parent="." unique_id=754433382 instance=ExtResource("7_6x1iy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.457367, 0, -3.7170024)

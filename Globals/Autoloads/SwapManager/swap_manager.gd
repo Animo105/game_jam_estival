@@ -4,10 +4,11 @@ signal enter_office
 signal enter_demon_world
 
 const REGEN_RATE : int = 3
-const OFFICE_SWAP_MAX_TIME : int = 5
-const DEMON_SWAP_MIN_TIME : int = 10
+const OFFICE_SWAP_MAX_TIME : int = 3
+const DEMON_SWAP_MIN_TIME : int = 5
 
-@onready var progress_bar: ProgressBar = $CanvasLayer/HBoxContainer/ProgressBar
+@onready var timer: Control = $Timer
+@onready var progress_bar: ProgressBar = $Timer/ProgressBar
 
 var do_swap_timer : bool = false
 var is_in_office : bool = false
@@ -16,8 +17,24 @@ var life_gain_timer : Timer = Timer.new()
 var office_swap_timer : Timer = Timer.new()
 var demon_swap_timer : Timer = Timer.new()
 
+var animation_to_office : Array[Texture] = [
+	load("res://Assets/Hands/tower_flip1.png"),
+	load("res://Assets/Hands/tower_flip2.png"),
+	load("res://Assets/Hands/tower_flip3.png"),
+	load("res://Assets/Hands/tower_up.png"),
+	load("res://Assets/Hands/tower_up.png"),
+	load("res://Assets/Hands/tower_up.png"),
+]
+var animation_to_demon : Array[Texture] = [
+	load("res://Assets/Hands/tower_flip3.png"),
+	load("res://Assets/Hands/tower_flip2.png"),
+	load("res://Assets/Hands/tower_flip1.png"),
+	load("res://Assets/Hands/tower_inverse.png"),
+	load("res://Assets/Hands/tower_inverse.png"),
+	load("res://Assets/Hands/tower_inverse.png"),
+]
+
 func _ready() -> void:
-	set_swap_mode(false)
 	life_gain_timer.wait_time = REGEN_RATE
 	life_gain_timer.autostart = false
 	life_gain_timer.one_shot = true
@@ -27,12 +44,14 @@ func _ready() -> void:
 	demon_swap_timer.wait_time = DEMON_SWAP_MIN_TIME
 	demon_swap_timer.autostart = false
 	demon_swap_timer.one_shot = true
+	SignalBus.player_life_changing.connect(player_life_changed)
 	life_gain_timer.timeout.connect(life_gain_timer_timeout)
 	office_swap_timer.timeout.connect(office_timer_timeout)
 	demon_swap_timer.timeout.connect(demon_timer_timeout)
 	add_child(life_gain_timer)
 	add_child(office_swap_timer)
 	add_child(demon_swap_timer)
+	set_swap_mode(false)
 	swap_to_office()
 
 func _process(_delta: float) -> void:
@@ -47,6 +66,9 @@ func _process(_delta: float) -> void:
 		else:
 			progress_bar.value = DEMON_SWAP_MIN_TIME
 
+func player_life_changed(new_amount : int)-> void:
+	life_gain_timer.start()
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("swap") && can_swap:
 		swap()
@@ -55,10 +77,12 @@ func set_swap_mode(enable : bool):
 	do_swap_timer = enable
 	can_swap = true
 	if not enable:
+		timer.visible = false
 		office_swap_timer.stop()
 		demon_swap_timer.stop()
-		progress_bar.visible = false
+	
 	else:
+		timer.visible = true
 		office_swap_timer.start()
 
 func swap():
@@ -66,16 +90,23 @@ func swap():
 		# change to demon
 		if not office_swap_timer.is_stopped():
 			office_swap_timer.stop()
+		Globals.hud_hands.play_once_animation(animation_to_demon, 0.4)
+		await Globals.hud_hands.finished_animation
 		swap_to_daemon()
 	else:
 		#change to office
 		if not demon_swap_timer.is_stopped():
 			demon_swap_timer.stop()
+		Globals.hud_hands.play_once_animation(animation_to_office, 0.4)
+		await Globals.hud_hands.finished_animation
 		swap_to_office()
 		
 
 func life_gain_timer_timeout():
-	pass
+	if Globals.player.health < Player.STARTING_LIFE:
+		Globals.player.health+=1
+	if Globals.player.health < Player.STARTING_LIFE:
+		life_gain_timer.start()
 
 func office_timer_timeout():
 	swap()
@@ -87,13 +118,14 @@ func lock_in_office():
 	demon_swap_timer.stop()
 	office_swap_timer.stop()
 	can_swap = false
-	progress_bar.visible = false
+	timer.visible = false
+	Globals.hud_hands.play_once_animation(animation_to_office, 0.4)
+	await Globals.hud_hands.finished_animation
 	is_in_office = true
 	enter_office.emit()
 
 func restart_timer():
-	progress_bar.visible = true
-	do_swap_timer = true
+	set_swap_mode(true)
 	swap_to_office()
 	
 

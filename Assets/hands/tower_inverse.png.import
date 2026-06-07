@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dysrq1ahucm43"
-path="res://.godot/imported/idle.png-8a759da4530999072fcf0da777f0a3a8.ctex"
+uid="uid://cq1ctduff4i23"
+path="res://.godot/imported/tower_inverse.png-b70857652b6ca05e299607fd3bf576eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/idle.png"
-dest_files=["res://.godot/imported/idle.png-8a759da4530999072fcf0da777f0a3a8.ctex"]
+source_file="res://Assets/Hands/tower_inverse.png"
+dest_files=["res://.godot/imported/tower_inverse.png-b70857652b6ca05e299607fd3bf576eb.ctex"]
 
 [params]
 

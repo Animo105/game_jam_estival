@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_4whrn"]
 [ext_resource type="PackedScene" uid="uid://biekqwwd8jjuk" path="res://Assets/Models/Static/BigRoom.glb" id="2_3cndm"]
 [ext_resource type="PackedScene" uid="uid://cv4v53b5s01gv" path="res://Assets/Models/Static/Wall.glb" id="3_fx8qu"]
+[ext_resource type="PackedScene" uid="uid://cp4gr4h7vdpyo" path="res://Level Related/Levels/level_tutoriel_2.tscn" id="4_e7326"]
 [ext_resource type="PackedScene" uid="uid://fg0lwc4s3333" path="res://Assets/Models/Static/Fence.glb" id="4_fx8qu"]
 [ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="4_jhcvk"]
 [ext_resource type="PackedScene" uid="uid://cyn4q8bvad4pi" path="res://Assets/Models/Elevator.glb" id="5_jhcvk"]
@@ -20,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://chh2tg7ptv1ur" path="res://Assets/Models/Screen.glb" id="17_b54we"]
 [ext_resource type="PackedScene" uid="uid://doetlgjdpay83" path="res://Assets/Models/Mouse.glb" id="19_hwiih"]
 [ext_resource type="PackedScene" uid="uid://bmlwkhvoepw7e" path="res://Assets/Models/Keyboard.glb" id="20_f8tsc"]
+[ext_resource type="PackedScene" uid="uid://sg7283f738ki" path="res://Items/wheel_chair.tscn" id="22_nfyuv"]
+[ext_resource type="PackedScene" uid="uid://b8pg2wa2e6kby" path="res://Items/black_chair.tscn" id="23_4w87f"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_nfyuv"]
 vertices = PackedVector3Array(-11.719698, 0.01495062, -2.341217, -9.969698, 0.01495062, -2.341217, -9.719698, 0.01495062, -3.091217, -11.719698, 0.01495062, -13.591217, -6.219698, 0.01495062, -3.341217, 5.780302, 0.01495062, -3.091217, 5.780302, 0.01495062, -13.591217, 9.030302, 0.01495062, -7.591217, 11.780302, 0.01495062, -7.591217, 11.780302, 0.01495062, -13.591217, 7.280302, 0.01495062, -13.591217, 7.280302, 0.01495062, 8.158783, 8.530302, 0.01495062, 8.158783, 8.530302, 0.01495062, -7.091217, 10.030302, 0.01495062, 7.408783, 10.780302, 0.01495062, 8.158783, 11.780302, 0.01495062, 8.158783, 11.780302, 0.01495062, -6.091217, 10.530302, 0.01495062, -1.591217, 10.030302, 0.01495062, -6.091217, 10.030302, 0.01495062, -3.341217, 10.530302, 0.01495062, -3.091217, 10.030302, 0.01495062, -1.341217, -9.719698, 0.01495062, -1.591217, -6.469698, 0.01495062, 8.158783, -6.469698, 0.01495062, 5.658783, -7.719698, 0.01495062, 5.408783, -11.719698, 0.01495062, 8.158783, -7.719698, 0.01495062, 1.408783, -6.469698, 0.01495062, 1.158783, -6.469698, 0.01495062, -1.591217, -0.46969795, 0.01495062, 3.908783, 0.53030205, 0.01495062, 3.658783, 0.53030205, 0.01495062, 3.158783, -0.46969795, 0.01495062, 2.908783, -0.21969795, 0.01495062, 7.408783, -4.969698, 0.01495062, 8.158783, 5.780302, 0.01495062, 8.158783, 2.030302, 0.01495062, 7.158783, -3.219698, 0.01495062, 1.408783, -3.219698, 0.01495062, 3.908783, -2.719698, 0.01495062, 4.158783, -0.21969795, 0.01495062, 0.65878296, -2.219698, 0.01495062, 0.65878296, -3.219698, 0.01495062, 5.658783, -4.969698, 0.01495062, 5.658783, -2.219698, 0.01495062, -1.591217, -4.969698, 0.01495062, -1.591217, -4.969698, 0.01495062, 1.158783, 5.530302, 0.01495062, 4.908783, 2.030302, 0.01495062, 4.908783, 1.280302, 0.01495062, 2.908783, 1.780302, 0.01495062, 3.658783, 5.780302, 0.01495062, -1.591217, 2.780302, 0.01495062, -1.591217, 2.780302, 0.01495062, 0.40878296, 1.280302, 0.01495062, 0.65878296, 0.53030205, 0.6249506, 4.658783, 0.53030205, 0.6249506, 6.408783, 1.030302, 0.6249506, 6.408783, 1.030302, 0.6249506, 4.658783)
@@ -40,7 +43,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.242675, 0.7710309, 10.0260
 
 [node name="Shift to dash" type="Label3D" parent="." unique_id=2083434632]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.016966, 1.0632415, -4.5457845)
+double_sided = false
 text = "Appuyer sur SHIFT pour se propulser"
+
+[node name="ElevatorArea" parent="." unique_id=213366012 instance=ExtResource("11_k6sqf")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.520161, 4.6163073e-08, 5.6964483)
+next_floor = ExtResource("4_e7326")
+enemies_to_kill = 1
 
 [node name="NavigationRegion3DGround" type="NavigationRegion3D" parent="." unique_id=567779944]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.3228705)
@@ -90,6 +99,13 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.6
 
 [node name="Tip" type="Label3D" parent="NavigationRegion3DGround/Structure" unique_id=2034399628]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.8674574, 1.0708185, 7.848026)
+double_sided = false
+text = "Retourne dans le monde normal
+ pour plus de fourniture"
+
+[node name="Tip2" type="Label3D" parent="NavigationRegion3DGround/Structure" unique_id=1372945328]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.8674574, 1.0708185, 7.848026)
+double_sided = false
 text = "Retourne dans le monde normal
  pour plus de fourniture"
 
@@ -164,10 +180,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7851553, 0, 3.551095)
 [node name="Wall14" parent="NavigationRegion3DGround/Structure" unique_id=1789622013 instance=ExtResource("3_fx8qu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7851553, 0, 10.540453)
 
-[node name="ElevatorArea" parent="NavigationRegion3DGround/Structure" unique_id=213366012 instance=ExtResource("11_k6sqf")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.520161, 4.6163073e-08, 5.6964483)
-enemies_to_kill = 1
-
 [node name="PillarSmall4" parent="NavigationRegion3DGround/Structure" unique_id=938594545 instance=ExtResource("7_hyjle")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4379864, 0, 0)
 
@@ -215,6 +227,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5542765, 0, 4.1806917)
 
 [node name="Mouse 2 to throw" type="Label3D" parent="Daemon" unique_id=916526523]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.808554, 1.012032, 9.747215)
+double_sided = false
+text = "Appuyer sur CLIQUE DROIT
+ pour lancer la chaise
+Bonne chance"
+
+[node name="Mouse 2 to throw2" type="Label3D" parent="Daemon" unique_id=667699402]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.808554, 1.012032, 9.747215)
+double_sided = false
 text = "Appuyer sur CLIQUE DROIT
  pour lancer la chaise
 Bonne chance"
@@ -252,6 +272,38 @@ text = "Appuyer sur CLIQUE GAUCHE
 
 [node name="Wall8" parent="Office" unique_id=1497494555 instance=ExtResource("3_fx8qu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5542765, 0, 7.3179636)
+
+[node name="Chair5" parent="Office" unique_id=1557537990 instance=ExtResource("9_mwi36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3426142, 0, 8.528928)
+
+[node name="Chair6" parent="Office" unique_id=718276770 instance=ExtResource("9_mwi36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3426142, 0, 7.7599583)
+
+[node name="Chair7" parent="Office" unique_id=22832715 instance=ExtResource("9_mwi36")]
+transform = Transform3D(-0.99996704, 0, 0.0081155915, 0, 1, 0, -0.0081155915, 0, -0.99996704, -0.1234808, 0, 7.7599583)
+
+[node name="WheelChair" parent="Office" unique_id=1499966095 instance=ExtResource("22_nfyuv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61489666, 0.0017630913, 1.9689012)
+
+[node name="WheelChair2" parent="Office" unique_id=1719897460 instance=ExtResource("22_nfyuv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3560777, 0.0017630913, 1.6737134)
+
+[node name="BlackChair2" parent="Office" unique_id=442746016 instance=ExtResource("23_4w87f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.7616258, 0, 10.8001375)
+
+[node name="BlackChair3" parent="Office" unique_id=1121393629 instance=ExtResource("23_4w87f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.3167262, 0, 10.8001375)
+
+[node name="BlackChair4" parent="Office" unique_id=93503986 instance=ExtResource("23_4w87f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.8203955, 0, 10.8001375)
+
+[node name="BlackChair5" parent="Office" unique_id=1763156760 instance=ExtResource("23_4w87f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.350903, 0, 10.8001375)
+
+[node name="Label3D" type="Label3D" parent="Office" unique_id=1821894918]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.5194018, 1.7002952, 11.176788)
+text = "CLIQUE GAUCHE pour frapper ou 
+utiliser certain objets"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2065422838]
 collision_layer = 16

@@ -13,7 +13,6 @@ var world_environement : WorldEnvironment = WorldEnvironment.new()
 var is_in_office : bool = true
 
 func _ready() -> void:
-	print("loaded_level")
 	SwapManager.enter_office.connect(enable_office)
 	SwapManager.enter_demon_world.connect(enable_demon_world)
 	office_environement = load("res://Assets/Environements/office_environement.tres")
@@ -27,7 +26,6 @@ func _ready() -> void:
 		player.visual.global_transform = starting_elevator.global_transform * SceneManager.data["relative_transform"]
 		player.set_position_for_reset()
 		starting_elevator.open_door()
-		SwapManager.restart_timer()
 
 func enable_demon_world():
 	is_in_office = false

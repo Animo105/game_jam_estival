@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dysrq1ahucm43"
-path="res://.godot/imported/idle.png-8a759da4530999072fcf0da777f0a3a8.ctex"
+uid="uid://by64hawf15vo0"
+path="res://.godot/imported/chaiseShield.png-d8e67256996c9cac855f772fc9354f4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/idle.png"
-dest_files=["res://.godot/imported/idle.png-8a759da4530999072fcf0da777f0a3a8.ctex"]
+source_file="res://Assets/Hands/chaiseShield.png"
+dest_files=["res://.godot/imported/chaiseShield.png-d8e67256996c9cac855f772fc9354f4b.ctex"]
 
 [params]
 

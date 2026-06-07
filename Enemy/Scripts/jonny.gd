@@ -6,6 +6,7 @@ const MAXIMAL_JONNY_RANGE : int = 3
 @onready var fire_cooldown: Timer = $fire_cooldown
 
 var can_spit_fire : bool = true
+var recoil_time : float = 0
 
 func _physics_process(_delta):
 	if state == States.CHASSING:
@@ -13,6 +14,16 @@ func _physics_process(_delta):
 		lauch_fire_ball()
 	elif state == States.HIT:
 		hit_recoil()
+
+func recoil(delta : float):
+	recoil_time += delta
+	if recoil_time >= 1.5:
+		recoil_time = 0
+		state = States.CHASSING
+
+func hit_recoil():
+	if linear_velocity.length() < 0.5:
+		state = States.CHASSING
 
 func lauch_fire_ball():
 	if not player: return

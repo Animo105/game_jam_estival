@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://bats0nchg8doq"]
 
 [ext_resource type="Script" uid="uid://dkmq8bedv738j" path="res://Globals/Autoloads/SwapManager/swap_manager.gd" id="1_xap8m"]
+[ext_resource type="Texture2D" uid="uid://h773xplc35f0" path="res://Assets/Materials/Timer.png" id="2_2jsdh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk3nb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="SwapManager" type="Node" unique_id=1515029395]
 script = ExtResource("1_xap8m")
@@ -8,14 +16,32 @@ script = ExtResource("1_xap8m")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=317540081]
 layer = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1677845008]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Timer" type="Control" parent="." unique_id=178833463]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 13.0
+offset_right = 40.0
+offset_bottom = 53.0
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/HBoxContainer" unique_id=1978085460]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="TextureRect" type="TextureRect" parent="Timer" unique_id=1991634607]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 494.0
+offset_right = 236.0
+offset_bottom = 822.0
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("2_2jsdh")
+
+[node name="ProgressBar" type="ProgressBar" parent="Timer" unique_id=1798493464]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 510.0
+offset_right = 108.4
+offset_bottom = 684.86
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_styles/fill = SubResource("StyleBoxFlat_mk3nb")
+value = 100.0
+fill_mode = 3
+show_percentage = false

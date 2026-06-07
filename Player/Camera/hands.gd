@@ -56,4 +56,6 @@ func play_once_animation(frames : Array[Texture], time : float = 1) -> void:
 	await tween.finished
 	animation_playing = false
 	finished_animation.emit()
+	if pickup_texture:
+		texture = pickup_texture
 	
