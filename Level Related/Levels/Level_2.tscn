@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://crykday4qt6bt" path="res://Prefabs/light.tscn" id="11_ehgd5"]
 [ext_resource type="PackedScene" uid="uid://ds22dr0hwtayh" path="res://Items/plant.tscn" id="11_n37fa"]
 [ext_resource type="PackedScene" uid="uid://fg0lwc4s3333" path="res://Assets/Models/Static/Fence.glb" id="12_2vipy"]
-[ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="13_rx4ve"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="13_sihpr"]
 [ext_resource type="PackedScene" uid="uid://b1gfwcdldul4k" path="res://Prefabs/lava.tscn" id="13_t2mk1"]
 [ext_resource type="PackedScene" uid="uid://c5hugqjkhcp7" path="res://Items/big_table.tscn" id="14_7nao7"]
@@ -356,8 +355,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.275397, 0.85889935, 4.28292
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8549652, 0.94921315, 3.8833013)
 
 [node name="Lava" parent="DeamonWorld" unique_id=1801914305 instance=ExtResource("13_t2mk1")]
-
-[node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("13_rx4ve")]
 
 [node name="Common" type="Node3D" parent="." unique_id=2057787903]
 

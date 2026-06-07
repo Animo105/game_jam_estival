@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://284x8rv58kc8" path="res://Enemy/jonny.tscn" id="11_ddhk5"]
 [ext_resource type="PackedScene" uid="uid://cccaj650n1npp" path="res://Items/valley.tscn" id="12_ccj0d"]
 [ext_resource type="PackedScene" uid="uid://b1gfwcdldul4k" path="res://Prefabs/lava.tscn" id="12_o3h8n"]
-[ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="13_5ff7v"]
 [ext_resource type="PackedScene" uid="uid://cpo7xnkvkp26w" path="res://Items/noodles.tscn" id="13_l4ejg"]
 [ext_resource type="PackedScene" uid="uid://crykday4qt6bt" path="res://Prefabs/light.tscn" id="14_eo62r"]
 [ext_resource type="PackedScene" uid="uid://dqvqavgusd0pd" path="res://Assets/Models/Static/Tv.glb" id="15_k705s"]
@@ -581,6 +580,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7234378, -0.55113816, -4.0
 height = 4.0
 vertices = PackedVector3Array(1.8003666, 0, 0.47468305, -2.3118877, 0, 0.5183995, -2.4780097, 0, -0.98252964, 1.9752319, 0, -0.8776107)
 affect_navigation_mesh = true
-
-[node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("13_5ff7v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.595724, 0.43214577, -1.7540455)

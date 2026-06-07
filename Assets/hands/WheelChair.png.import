@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1p1lbim1vs48"
-path="res://.godot/imported/WheelChair.png-e6bc1b9e92b4817325e357b2160cf3a1.ctex"
+path="res://.godot/imported/WheelChair.png-210fa6a5fda10cb3f33e847c3feb7ad3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/WheelChair.png"
-dest_files=["res://.godot/imported/WheelChair.png-e6bc1b9e92b4817325e357b2160cf3a1.ctex"]
+source_file="res://Assets/hands/WheelChair.png"
+dest_files=["res://.godot/imported/WheelChair.png-210fa6a5fda10cb3f33e847c3feb7ad3.ctex"]
 
 [params]
 
