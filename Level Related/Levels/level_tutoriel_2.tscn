@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_dhkpv"]
 [ext_resource type="PackedScene" uid="uid://biekqwwd8jjuk" path="res://Assets/Models/Static/BigRoom.glb" id="3_4d651"]
-[ext_resource type="PackedScene" uid="uid://jsui6ecmwojy" path="res://Level Related/Levels/Level_1.tscn" id="3_6x1iy"]
+[ext_resource type="PackedScene" uid="uid://dpejp70faqtsj" path="res://Level Related/Levels/Level_1.tscn" id="3_6x1iy"]
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="3_j6urx"]
 [ext_resource type="PackedScene" uid="uid://cv4v53b5s01gv" path="res://Assets/Models/Static/Wall.glb" id="3_q8rre"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="5_q8rre"]
@@ -49,14 +49,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6252637, 0, -0.88318014)
 [node name="Label3D" type="Label3D" parent="." unique_id=973885012]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.084366, 2.166515, -0.92874646)
 double_sided = false
-text = "Vous pouvez rester un maximum de 5 seconde dans les 
+text = "Vous pouvez rester un maximum de 3 seconde dans les 
 bureaux. il est possible de changer a tout moment avec E"
 
 [node name="Label3D2" type="Label3D" parent="." unique_id=1589847816]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.377404, 1.0354424, -0.92874646)
 double_sided = false
-text = "Vous devez rester un minimum de 5 seconde dans 
-l'autre monde avant de pouvoir changer avec E"
+text = "Dans l'autre monde, vous reviendrez dans 
+les bureaux apres 5 secondes"
 
 [node name="Light" parent="." unique_id=754433382 instance=ExtResource("7_6x1iy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.457367, 0, -3.7170024)

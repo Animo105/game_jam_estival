@@ -37,12 +37,11 @@ func hit(force : Vector3, damage : int):
 	damaged.emit()
 	if health < 0:
 		death()
-	print("health"+str(health))
 
 func death():
 	var blood = blood_effect.instantiate()
-	blood.global_position = self.global_position
 	get_parent().add_child(blood)
+	blood.global_position = self.global_position
 	blood.emitting = true
 	queue_free()
 	SignalBus.enemy_death.emit()

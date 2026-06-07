@@ -30,7 +30,7 @@ func health_timeout() -> void :
 	progress_bar.value = Globals.player.health
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Globals.player.health >= Player.STARTING_LIFE :
 		regen_bar.value = 0
 		return

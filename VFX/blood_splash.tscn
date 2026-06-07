@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dt2r0e5g52ltl"]
 
 [ext_resource type="Texture2D" uid="uid://cuicioifsocvn" path="res://Assets/particleblood.png" id="1_ngy4w"]
-[ext_resource type="Script" uid="uid://bmhwhaeku4xy" path="res://VFX/blood_splash.gd" id="2_jrx62"]
+[ext_resource type="Script" path="res://VFX/blood_splash.gd" id="2_jrx62"]
 
 [sub_resource type="Gradient" id="Gradient_jrx62"]
 colors = PackedColorArray(0.5111483, 1.8770993e-06, 0, 1, 0.99999994, 0.1835837, 0.12355625, 1)

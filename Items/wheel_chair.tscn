@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://sg7283f738ki"]
 
-[ext_resource type="Script" uid="uid://bvul8at3tnxs0" path="res://Items/Scripts/basic_item.gd" id="1_4jmvk"]
 [ext_resource type="Material" uid="uid://md7bsljcox5f" path="res://Assets/Materials/Black.tres" id="1_dhwvw"]
+[ext_resource type="Script" uid="uid://dkkk5utcoerc7" path="res://Items/Scripts/combat_item.gd" id="1_k0t7f"]
 [ext_resource type="Material" uid="uid://ia2w1jyy541w" path="res://Assets/Materials/Metal.tres" id="2_4jmvk"]
-[ext_resource type="Texture2D" uid="uid://by64hawf15vo0" path="res://Assets/Hands/chaiseShield.png" id="2_k0t7f"]
+[ext_resource type="Texture2D" uid="uid://b1p1lbim1vs48" path="res://Assets/Hands/WheelChair.png" id="2_k0t7f"]
 [ext_resource type="Material" uid="uid://djorsmnkndhm8" path="res://Assets/Materials/Textile.tres" id="3_k0t7f"]
 [ext_resource type="Material" uid="uid://bvtwh8j2and0y" path="res://Assets/Materials/Leather.tres" id="4_v3phf"]
 
@@ -118,12 +118,13 @@ shadow_mesh = SubResource("ArrayMesh_a1j04")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hvlqh"]
 points = PackedVector3Array(-0.30282336, 0, -5.877018e-05, -0.0030226707, 0, -0.29980075, -0.0030226707, 0, 0.29980063, -0.24113767, 0.30996585, 0.1959151, -0.24747644, 0.37514555, 0.20495373, -0.30282336, 0.07429638, -5.877018e-05, -0.24747644, 0.37514555, -0.20501256, -0.24113767, 0.30996585, -0.19597393, 0.29677802, 0, -5.9604645e-08, -0.0030226707, 0.07429638, -0.29980075, 0.23743999, 0.87042636, -0.20501256, 0.15609238, 0.3760828, -0.20501256, 0.15609238, 0.3760828, 0.20495373, 0.23743999, 0.87042636, 0.20495373, -0.0030226707, 0.07429638, 0.29980063, 0.19177735, 0.86872226, 0.20495373, 0.19177735, 0.86872226, -0.20501256, 0.29677802, 0.07429638, -5.9604645e-08)
 
-[node name="WheelChair" type="RigidBody3D" unique_id=1499966095]
+[node name="WheelChair" type="RigidBody3D" unique_id=1121216145]
 physics_material_override = SubResource("PhysicsMaterial_dhwvw")
-script = ExtResource("1_4jmvk")
+script = ExtResource("1_k0t7f")
+melee_attack = false
 texture_in_ui = ExtResource("2_k0t7f")
-drop_distance = 2.0
-metadata/_custom_type_script = "uid://bvul8at3tnxs0"
+drop_distance = 0.5
+metadata/_custom_type_script = "uid://dkkk5utcoerc7"
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=1438731430]
 mesh = SubResource("ArrayMesh_f3nke")

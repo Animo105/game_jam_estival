@@ -67,7 +67,7 @@ func _process(_delta: float) -> void:
 		else:
 			progress_bar.value = DEMON_SWAP_MIN_TIME
 
-func player_life_changed(new_amount : int, decreasing :bool)-> void:
+func player_life_changed(_new_amount : int, _decreasing :bool)-> void:
 	life_gain_timer.start()
 	SignalBus.start_player_health_gain.emit(REGEN_RATE, life_gain_timer)
 
@@ -115,7 +115,7 @@ func office_timer_timeout():
 	swap()
 
 func demon_timer_timeout():
-	can_swap = true
+	swap()
 
 func lock_in_office():
 	demon_swap_timer.stop()

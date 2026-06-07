@@ -10,7 +10,7 @@ const DEFAULT_FOV : float = 75.0
 
 const DASH_STRENGHT : float = 30.0
 
-const JUMP_VELOCITY : float = 7.0
+const JUMP_VELOCITY : float = 10.0
 
 const STARTING_LIFE : int = 5
 
