@@ -9,6 +9,7 @@ const DEMON_SWAP_MIN_TIME : int = 5
 
 @onready var timer: Control = $Timer
 @onready var progress_bar: ProgressBar = $Timer/ProgressBar
+@onready var color_rect: ColorRect = $Timer/ColorRect
 
 var do_swap_timer : bool = false
 var is_in_office : bool = false
@@ -96,16 +97,24 @@ func swap():
 		if not office_swap_timer.is_stopped():
 			office_swap_timer.stop()
 		Globals.hud_hands.play_once_animation(animation_to_demon, 0.4)
+		Vfx.play(Vfx.Sound.CARD)
 		await Globals.hud_hands.finished_animation
 		swap_to_daemon()
+		_flash()
 	else:
 		#change to office
 		if not demon_swap_timer.is_stopped():
 			demon_swap_timer.stop()
 		Globals.hud_hands.play_once_animation(animation_to_office, 0.4)
+		Vfx.play(Vfx.Sound.CARD)
 		await Globals.hud_hands.finished_animation
 		swap_to_office()
+		_flash()
 		
+func _flash():
+	color_rect.show()
+	await get_tree().create_timer(0.1).timeout
+	color_rect.hide()
 
 func life_gain_timer_timeout():
 	if Globals.player.health < Player.STARTING_LIFE:

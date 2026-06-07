@@ -45,3 +45,18 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_mk3nb")
 value = 100.0
 fill_mode = 3
 show_percentage = false
+
+[node name="ColorRect" type="ColorRect" parent="Timer" unique_id=1877303989]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.1520001
+anchor_top = -1.501
+anchor_right = 32.403
+anchor_bottom = 18.738
+offset_left = 21.080002
+offset_top = 25.04
+offset_right = 54.880005
+offset_bottom = -14.52002
+grow_horizontal = 2
+grow_vertical = 2
