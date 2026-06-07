@@ -26,6 +26,7 @@ func _ready() -> void:
 		player.visual.global_transform = starting_elevator.global_transform * SceneManager.data["relative_transform"]
 		player.set_position_for_reset()
 		starting_elevator.open_door()
+		SwapManager.restart_timer()
 
 func enable_demon_world():
 	is_in_office = false

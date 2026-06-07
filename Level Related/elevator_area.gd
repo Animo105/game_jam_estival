@@ -40,6 +40,7 @@ func _on_elevator_area_body_entered(body: Node3D) -> void:
 		timer.start()
 
 func swap_player():
+	SwapManager.lock_in_office()
 	SceneManager.data["relative_position"] = to_local(Globals.player.global_position)
 	SceneManager.data["relative_transform"] = global_transform.affine_inverse() * Globals.player.visual.global_transform
 	get_tree().current_scene.remove_child(Globals.player)

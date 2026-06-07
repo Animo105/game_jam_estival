@@ -83,6 +83,20 @@ func office_timer_timeout():
 func demon_timer_timeout():
 	can_swap = true
 
+func lock_in_office():
+	demon_swap_timer.stop()
+	office_swap_timer.stop()
+	can_swap = false
+	progress_bar.visible = false
+	is_in_office = true
+	enter_office.emit()
+
+func restart_timer():
+	progress_bar.visible = true
+	do_swap_timer = true
+	swap_to_office()
+	
+
 func swap_to_office():
 	progress_bar.value = 0
 	progress_bar.max_value = OFFICE_SWAP_MAX_TIME
