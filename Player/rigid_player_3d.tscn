@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bbkag7tgn5b7a" path="res://Player/Camera/camera.tscn" id="2_67wvr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x3372"]
-friction = 0.1
+friction = 0.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ba4mr"]
 radius = 0.15
