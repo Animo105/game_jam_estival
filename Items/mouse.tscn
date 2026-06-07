@@ -43,6 +43,7 @@ shadow_mesh = SubResource("ArrayMesh_74r83")
 points = PackedVector3Array(-0.039486755, 1.7130253e-10, -0.019743396, -0.039486755, 0.016662288, -0.019743396, 0.039486755, 1.7130253e-10, -0.019743396, -0.039486755, 1.7130253e-10, 0.019743359, -0.039486755, 0.016662288, 0.019743359, 0.039486755, 0.016662288, -0.019743396, 0.039486755, 1.7130253e-10, 0.019743359, 0.039486755, 0.016662288, 0.019743359)
 
 [node name="Mouse" type="RigidBody3D" unique_id=868361759]
+continuous_cd = true
 script = ExtResource("1_n17b0")
 melee_range = Vector3(0.4, 0.4, 4)
 melee_animation = Array[Texture]([ExtResource("2_gy8ks")])
