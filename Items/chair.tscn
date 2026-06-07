@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dfg1tit83sxga"]
 
 [ext_resource type="Script" uid="uid://dkkk5utcoerc7" path="res://Items/Scripts/combat_item.gd" id="1_kyc31"]
-[ext_resource type="Texture2D" uid="uid://beinwuxscwfu" path="res://Assets/Hands/chaiseOrange.png" id="2_2lb1x"]
+[ext_resource type="Texture2D" uid="uid://beinwuxscwfu" path="res://Assets/hands/chaiseOrange.png" id="2_2lb1x"]
 [ext_resource type="Material" uid="uid://dyyrkusqsaoln" path="res://Assets/Materials/Orange.tres" id="3_o3kxk"]
 [ext_resource type="Material" uid="uid://ia2w1jyy541w" path="res://Assets/Materials/Metal.tres" id="4_mdxnl"]
 [ext_resource type="Material" uid="uid://md7bsljcox5f" path="res://Assets/Materials/Black.tres" id="5_57cu3"]
@@ -102,8 +102,8 @@ physics_material_override = SubResource("PhysicsMaterial_kyc31")
 script = ExtResource("1_kyc31")
 melee_attack = false
 melee_range = Vector3(0.8, 0.5, 2)
-health = 3
-damage = 3
+health = 2
+damage = 4
 texture_in_ui = ExtResource("2_2lb1x")
 metadata/_custom_type_script = "uid://dkkk5utcoerc7"
 

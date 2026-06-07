@@ -3,7 +3,7 @@ extends Node
 signal enter_office
 signal enter_demon_world
 
-const REGEN_RATE : int = 3
+const REGEN_RATE : int = 6
 const OFFICE_SWAP_MAX_TIME : int = 3
 const DEMON_SWAP_MIN_TIME : int = 5
 

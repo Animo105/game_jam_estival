@@ -48,7 +48,8 @@ func _on_player_finished():
 
 func play(music_name):
 	music_folder = DirAccess.open(root_folder + music_name)
-	if not music_folder: return
+	if not music_folder :
+		return
 	if music_folder.dir_exists("Intro/"):
 		dir_contents(music_folder.get_current_dir() + "/Intro/")
 	elif music_folder.dir_exists("Loop/"):

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmfgtvhgwk8c0"
-path="res://.godot/imported/tower_flip2.png-5d00938c2b912c459de646cd0fcd06a9.ctex"
+path="res://.godot/imported/tower_flip2.png-d16fb11505e9ceab2e4c152d081ef127.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hands/tower_flip2.png"
-dest_files=["res://.godot/imported/tower_flip2.png-5d00938c2b912c459de646cd0fcd06a9.ctex"]
+source_file="res://Assets/hands/tower_flip2.png"
+dest_files=["res://.godot/imported/tower_flip2.png-d16fb11505e9ceab2e4c152d081ef127.ctex"]
 
 [params]
 
