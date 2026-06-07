@@ -1,0 +1,69 @@
+[gd_scene format=4 uid="uid://dvxcsjeu8v7af"]
+
+[ext_resource type="Material" uid="uid://bbm8rvt1fd5fd" path="res://Assets/Materials/Computer.tres" id="1_4ruei"]
+[ext_resource type="Material" uid="uid://md7bsljcox5f" path="res://Assets/Materials/Black.tres" id="2_olobt"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hr47q"]
+points = PackedVector3Array(-0.055999998, 0, -0.13999999, 0.055999998, 0, -0.13999999, -0.055999998, 0, 0.13999999, -0.055999998, 0.24110399, -0.13999999, 0.055999998, 0.24110399, -0.13999999, 0.055999998, 0, 0.13999999, -0.055999998, 0.24110399, 0.13999999, 0.055999998, 0.24110399, 0.13999999)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jfxm7"]
+_surfaces = [{
+"aabb": AABB(-0.055999998, 0, -0.13999999, 0.111999996, 0.24110399, 0.27999997),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"name": "Computer",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD///////8AAP//AAD//wAAAAD/////AAD//wAAAAAAAAAA//8AAAAAAAAAAAAAAAD/////AAAAAA==")
+}, {
+"aabb": AABB(-0.055999998, 0, -0.13999999, 0.111999996, 0.24110399, 0.27999997),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgAEAAAAAwAFAAEAAgAGAAQABAAGAAUAAwAHAAUABAAFAAcA"),
+"name": "Black",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAA//8AAP//AAAAAP////8AAP////8AAAAAAAD//wAAAAD///////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ic3wu"]
+resource_name = "Computer_Computer-col"
+_surfaces = [{
+"aabb": AABB(-0.055999998, 0, -0.13999999, 0.111999996, 0.24110399, 0.27999997),
+"attribute_data": PackedByteArray("lHj///7/AAD/////lHgAAAAA//9UdwAAVHf//wAAAAA="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": ExtResource("1_4ruei"),
+"name": "Computer",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AID///////8AgP//AAD//wCAAAD/////AID//wAAAAD//wAA//8AAP//AAAAAAAA////////AAD///9/////f////3////9/////f////3////9/////f///")
+}, {
+"aabb": AABB(-0.055999998, 0, -0.13999999, 0.111999996, 0.24110399, 0.27999997),
+"attribute_data": PackedByteArray("T1Ot8Q2vUAxPU1AMDa+t8U9TrfENr1AMDa+t8U9TUAx/Dr/h3PM/HNzzv+F/Dj8c3PO/4X8OPxx/Dr/h3PM/HA=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": ExtResource("2_olobt"),
+"name": "Black",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAAAP///z///wAAAAD/PwAAAAAAAP8///8AAP///z8AAP//////v/////8AAP+//////////78AAP//AAD/v///AAD///+//////wAA/7///wAAAAD/v/////////+/AAAAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAAAAP9/AAD/fwAA/38AAP9/////f////3////9/////f/9/AAD/fwAA/38AAP9/AAD/P/9//z//f/8//3//P/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jfxm7")
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=94500985]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=179853113]
+shape = SubResource("ConvexPolygonShape3D_hr47q")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=517481455]
+mesh = SubResource("ArrayMesh_ic3wu")
