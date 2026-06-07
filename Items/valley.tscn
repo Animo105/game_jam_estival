@@ -1,0 +1,48 @@
+[gd_scene format=4 uid="uid://cccaj650n1npp"]
+
+[ext_resource type="Material" uid="uid://ut7mqi6dsfsj" path="res://Assets/Materials/Material.tres" id="1_2cfq8"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8ajvi"]
+_surfaces = [{
+"aabb": AABB(-0.042750433, -3.4784665e-05, -0.013677872, 0.085500866, 0.0067304764, 0.027355744),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("BwACAAgABwABAAIAAgABAAkAAgAJAAgABwAEAAEAAQAEAAkABQAEAAcABQAHAAgABAAKAAkACAAJAAoABQAGAAQABAAGAAoABQAIAAsACAAKAAsAAAAGAAUAAAAFAAsABgADAAoAAAADAAYACwAKAAMACwADAAAA"),
+"lods": [0.018900355, PackedByteArray("AgAEAAEABQAEAAIABAADAAEAAgABAAMABQAGAAQABAAGAAMABQACAAAAAAAGAAUAAgADAAAAAAADAAYA"), 0.028350532, PackedByteArray("AAABAAIAAgABAAMAAAADAAEAAgADAAAA")],
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAD/fwAAAAD///9///8AAP///38AAAAAAAD/f///AADP4wAAus4AAC8cAABEMQAALxwAALrOAADP4wAARDEAAM/j//9EMQAAz+P//7rOAAAvHP//us4AAC8c//9EMQAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ah7lg"]
+resource_name = "Valley_Valley"
+_surfaces = [{
+"aabb": AABB(-0.042750433, -3.4784665e-05, -0.013677872, 0.085500866, 0.0067304764, 0.027355744),
+"attribute_data": PackedByteArray("f/wL8gmFGAMR9CwBT4zb+VN8Mv2kCAkD73cJAysHMv3glSIgsvE30hqbZ9Nib8hd1GW0qNRlo0lib5CUVVsWkv9lv0r/ZUSlVVvtXalw7V2pcBaSRVyQlEVcyF376+AWCm3XLdUa1y23cGjXiBto1w=="),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("EgAQABMADwASABMADwATABQAEQAPABQADgAMABUACwAOABUACwAVABYADQALABYAFwABAAIAFwAIAAEACQAIABcACQAKAAgAAAAKAAkAAAADAAoAGAAFAAYAGAAZAAUAGgAZABgAGgAbABkABAAbABoABAAHABsA"),
+"lods": [0.018900355, PackedByteArray("AgAIAAEACQAIAAIACQAKAAgAAAAKAAkAAAADAAoACwAMAA0ACwAOAAwADwAQABEABAAFAAYABAAHAAUA"), 0.028350532, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA")],
+"material": ExtResource("1_2cfq8"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("AAD/fwAANeP///9///+9zP///38AAL/gAAD/f///+c////9/AADFzQAA/3///9HdAAD/fwAA0d3///9////Fzc/jAAC6zkHOLxwAAEQx1+YvHAAAus60ys/jAAC6zoHIAAD/f///uMj///9///+vzS8cAAC6zpvHLxwAAEQxwub///9/AADt3QAA/38AAPDkz+MAAEQxSOXP4///RDF1+S8c//9EMXX5Lxz//7rOhcDP4///us6FwM/jAABEMc3nLxz//0QxDdovHP//us4N2s/j//9EMefQz+P//7rO59AcTxVQjWAGWlpRNEw5XrFd3MpuJafeUy+n3lMv3MpuJQllLl57TX9MXGEzYChhaV9bWCtgTmHFWTFf8mBOTZ5MlUujTwpSL04OTL9Mc8Nzw4s8izziixx0HHTii7JRA0m22lstttpbLZXPyieVz8on")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8ajvi")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pbgrx"]
+points = PackedVector3Array(-0.043000005, 0, -0.009000001, -0.043000005, 0.0067567034, -0.009000001, 0.043000005, 0, -0.009000001, -0.043000005, 0, 0.009000001, -0.043000005, 0.0067567034, 0.009000001, 0.043000005, 0.0067567034, -0.009000001, 0.043000005, 0, 0.009000001, 0.043000005, 0.0067567034, 0.009000001)
+
+[node name="Valley" type="RigidBody3D" unique_id=331481802]
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=951204796]
+mesh = SubResource("ArrayMesh_ah7lg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1420002885]
+shape = SubResource("ConvexPolygonShape3D_pbgrx")

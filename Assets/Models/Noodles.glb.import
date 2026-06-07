@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bun0xb5xg07su"
-path="res://.godot/imported/Computer.glb-402bc49176d8d8fcf28c553bc65c6226.scn"
+uid="uid://cecithu3i3hm1"
+path="res://.godot/imported/Noodles.glb-2b2a8886edd3568a5990be042dd45a6e.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Computer.glb"
-dest_files=["res://.godot/imported/Computer.glb-402bc49176d8d8fcf28c553bc65c6226.scn"]
+source_file="res://Assets/Models/Noodles.glb"
+dest_files=["res://.godot/imported/Noodles.glb-2b2a8886edd3568a5990be042dd45a6e.scn"]
 
 [params]
 

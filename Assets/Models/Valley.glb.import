@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bun0xb5xg07su"
-path="res://.godot/imported/Computer.glb-402bc49176d8d8fcf28c553bc65c6226.scn"
+uid="uid://pcqew8lpup2m"
+path="res://.godot/imported/Valley.glb-4aad35755b838e2f4d64dcdcf4262d73.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Computer.glb"
-dest_files=["res://.godot/imported/Computer.glb-402bc49176d8d8fcf28c553bc65c6226.scn"]
+source_file="res://Assets/Models/Valley.glb"
+dest_files=["res://.godot/imported/Valley.glb-4aad35755b838e2f4d64dcdcf4262d73.scn"]
 
 [params]
 
