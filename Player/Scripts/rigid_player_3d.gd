@@ -18,8 +18,9 @@ const STARTING_LIFE : int = 5
 @onready var neck: Node3D = $Visual/Neck
 @onready var camera: Camera3D = $Visual/Neck/Camera
 @onready var feet_ray_cast: RayCast3D = $FeetRayCast
-@onready var melee_area: Area3D = $Visual/MeleeArea
-@onready var range_collision_shape: CollisionShape3D = $Visual/MeleeArea/CollisionShape3D
+@onready var melee_area: Area3D = $Visual/Neck/Camera/MeleeArea
+@onready var range_collision_shape: CollisionShape3D = $Visual/Neck/Camera/MeleeArea/CollisionShape3D
+
 
 var is_grounded : bool = false
 var inputs : PlayerInput = PlayerInput.new()

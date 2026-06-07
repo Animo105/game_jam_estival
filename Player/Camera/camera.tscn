@@ -11,6 +11,7 @@ script = ExtResource("1_os5io")
 
 [node name="PickupRayCast" type="RayCast3D" parent="." unique_id=2091028835]
 target_position = Vector3(0, 0, -2)
+collision_mask = 8
 
 [node name="ThrowHandRayCast" type="RayCast3D" parent="." unique_id=542741315]
 target_position = Vector3(0, 0, -2.5)

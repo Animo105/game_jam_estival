@@ -137,6 +137,7 @@ drop={
 3d_physics/layer_1="Walls"
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Enemies"
+3d_physics/layer_4="Props"
 
 [physics]
 

@@ -152,7 +152,7 @@ blend_shapes/Open = 0.0
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=759166617]
+[node name="AreaShape" type="CollisionShape3D" parent="Area3D" unique_id=759166617]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5507282, 0.58164)
 shape = SubResource("BoxShape3D_r53mp")
 

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://blhku3fh01ga0"]
+
+[ext_resource type="Texture2D" uid="uid://koxlnq2psnpb" path="res://Assets/Enemies/FireBall.png" id="1_nwudk"]
+[ext_resource type="Script" uid="uid://dduucni6ugcta" path="res://Enemy/fire_ball.gd" id="1_qqrf4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nwudk"]
+radius = 0.15384255
+
+[node name="FireBall" type="CharacterBody3D" unique_id=1247173857]
+collision_layer = 0
+collision_mask = 11
+script = ExtResource("1_qqrf4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=867972607]
+shape = SubResource("SphereShape3D_nwudk")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=402990916]
+pixel_size = 0.001
+billboard = 2
+texture = ExtResource("1_nwudk")

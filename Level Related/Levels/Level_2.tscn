@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dqvqavgusd0pd" path="res://Assets/Models/Static/Tv.glb" id="18_wy55a"]
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="20_ahrcu"]
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="21_mjxqx"]
+[ext_resource type="PackedScene" uid="uid://dpejp70faqtsj" path="res://Level Related/Levels/level_1.tscn" id="21_t2mk1"]
 [ext_resource type="PackedScene" uid="uid://284x8rv58kc8" path="res://Enemy/jonny.tscn" id="25_l2c51"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_n37fa"]
@@ -404,13 +405,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40190125, 0, -1.250011)
 
 [node name="ElevatorArea" parent="." unique_id=213366012 instance=ExtResource("20_ahrcu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.077, 0, -5.251)
+next_floor = ExtResource("21_t2mk1")
 
 [node name="StartingElevator" parent="." unique_id=1763282973 instance=ExtResource("21_mjxqx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.518, 0, -5.25)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1450350696]
 navigation_mesh = SubResource("NavigationMesh_n37fa")
-navigation_layers = 2
 
 [node name="PillarBig2" parent="NavigationRegion3D" unique_id=1242776049 instance=ExtResource("14_l2c51")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9679275, 2.3841858e-07, 5.0471706)
