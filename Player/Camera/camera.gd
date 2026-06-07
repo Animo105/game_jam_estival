@@ -61,14 +61,17 @@ func drop_item():
 	if not item_picked_up: return
 	if item_picked_up.drop_at(global_position, -global_basis.z):
 		item_picked_up = null
+		hands.pickup_texture = null
 
 func use_item():
 	if not item_picked_up: return
 	item_picked_up.use(global_position, -global_basis.z)
 	if item_picked_up.is_queued_for_deletion():
 		item_picked_up = null
+		hands.pickup_texture = null
 
 func throw_item():
 	if not item_picked_up: return
 	if item_picked_up.throw(global_position, -global_basis.z):
 		item_picked_up = null
+		hands.pickup_texture = null
