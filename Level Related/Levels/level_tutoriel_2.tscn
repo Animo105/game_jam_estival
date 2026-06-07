@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_dhkpv"]
 [ext_resource type="PackedScene" uid="uid://biekqwwd8jjuk" path="res://Assets/Models/Static/BigRoom.glb" id="3_4d651"]
-[ext_resource type="PackedScene" uid="uid://dpejp70faqtsj" path="res://Level Related/Levels/Level_1.tscn" id="3_6x1iy"]
+[ext_resource type="PackedScene" uid="uid://wyx0u7ij6x2x" path="res://Level Related/Levels/Level_1.tscn" id="3_6x1iy"]
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="3_j6urx"]
 [ext_resource type="PackedScene" uid="uid://cv4v53b5s01gv" path="res://Assets/Models/Static/Wall.glb" id="3_q8rre"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="5_q8rre"]
