@@ -115,10 +115,9 @@ shadow_mesh = SubResource("ArrayMesh_xlf0w")
 [node name="Screen" type="RigidBody3D" unique_id=329535624]
 continuous_cd = true
 script = ExtResource("1_g7o2n")
-push_force = 3
+push_force = 10
 melee_attack = false
-health = 2
-damage = 5
+damage = 10
 texture_in_ui = ExtResource("2_g7o2n")
 drop_distance = 0.7
 metadata/_custom_type_script = "uid://dkkk5utcoerc7"
