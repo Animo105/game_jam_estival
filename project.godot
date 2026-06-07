@@ -15,6 +15,10 @@ run/main_scene="uid://dfnm5tdfviphj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bug2k20qn2hie"
+
 [autoload]
 
 Globals="*uid://bjlvruyax0c8c"
@@ -22,6 +26,7 @@ SignalBus="*uid://b5pn5qs3uaurd"
 SceneManager="*uid://bw2sxibflqgih"
 AudioManager="*uid://nuo2dhgdpwhc"
 SwapManager="*uid://bats0nchg8doq"
+IMM="*uid://chycbua4v54gl"
 
 [display]
 
