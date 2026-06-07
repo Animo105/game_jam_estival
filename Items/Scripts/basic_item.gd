@@ -62,6 +62,9 @@ func drop_at(camera_coords : Vector3, forward_direction : Vector3) -> bool:
 	state = States.NORMAL
 	return true
 
+func pickup() -> bool:
+	return true
+
 @warning_ignore("unused_parameter")
 func throw(camera_coods : Vector3, forward_direction : Vector3) -> bool:
 	return false

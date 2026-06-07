@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cpo7xnkvkp26w"]
 
 [ext_resource type="Material" uid="uid://opv3d75wyv4w" path="res://Assets/Materials/Noodles.tres" id="1_0bmk2"]
+[ext_resource type="Script" uid="uid://md478m8hlh80" path="res://Items/Scripts/food_items.gd" id="1_0qmtn"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6fgej"]
 _surfaces = [{
@@ -39,7 +40,10 @@ shadow_mesh = SubResource("ArrayMesh_6fgej")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_u20ni"]
 points = PackedVector3Array(-0.051490672, 0, -0.034055185, -0.051490672, 0.030482166, -0.034055185, 0.05149068, 0, -0.034055185, -0.051490672, 0, 0.034055185, -0.051490672, 0.030482166, 0.034055185, 0.05149068, 0.030482166, -0.034055185, 0.05149068, 0, 0.034055185, 0.05149068, 0.030482166, 0.034055185)
 
-[node name="Noodles" type="RigidBody3D" unique_id=795123092]
+[node name="Noodles" type="RigidBody3D" unique_id=973211024]
+script = ExtResource("1_0qmtn")
+life_gain = 2
+metadata/_custom_type_script = "uid://md478m8hlh80"
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=682791834]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

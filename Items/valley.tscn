@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cccaj650n1npp"]
 
 [ext_resource type="Material" uid="uid://ut7mqi6dsfsj" path="res://Assets/Materials/Material.tres" id="1_2cfq8"]
+[ext_resource type="Script" uid="uid://md478m8hlh80" path="res://Items/Scripts/food_items.gd" id="1_aamh8"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8ajvi"]
 _surfaces = [{
