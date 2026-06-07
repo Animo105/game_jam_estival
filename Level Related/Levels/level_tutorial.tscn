@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bun0xb5xg07su" path="res://Assets/Models/Computer.glb" id="14_4w87f"]
 [ext_resource type="PackedScene" uid="uid://ccoiyhmb1fhkl" path="res://Assets/Models/Table.glb" id="16_v0747"]
 [ext_resource type="PackedScene" uid="uid://chh2tg7ptv1ur" path="res://Assets/Models/Screen.glb" id="17_b54we"]
+[ext_resource type="Script" uid="uid://dgu0qk4kontiu" path="res://Globals/Autoloads/Music Stuff/Script/musicSignalReceiver.gd" id="19_e7326"]
 [ext_resource type="PackedScene" uid="uid://doetlgjdpay83" path="res://Assets/Models/Mouse.glb" id="19_hwiih"]
 [ext_resource type="PackedScene" uid="uid://bmlwkhvoepw7e" path="res://Assets/Models/Keyboard.glb" id="20_f8tsc"]
 
@@ -48,9 +49,6 @@ navigation_mesh = SubResource("NavigationMesh_nfyuv")
 
 [node name="Structure" type="Node3D" parent="NavigationRegion3DGround" unique_id=1188034269]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3228705)
-
-[node name="Light2" parent="NavigationRegion3DGround/Structure" unique_id=1557470311 instance=ExtResource("8_y4r32")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.004224, 0, 5.581562)
 
 [node name="BigTable2" parent="NavigationRegion3DGround/Structure" unique_id=1313574200 instance=ExtResource("13_nfyuv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66, 0, 1.636)
@@ -90,18 +88,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4477057, 1.935918, 3.901212
 
 [node name="Tv3" parent="NavigationRegion3DGround/Structure" unique_id=1349543513 instance=ExtResource("10_e7326")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.615249, 2.0925674, 9.171437)
-
-[node name="Light3" parent="NavigationRegion3DGround/Structure" unique_id=1314316935 instance=ExtResource("8_y4r32")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8453937, 0, 3.75531)
-
-[node name="Light4" parent="NavigationRegion3DGround/Structure" unique_id=362476383 instance=ExtResource("8_y4r32")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.585803, 2.3841858e-07, 9.7703905)
-
-[node name="Light5" parent="NavigationRegion3DGround/Structure" unique_id=810037332 instance=ExtResource("8_y4r32")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2.83)
-
-[node name="Light6" parent="NavigationRegion3DGround/Structure" unique_id=450304129 instance=ExtResource("8_y4r32")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.016838, -0.14092219, 9.096658)
 
 [node name="Tip" type="Label3D" parent="NavigationRegion3DGround/Structure" unique_id=2034399628]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.8674574, 1.0708185, 7.848026)
@@ -185,6 +171,28 @@ enemies_to_kill = 1
 
 [node name="PillarSmall4" parent="NavigationRegion3DGround/Structure" unique_id=938594545 instance=ExtResource("7_hyjle")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4379864, 0, 0)
+
+[node name="Put all lights in here" type="Node" parent="NavigationRegion3DGround/Structure" unique_id=930243699]
+
+[node name="Light2" parent="NavigationRegion3DGround/Structure/Put all lights in here" unique_id=1557470311 instance=ExtResource("8_y4r32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.004224, 0, 5.581562)
+script = ExtResource("19_e7326")
+
+[node name="Light3" parent="NavigationRegion3DGround/Structure/Put all lights in here" unique_id=1314316935 instance=ExtResource("8_y4r32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8453937, 0, 3.75531)
+script = ExtResource("19_e7326")
+
+[node name="Light4" parent="NavigationRegion3DGround/Structure/Put all lights in here" unique_id=362476383 instance=ExtResource("8_y4r32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.585803, 2.3841858e-07, 9.7703905)
+script = ExtResource("19_e7326")
+
+[node name="Light5" parent="NavigationRegion3DGround/Structure/Put all lights in here" unique_id=810037332 instance=ExtResource("8_y4r32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2.83)
+script = ExtResource("19_e7326")
+
+[node name="Light6" parent="NavigationRegion3DGround/Structure/Put all lights in here" unique_id=450304129 instance=ExtResource("8_y4r32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.016838, -0.14092219, 9.096658)
+script = ExtResource("19_e7326")
 
 [node name="Daemon" type="Node3D" parent="." unique_id=569565411]
 
