@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://b8pg2wa2e6kby"]
 
 [ext_resource type="Script" uid="uid://dkkk5utcoerc7" path="res://Items/Scripts/combat_item.gd" id="1_bqf2d"]
-[ext_resource type="Texture2D" uid="uid://drl0juqsd2j8w" path="res://Assets/Hands/chaiseNoire.png" id="3_bqf2d"]
+[ext_resource type="Texture2D" uid="uid://b7k4ru7dsbf0c" path="res://Assets/hands/chaiseNoire3.png" id="2_sm65h"]
+[ext_resource type="Texture2D" uid="uid://drl0juqsd2j8w" path="res://Assets/hands/chaiseNoire.png" id="3_bqf2d"]
 [ext_resource type="Material" uid="uid://bcl0d78drtxtl" path="res://Assets/Materials/ChairBlack.tres" id="4_ebhnf"]
 [ext_resource type="Material" uid="uid://ia2w1jyy541w" path="res://Assets/Materials/Metal.tres" id="5_4eox1"]
 [ext_resource type="Material" uid="uid://md7bsljcox5f" path="res://Assets/Materials/Black.tres" id="6_3mght"]
@@ -95,8 +96,13 @@ shadow_mesh = SubResource("ArrayMesh_l1mio")
 collision_mask = 5
 mass = 3.0
 script = ExtResource("1_bqf2d")
+push_force = 4
+melee_range = Vector3(1, 1, 2)
 melee_animation = Array[Texture]([ExtResource("3_bqf2d")])
 throwable = false
+health = 3
+damage = 2
+texture_in_ui = ExtResource("2_sm65h")
 metadata/_custom_type_script = "uid://dkkk5utcoerc7"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1459733791]

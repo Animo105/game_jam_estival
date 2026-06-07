@@ -29,18 +29,17 @@ func destroy():
 func use(_camera_coords : Vector3, forward_direction : Vector3):
 	if not melee_attack: return
 	if not can_attack: return
-	can_attack = false
 	var bodies := await Globals.player.get_bodies_in_melee_range(melee_range)
+	can_attack = false
 	for body in bodies:
 		if body is BasicEnemy:
 			health -= 1
 			body.hit(forward_direction * push_force, damage)
-			Globals.hud_hands.play_once_animation(melee_animation, animation_time)
-			await Globals.hud_hands.finished_animation
-			can_attack = true
-		can_attack = true
 		if body is BasicItem:
 			linear_velocity += forward_direction
+	Globals.hud_hands.play_once_animation(melee_animation, animation_time)
+	await Globals.hud_hands.finished_animation
+	can_attack = true
 
 func throw(camera_coods : Vector3, forward_direction : Vector3) -> bool:
 	if not throwable : return false

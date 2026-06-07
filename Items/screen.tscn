@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dp2p7egfsceyq"]
 
 [ext_resource type="Script" uid="uid://dkkk5utcoerc7" path="res://Items/Scripts/combat_item.gd" id="1_g7o2n"]
-[ext_resource type="Texture2D" uid="uid://7mjsw1lhymxf" path="res://Assets/Hands/screen.png" id="2_g7o2n"]
+[ext_resource type="Texture2D" uid="uid://7mjsw1lhymxf" path="res://Assets/hands/screen.png" id="2_g7o2n"]
 [ext_resource type="Material" uid="uid://md7bsljcox5f" path="res://Assets/Materials/Black.tres" id="3_5oh7s"]
 [ext_resource type="Material" uid="uid://72mlmt7l5glb" path="res://Assets/Materials/BackScreen.tres" id="4_nugu2"]
 [ext_resource type="Material" uid="uid://6wvnj4wx0way" path="res://Assets/Materials/LightGray.tres" id="5_r4knw"]
@@ -118,7 +118,7 @@ script = ExtResource("1_g7o2n")
 push_force = 3
 melee_attack = false
 health = 2
-damage = 4
+damage = 5
 texture_in_ui = ExtResource("2_g7o2n")
 drop_distance = 0.7
 metadata/_custom_type_script = "uid://dkkk5utcoerc7"
