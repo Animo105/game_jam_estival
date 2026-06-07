@@ -2,8 +2,8 @@
 
 [ext_resource type="Material" uid="uid://g1gnesr0or44" path="res://Assets/Materials/Mouse.tres" id="1_8qhs4"]
 [ext_resource type="Script" uid="uid://dkkk5utcoerc7" path="res://Items/Scripts/combat_item.gd" id="1_n17b0"]
-[ext_resource type="Texture2D" uid="uid://kftirstn5sw4" path="res://Assets/Hands/mouse2.png" id="2_gy8ks"]
-[ext_resource type="Texture2D" uid="uid://depcx3kbf2hti" path="res://Assets/Hands/mouse1.png" id="3_g1eiu"]
+[ext_resource type="Texture2D" uid="uid://kftirstn5sw4" path="res://Assets/hands/mouse2.png" id="2_gy8ks"]
+[ext_resource type="Texture2D" uid="uid://depcx3kbf2hti" path="res://Assets/hands/mouse1.png" id="3_g1eiu"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_74r83"]
 _surfaces = [{
@@ -45,12 +45,13 @@ points = PackedVector3Array(-0.039486755, 1.7130253e-10, -0.019743396, -0.039486
 [node name="Mouse" type="RigidBody3D" unique_id=868361759]
 continuous_cd = true
 script = ExtResource("1_n17b0")
-melee_range = Vector3(0.4, 0.4, 4)
+push_force = 4
+melee_range = Vector3(0.4, 0.4, 4.5)
 melee_animation = Array[Texture]([ExtResource("2_gy8ks")])
 animation_time = 0.4
 throwable = false
-health = 5
-damage = 2
+health = 2
+damage = 3
 texture_in_ui = ExtResource("3_g1eiu")
 metadata/_custom_type_script = "uid://dkkk5utcoerc7"
 
