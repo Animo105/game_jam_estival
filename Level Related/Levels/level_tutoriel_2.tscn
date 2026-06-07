@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_dhkpv"]
 [ext_resource type="PackedScene" uid="uid://biekqwwd8jjuk" path="res://Assets/Models/Static/BigRoom.glb" id="3_4d651"]
+[ext_resource type="PackedScene" uid="uid://dpejp70faqtsj" path="res://Level Related/Levels/Level_2.tscn" id="3_6x1iy"]
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="3_j6urx"]
 [ext_resource type="PackedScene" uid="uid://cv4v53b5s01gv" path="res://Assets/Models/Static/Wall.glb" id="3_q8rre"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="5_q8rre"]
@@ -19,6 +20,7 @@ metadata/_custom_type_script = "uid://dlbh676178r14"
 
 [node name="ElevatorArea" parent="Structure" unique_id=213366012 instance=ExtResource("7_y3agi")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.093305, 4.6163073e-08, 5.351502)
+next_floor = ExtResource("3_6x1iy")
 
 [node name="StartingElevator" parent="Structure" unique_id=1763282973 instance=ExtResource("3_j6urx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.040073, 0, -11.93782)

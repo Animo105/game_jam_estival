@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dg05c4i6tntse"]
+[gd_scene format=3 uid="uid://dpejp70faqtsj"]
 
 [ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_pobmy"]
 [ext_resource type="PackedScene" uid="uid://cehd8wr85cfup" path="res://Items/high_plant.tscn" id="2_kbn4t"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://crykday4qt6bt" path="res://Prefabs/light.tscn" id="11_ehgd5"]
 [ext_resource type="PackedScene" uid="uid://ds22dr0hwtayh" path="res://Items/plant.tscn" id="11_n37fa"]
 [ext_resource type="PackedScene" uid="uid://fg0lwc4s3333" path="res://Assets/Models/Static/Fence.glb" id="12_2vipy"]
-[ext_resource type="PackedScene" uid="uid://bgheo6lvpausy" path="res://Player/rigid_player_3d.tscn" id="13_rx4ve"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="13_sihpr"]
 [ext_resource type="PackedScene" uid="uid://b1gfwcdldul4k" path="res://Prefabs/lava.tscn" id="13_t2mk1"]
 [ext_resource type="PackedScene" uid="uid://c5hugqjkhcp7" path="res://Items/big_table.tscn" id="14_7nao7"]
@@ -24,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://dqvqavgusd0pd" path="res://Assets/Models/Static/Tv.glb" id="18_wy55a"]
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="20_ahrcu"]
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="21_mjxqx"]
+[ext_resource type="PackedScene" uid="uid://bmeggvgxwrt5f" path="res://Level Related/Levels/level_1.tscn" id="21_t2mk1"]
 [ext_resource type="PackedScene" uid="uid://284x8rv58kc8" path="res://Enemy/jonny.tscn" id="25_l2c51"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_t2mk1"]
@@ -356,8 +356,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8549652, 0.94921315, 3.883
 
 [node name="Lava" parent="DeamonWorld" unique_id=1801914305 instance=ExtResource("13_t2mk1")]
 
-[node name="RigidPlayer3D" parent="." unique_id=233515060 instance=ExtResource("13_rx4ve")]
-
 [node name="Common" type="Node3D" parent="." unique_id=2057787903]
 
 [node name="Lights" type="Node3D" parent="Common" unique_id=1298734879]
@@ -421,6 +419,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40190125, 0, -1.250011)
 
 [node name="ElevatorArea" parent="." unique_id=213366012 instance=ExtResource("20_ahrcu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.077, 0, -5.251)
+next_floor = ExtResource("21_t2mk1")
 enemies_to_kill = 1
 
 [node name="StartingElevator" parent="." unique_id=1763282973 instance=ExtResource("21_mjxqx")]

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bwmrmlywm534c"]
+[gd_scene format=3 uid="uid://bmeggvgxwrt5f"]
 
 [ext_resource type="Script" uid="uid://dlbh676178r14" path="res://Level Related/level_class.gd" id="1_s72ca"]
 [ext_resource type="PackedScene" uid="uid://cehd8wr85cfup" path="res://Items/high_plant.tscn" id="2_0ol6i"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://c5hugqjkhcp7" path="res://Items/big_table.tscn" id="16_pypdh"]
 [ext_resource type="PackedScene" uid="uid://ccoiyhmb1fhkl" path="res://Assets/Models/Table.glb" id="18_35b1u"]
 [ext_resource type="PackedScene" uid="uid://cye2iv70yf1t6" path="res://Level Related/elevators/level_elevator.tscn" id="20_3xtle"]
+[ext_resource type="PackedScene" uid="uid://b6wy3ojvhgign" path="res://Level Related/Levels/level_3.tscn" id="20_dhlcr"]
 [ext_resource type="PackedScene" uid="uid://cetc4sc1k7v6x" path="res://Level Related/elevators/starting_elevator.tscn" id="22_i6bpf"]
 [ext_resource type="PackedScene" uid="uid://dghdv0gu0jctx" path="res://Assets/Models/Static/Room.glb" id="24_nbhpf"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="25_onfom"]
@@ -544,6 +545,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.05
 
 [node name="ElevatorArea" parent="." unique_id=213366012 instance=ExtResource("20_3xtle")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.077, 0, -5.251)
+next_floor = ExtResource("20_dhlcr")
 enemies_to_kill = 1
 
 [node name="StartingElevator" parent="." unique_id=1763282973 instance=ExtResource("22_i6bpf")]

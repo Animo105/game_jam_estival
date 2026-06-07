@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://bbm8rvt1fd5fd" path="res://Assets/Materials/Computer.tres" id="1_4ruei"]
 [ext_resource type="Script" uid="uid://dkkk5utcoerc7" path="res://Items/Scripts/combat_item.gd" id="1_olobt"]
-[ext_resource type="Texture2D" uid="uid://bcksowvww07ou" path="res://Assets/Hands/ComputerHand.png" id="2_l33yn"]
+[ext_resource type="Texture2D" uid="uid://bcksowvww07ou" path="res://Assets/hands/ComputerHand.png" id="2_l33yn"]
 [ext_resource type="Material" uid="uid://md7bsljcox5f" path="res://Assets/Materials/Black.tres" id="2_olobt"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hr47q"]
@@ -65,6 +65,8 @@ shadow_mesh = SubResource("ArrayMesh_jfxm7")
 [node name="Computer" type="RigidBody3D" unique_id=1597662909]
 script = ExtResource("1_olobt")
 melee_attack = false
+health = 10
+damage = 5
 texture_in_ui = ExtResource("2_l33yn")
 metadata/_custom_type_script = "uid://dkkk5utcoerc7"
 

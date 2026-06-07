@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://yolt7h42j0g1" path="res://Assets/Models/Static/PillarBig.glb" id="13_6l3ix"]
 [ext_resource type="PackedScene" uid="uid://bbhiwsd57jqii" path="res://Assets/Models/Static/PillarSmall.glb" id="14_xxtx7"]
 [ext_resource type="PackedScene" uid="uid://qmefvog5bmqt" path="res://Items/round_table.tscn" id="15_3axcm"]
+[ext_resource type="PackedScene" uid="uid://cb223rrpovmeu" path="res://Level Related/Levels/level_end.tscn" id="15_cl4tl"]
 [ext_resource type="PackedScene" uid="uid://fg0lwc4s3333" path="res://Assets/Models/Static/Fence.glb" id="17_l5pbd"]
 [ext_resource type="PackedScene" uid="uid://crykday4qt6bt" path="res://Prefabs/light.tscn" id="18_l5pbd"]
 
@@ -392,6 +393,7 @@ stop_distance = 5.0
 
 [node name="ElevatorArea" parent="." unique_id=213366012 instance=ExtResource("6_qie5f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.933123, 0, -10.5321865)
+next_floor = ExtResource("15_cl4tl")
 enemies_to_kill = 4
 
 [node name="StartingElevator" parent="." unique_id=1763282973 instance=ExtResource("7_tjhgu")]
