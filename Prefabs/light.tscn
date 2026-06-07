@@ -1,0 +1,71 @@
+[gd_scene format=4 uid="uid://crykday4qt6bt"]
+
+[ext_resource type="Material" uid="uid://f7rdf3y5ekts" path="res://Assets/Materials/Ceiling.tres" id="1_1sa5l"]
+[ext_resource type="Material" uid="uid://c2rb06cfkoh8k" path="res://Assets/Materials/Light.tres" id="2_xsfwc"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eirfg"]
+_surfaces = [{
+"aabb": AABB(-0.38724393, 3.4697056, -0.38724393, 0.77448785, 0.023234606, 0.77448785),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEABQAAAAIABQACAAkACwAJAAQACwAFAAkAAwALAAQAAAAFAAwAAwAAAA0AAAAMAA0ABQAOAAwABQALAA4ABwANAAwACgAHAAwACgAMAA4ABwAGAA0ACAAKAA4ACwAPAA4ACAAOAA8ABgAIAA8ABgAPAA0ACwADAA8AAwANAA8A"),
+"lods": [0.06780802, PackedByteArray("AAABAAIAAAADAAEAAwAEAAEABQAAAAIAAwAAAAYAAAAHAAYAAAAFAAcAAwAGAAgABQACAAkABQAKAAcACwAJAAQACwAFAAkAAwALAAQABQALAAoACwADAAgACwAIAAoA")],
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("wfUAAMH1AADB9VRVPQoAAMH1VFXB9QAAwfUAAD0KAAA9ClRVPQoAAD0KAADB9QAA////////AAAAAP////8AAP////8AAAAAPQpUVcH1AAAAAP//AAAAAD0KAAA9CgAAHgUAAOD6AADg+gAA4PoAAB4FAAAeBQAA4PoAAB4FAAA=")
+}, {
+"aabb": AABB(-0.35626438, 3.4774501, -0.35626438, 0.71252877, 1e-05, 0.71252877),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Light",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAAAAAAAAAA//8AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o8dd3"]
+resource_name = "Light_Light"
+_surfaces = [{
+"aabb": AABB(-0.38724393, 3.4697056, -0.38724393, 0.77448785, 0.023234606, 0.77448785),
+"attribute_data": PackedByteArray("ihFY4XTuv+OKEb/jdO5Y4YoRph4O+D4q8Ac+KnTuph6mHnTuPirwBz4qDvimHooRdO5Y4fAHwNUO+MDVihFY4VjhihHA1Q74wNXwB1jhdO507qYeihE/HHTuPxyKEaYeWOF07r/jihG/43TuWOGKEaYeihE/HHTuPxyKEaYedO69DHMjQfNzI4vcvQyL3EHzcyNB83MjvQxB84vcvQyL3A=="),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABQAgACEABQAGACAABAAhACAABAAHACEAEQAiACMAEQASACIAEAAjACIAEAATACMACQAkACUACQAKACQACAAlACQACAALACUADQAmACcADQAOACYADAAnACYADAAPACcAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0A"),
+"lods": [0.06780802, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0A")],
+"material": ExtResource("1_1sa5l"),
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("wfUAAMH1///B9VRVPQr//8H1VFXB9f//wfUAAD0K//89CgAAwfVU1QAA//8AAC7vAAD/////Lu89CgAAPQpU1cH1AADB9VTVAAD/////bMP///////9swz0KAADB9VTVwfUAAD0KVNX///////9sw/////8AAGzDwfUAAMH1VNU9CgAAPQpU1f////8AAC3vAAD//wAALe/B9QAAPQpU1T0KAAA9Cv+/PQpUVcH1/789ClRVPQr/vz0KAADB9f+/wfUAAD0K/789ClRVPQr/v8H1VFU9Cv+/PQoAAD0K/789CgAAwfX//8H1VFXB9f//PQpUVcH1///B9QAAwfX//x4FAADg+hjoHgUAAB4FGOgeBQAAHgUY6OD6AAAeBRjo4PoAAOD618YeBQAA4PrXxuD6AAAeBdfG4PoAAOD618b/P/9//z//f/8//3//P/9/VFVUVWlIK29pSCtvVFVUVaoqVNUjGNvnIxjb56oqVNVVVVRV3GdGMNxnRjBUVVRVqipU1ZU3aciVN2nIqipU1f9/AAD/fwAA/38AAP9/AAD//////////////////////z//v/8//7//P/+//z//v7ZLkmi2S5JoSTS1y0k0tcs+HsDhPh7A4cBhfTzAYX08")
+}, {
+"aabb": AABB(-0.35626438, 3.4774501, -0.35626438, 0.71252877, 1e-05, 0.71252877),
+"attribute_data": PackedByteArray("JQXZ+tn6JQUlBSUF2frZ+g=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": ExtResource("2_xsfwc"),
+"name": "Light",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP///z///wAAAAD/PwAAAAAAAP8///8AAP///z8AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_eirfg")
+
+[node name="Light" type="Node3D" unique_id=754433382]
+
+[node name="Light" type="MeshInstance3D" parent="." unique_id=1433865165]
+mesh = SubResource("ArrayMesh_o8dd3")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=489714540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.644062, 0)
+light_energy = 0.5
+light_specular = 0.0
+shadow_enabled = true

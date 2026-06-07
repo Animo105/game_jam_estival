@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://fg0lwc4s3333"
-path="res://.godot/imported/Fence.glb-0b142e81ebf61ea86b3a604d7432bf18.scn"
+uid="uid://bbhiwsd57jqii"
+path="res://.godot/imported/PillarSmall.glb-045042a169f1b469fb8a01add79b498b.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Fence.glb"
-dest_files=["res://.godot/imported/Fence.glb-0b142e81ebf61ea86b3a604d7432bf18.scn"]
+source_file="res://Assets/Models/Static/PillarSmall.glb"
+dest_files=["res://.godot/imported/PillarSmall.glb-045042a169f1b469fb8a01add79b498b.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dqvqavgusd0pd"
-path="res://.godot/imported/Tv.glb-f2d4c0f3deec11782d56171d00292694.scn"
+uid="uid://yolt7h42j0g1"
+path="res://.godot/imported/PillarBig.glb-1983ccfbbd80980f2497bcc7eae104cf.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Tv.glb"
-dest_files=["res://.godot/imported/Tv.glb-f2d4c0f3deec11782d56171d00292694.scn"]
+source_file="res://Assets/Models/Static/PillarBig.glb"
+dest_files=["res://.godot/imported/PillarBig.glb-1983ccfbbd80980f2497bcc7eae104cf.scn"]
 
 [params]
 

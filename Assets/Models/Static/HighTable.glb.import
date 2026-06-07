@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://biekqwwd8jjuk"
-path="res://.godot/imported/BigRoom.glb-ae13246bdae3287f3ea9babb936a3f9c.scn"
+uid="uid://dybx4e0t3dq8u"
+path="res://.godot/imported/HighTable.glb-fd61a47f99b6f4b750b2825779c43487.scn"
 
 [deps]
 
-source_file="res://Assets/Models/BigRoom.glb"
-dest_files=["res://.godot/imported/BigRoom.glb-ae13246bdae3287f3ea9babb936a3f9c.scn"]
+source_file="res://Assets/Models/Static/HighTable.glb"
+dest_files=["res://.godot/imported/HighTable.glb-fd61a47f99b6f4b750b2825779c43487.scn"]
 
 [params]
 
