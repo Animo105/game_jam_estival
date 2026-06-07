@@ -546,7 +546,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.05
 [node name="ElevatorArea" parent="." unique_id=213366012 instance=ExtResource("20_3xtle")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.077, 0, -5.251)
 next_floor = ExtResource("20_dhlcr")
-enemies_to_kill = 1
+enemies_to_kill = 2
 
 [node name="StartingElevator" parent="." unique_id=1763282973 instance=ExtResource("22_i6bpf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.518, 0, -5.25)
