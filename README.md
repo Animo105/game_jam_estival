@@ -9,5 +9,5 @@ Un jeu 3D où vous devez éliminer tous les démons pour gravir la tour. Alterne
 ## Collaborateurs
 - [perceval001](https://github.com/perceval001)
 - [Roket](https://github.com/R0KET-011)
+- [SunnyDee](https://sunnydee719.newgrounds.com/)
 - [Educaplus](https://github.com/educa-plus)
-- Gabriel Bradette
